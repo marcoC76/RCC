@@ -5,7 +5,9 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 15px 10px 50px 10px;
-  background-color: #666768;
+  background-image: url('images/fondo.png');
+  background-repeat: none;
+ 
 }
 
 .title {
@@ -14,8 +16,11 @@ body {
   margin: 0 0 5px 0;
   font-size: 22px;
 }
-
-p {
+h1{
+  color: white;
+  text-align: center;
+}
+p{
   color: white;
   text-align: center;
   opacity: .8;
@@ -34,7 +39,7 @@ p {
   margin: 0 auto;
   overflow: hidden;
   transition: all ease-out .2s;
-  cursor: pointer;
+  
 }
 
 .card:hover {
@@ -52,28 +57,22 @@ p {
 }
 
 .cost {
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
   padding: 8px 20px 7px 15px;
   position: absolute;
-  right: 15px;
+  right:-10px;
   top: 0;
 }
 
 .cost img {
-  position: absolute;
+  width: 30%;
   right: 0;
-  top: 13px;
-  width: 14px;
+  top: 30%;
 }
 
 .image {
-  background-image: url(images/100218.png);
- 
-  height: 220px;
-  background-color: white;
+  background-image: url(images/personaje.png);
+  height: 150px;
+  background-color: #555555;
   box-shadow: 0px 3px 0 rgba(0,0,0,.15);
   position: relative;
   background-position: top;
@@ -117,6 +116,7 @@ p {
 }
 
 
+
 /* Power and Defense stats at the bottom */
 
 .stat {
@@ -125,16 +125,15 @@ p {
   bottom: 0px;
   font-weight: bold;
   color: black;
-  font-size: 20px;
+  font-size: 1.5em;
   background: black;
   color: white;
 }
 
 .stat img {
   display: inline;
-  height: 18px;
   position: relative;
-  top: 1px;
+  top: 1vh;
 }
 
 .power {
@@ -219,29 +218,3 @@ p {
   }
 }
 
-/* Mozilla license info */
-
-.license {
-  position: fixed;
-  right: 15px;
-  bottom: 14px;
-  font-size: 13px;
-  color: white;
-  color: rgba(255,255,255,.4);
-}
-
-.license a {
-  margin-left: 5px;
-}
-
-.license img {
-  width: 60px;
-  opacity: .4;
-  position: relative;
-  top: 3px;
-  transition: opacity .2s ease-out;
-}
-
-.license img:hover {
-  opacity: .6;
-}
