@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+  <meta charset="UTF-8">
   <title>Perfil de reporte</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png?1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Perfil</a>
+    <a href="#news">Desglose</a>
+    <a href="#contact">Mapa</a>
+    <a href="#about">Ayuda</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
   <h1>
     ID: 44856D
   </h1>
@@ -19,53 +31,53 @@
       Los Magos
     </h2>
 
-    <div class="cost" tooltip="Vidas">
-      <img id="vida" src="images/vida.png" />
-      <img id="vida" src="images/vida.png" />
-      <img id="vida" src="images/vida.png" />
+    <div class="cost" tooltip="Puntos"> 800 <img id="vida" src="images/puntos.png">
     </div>
 
     <!--  <div class="monster"></div> -->
 
     <div class="image"></div>
-    <div class="nick" style="color:white; text-align:center;font-size: 1.5em;" tooltip="Nombre de tu Avatar">Tony26</div>
+    <div class="nick" style="color:white; text-align:center;font-size: 1.5em;" tooltip="Nombre de tu Avatar">Tony26
+    </div>
     <br>
 
     <!-- Use the following list of abilities, or make up your own -->
-    <ul class="abilities" tooltip="List of anti-hacking abilities">
+    <ul class="abilities" tooltip="Lista de habilidades">
       <!-- <li>Account defender</li> -->
       <!-- <li>Ad blocker</li> -->
       <!-- <li>Anonymizing agent</li> -->
-      <li>Data guardian</li>
+      <li>Monedas x2 </li>
       <!-- <li>Encoded contacts</li> -->
       <!-- <li>Encryption expert</li> -->
       <!-- <li>Hidden historian</li> -->
       <!-- <li>Metadata master</li> -->
       <!-- <li>Password genius</li> -->
-      <li>Private browser</li>
-      <li>Search savant</li>
+      <li>Puntos extra</li>
+      <li>Pasar Puntos</li>
       <!-- <li>Secret location</li> -->
       <!-- <li>Secure messenger</li> -->
       <!-- <li>Tech teacher</li> -->
-      <li>Third-party pummeler</li>
+      <li>Otro intento</li>
       <!-- <li>Track the trackers</li> -->
       <!-- <li>Two-factor titan</li> -->
       <!-- <li>VPN ranger</li> -->
     </ul>
 
     <div class="flavor-text" tooltip="Descripción">
-      "Defend all the things."
+      <center>
+        "Ayuda a compañeros en peligro"
+      </center>
     </div>
     <br>
     <div class="insignias">Insignias conseguidas:
       <center>
-        <img tooltip="Mision Cuestioanrios" src="images/nivel1.png" />
-        <img tooltip="Mision Actividades" src="images/nivel1.png" />
-        <img tooltip="Mision Bitacora" src="images/nivel1.png" />
-        <img tooltip="Mision Plataforma" src="images/nivel1.png" />
+        <img tooltip="Mision Cuestioanrios" src="images/insgCuest.png" />
+        <img tooltip="Mision Actividades" src="images/insgaAct.png" />
+        <img tooltip="Mision Bitacora" src="images/insgBit.png" />
+        <img tooltip="Mision Plataforma" src="images/insgPlat.png" />
       </center>
     </div>
-    
+
 
     <div class="power stat" tooltip="Dinero">
       200 <img src="images/dinero.png" />
@@ -79,6 +91,16 @@
   <div class="tooltip"></div>
 
   <script src="scripts/tooltip.js" type="text/javascript"></script>
+  <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
 </body>
 
 </html>
