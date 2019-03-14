@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body >
     <div class="topnav" id="myTopnav">
         <a href="#" class="active">Ayuda</a>
         <a href="index.html">Perfil</a>
@@ -20,34 +20,77 @@
             <i class="fa fa-bars"></i>
         </a>
     </div>
-    <br><br>
+
+    <br><br><br>
     <div class="card">
         <h1>Historia</h1>
-        <p>Junto con tu clan, deberas pasar todas las misiones para obtener el rango de estrella dorada y obtener la calificacion mas alta posible en la materia. </p>
-        <p>Cada mundo (periodo) estara constituido por 4 misiones, y cada una de ellas te entregara una insignia.</p>
+        <p>Junto con tu clan, deberás pasar todas las misiones para obtener el rango de estrella dorada y obtener la
+            calificación mas alta posible en la materia. </p>
+        <p>Cada mundo (periodo) estará constituido por 4 misiones, y cada una de ellas te entregara una insignia.</p>
         <p>Las insignias otorgan puntos y monedas.</p>
-        <p>Los puntos determinan tu rango y calificacion final para ese mundo en particular.</p>
+        <p>Los puntos determinan tu rango y calificación final para ese mundo en particular.</p>
         <p>Las monedas las puedes usar para activar los poderes que tu personaje tiene.</p>
+        <p>Al finalizar cada mundo todos los puntajes y monedas vuelven a 0 </p>
         <div class="sheen"></div>
     </div>
     <br>
     <div class="card">
         <h1>Misiones</h1>
-        <h3 style="color:white;">Actividades: </h3>
-        <p>Completar esta mision otorga 200 monedas y 250 puntos.
+        <p>Recibirás los puntos correspondientes a cada misión, pero la insignia y las monedas se consiguen con la puntuación máxima de cada misión</p>
+        <h3 class="ayuda" >Actividades: <img src="images/insgaAct.png" /></h3>
+        <p>Completar esta misión otorga 200 monedas y un maximo de 250 puntos.
         </p>
-        <h3 style="color:white;">Cuestionarios previos: </h3>
-        <p>Completar esta mision otorga 200 monedas y 250 puntos.
+        <h3 class="ayuda" >Cuestionarios previos: <img src="images/insgCuest.png" /></h3>
+        <p>Completar esta misión otorga 200 monedas y un maximo de 200 puntos.
         </p>
-        <h3 style="color:white;">Actividades: </h3>
-        <p>Completar esta mision otorga 200 monedas y 250 puntos.
+        <h3 class="ayuda">Bitácora: <img src="images/insgBit.png" /></h3>
+        <p>Completar esta misión otorga 200 monedas y un maximo de 250 puntos.
         </p>
-        <h3 style="color:white;">Actividades: </h3>
-        <p>Completar esta mision otorga 200 monedas y 250 puntos.
+        <h3 class="ayuda">Proyecto: <img src="images/insgPlat.png" /></h3>
+        <p>Completar esta misión otorga 200 monedas y un maximo de 300 puntos.
+        </p>
+        <h3 class="ayuda">Puntos extra: <img src="images/insgPuntos.png" /></h3>
+        <p>Completar esta misión otorga 100 monedas y 100 puntos.
         </p>
         
+
         <div class="sheen"></div>
     </div>
+    <br>
+    <div class="card">
+        <h1>Rangos</h1>
+        <p>
+            Tu calificación la obtienes dividiendo tus puntos entre 100
+        </p>
+        <h3 style="color:white;">Sin Rango: <img src="images/sinNivel.png" /></h3>
+        <p>Todos comienzan cada mundo sin rango y 0 puntos
+        </p>
+        <h3 style="color:white;">Bronce: <img src="images/nivel1.png" /></h3>
+        <p>Este rango se alcanza cuando tus puntos son al menos 600
+        </p>
+        <h3 style="color:white;">Plata: <img src="images/nivel2.png" /></h3>
+        <p>Este rango se alcanza cuando tus puntos son al menos 800
+        </p>
+        <h3 style="color:white;">Oro: <img src="images/nivel3.png" /></h3>
+        <p>Este rango se alcanza cuando tus puntos son al menos 1000
+        </p>
+
+        <div class="sheen"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -12,8 +12,14 @@ body {
   padding: 0;
   background-image: url('images/fondo.png');
   background-repeat: none;
+  background-attachment: fixed;
 }
-
+.ayuda{
+  color: white;
+}
+.ayuda img{
+  width: 15%;
+}
 .title {
   color: aliceblue;
   text-align: center;
