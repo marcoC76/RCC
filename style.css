@@ -10,8 +10,9 @@ body {
   font-family: "Pixel";
   margin: 0;
   padding: 0;
-  background-image: url('images/fondo.png');
+  background-image: url('images/fondo3.png');
   background-repeat: none;
+  background-size: cover;
   background-attachment: fixed;
 }
 .ayuda{
@@ -143,6 +144,7 @@ p {
 }
 
 .image {
+  opacity: 0;
   background-image: url(images/personaje.png);
   height: 150px;
   background-color: #555555;
@@ -152,6 +154,7 @@ p {
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
+  animation: anima 1s forwards 0.5s ease;
 }
 
 .type {
@@ -182,7 +185,7 @@ p {
 
 .insignias {
   background: rgba(255, 255, 255, .3);
-  color: aliceblue;
+  color: #ffffff;
   text-align: left;
   font-size: 1em;
   border-radius: 3px;
@@ -191,7 +194,9 @@ p {
 }
 
 .insignias img {
+  opacity: 0;
   width: 10%;
+  animation: anima 1s forwards 1s ease;
 }
 
 .nick {
@@ -231,10 +236,11 @@ p {
 }
 
 .stat img {
+  opacity: 0;
   display: inline;
   position: relative;
   top: 1vh;
-  animation: anima 1s forwards 0.5s ease;
+  animation: anima 1s forwards 1s ease;
 }
 
 .power {
