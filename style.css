@@ -10,7 +10,7 @@ body {
   font-family: "Pixel";
   margin: 0;
   padding: 0;
-  background-image: url('images/fondo3.png');
+  background-image: url('images/fondo4.jpg');
   background-repeat: none;
   background-size: cover;
   background-attachment: fixed;
@@ -52,6 +52,13 @@ p {
   margin: 0 auto;
   overflow: hidden;
   transition: all ease-out .2s;
+}
+.card2 {
+  width: 280px;
+  padding: 0 0 1% 0;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .map {
@@ -156,6 +163,9 @@ p {
   background-repeat: no-repeat;
   animation: anima 1s forwards 0.5s ease;
 }
+.image:hover{
+  background-image: url(images/personaje2.png);
+}
 
 .type {
   text-transform: uppercase;
@@ -195,7 +205,7 @@ p {
 
 .insignias img {
   opacity: 0;
-  width: 10%;
+  width: 15%;
   animation: anima 1s forwards 1s ease;
 }
 
@@ -265,7 +275,7 @@ p {
   text-align: left;
   font-size: 14px;
   padding: 7px 10px 9px 10px;
-  z-index: 99999;
+  z-index: 90000;
   color: rgba(255, 255, 255, .8);
   animation: tooltipPop .15s ease-out;
   transform-origin: bottom left;
@@ -406,3 +416,57 @@ p {
     opacity: 1;
   }
 }
+
+input[type=text] {
+  font-family: "Pixel";
+  text-align: center;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: #272b28;
+  border: solid 10px #000000;
+  border-radius: 10%;
+  font-size: 2em;
+  background-image: url('images/find_you.png');
+  background-position: 10px 10px;
+  background-size: 25px; 
+  background-repeat: no-repeat;
+  color: white;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+.modal-contenido{
+  color: white;
+  font-family: "Pixel";
+  text-align: center;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: #383d3a;
+  border: solid 10px #000000;
+  border-radius: 10%;
+  font-size: 2em;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+}
+.modal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+  transition: all 1s;
+}
+
+#miModal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+

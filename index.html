@@ -8,27 +8,36 @@
   <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png?1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="scripts/js.js"></script>
+
 </head>
 
-<body id="particles-js">
+<body>
   <div class="topnav" id="myTopnav">
     <a href="#" class="active">Perfil</a>
     <a href="desglose.html">Desglose</a>
     <!--  <a href="/mapa.html">Mapa</a> -->
     <a href="ayuda.html">Ayuda</a>
+    <a href="#miModal">Mundos</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
   <br>
   <br>
-  <h1>
+  <br>
+  <div class="card2">
+    <center>
+      <form>
+        <input type="text" name="search" placeholder="ID">
+      </form>
+    </center>
+  </div>
+  <!-- <h1>
     ID: 44856D
-  </h1>
+  </h1> -->
 
 
-  <div class="card">
+  <div id="resultado" class="card">
     <h2 class="name" tooltip="Clan al que perteneces">
       Los Magios
     </h2>
@@ -46,7 +55,7 @@
 
     <ul class="abilities" tooltip="Lista de habilidades">
       <!-- <li style="text-decoration:line-through">Apuntes en examen $200</li> -->
-      <li >Puntos Extra $300</li>
+      <li>Puntos Extra $300</li>
       <li>Pasar Puntos $300</li>
       <li style="text-decoration:line-through">Otro Intento $200</li>
     </ul>
@@ -59,17 +68,17 @@
     <br>
     <div class="insignias">Insignias conseguidas:
       <center>
-        <img tooltip="Mision Cuestioanrios" src="images/insgCuest.png" />
-        <img tooltip="Mision Actividades" src="images/insgaAct.png" />
-        <img tooltip="Mision Bitacora" src="images/insgBit.png" />
-        <img tooltip="Mision Proyecto" src="images/insgPlat.png" />
-        <img tooltip="Mision Puntos extra" src="images/sinInsgPuntos.png" />
-       <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
+        <img tooltip="Misión Cuestionarios" src="images/insgCuest.png" />
+        <img tooltip="Misión Actividades" src="images/insgaAct.png" />
+        <img tooltip="Misión Bitácora" src="images/insgBit.png" />
+        <img tooltip="Misión Proyecto" src="images/insgPlat.png" />
+        <img tooltip="Misión Puntos extra" src="images/sinInsgPuntos.png" />
+        <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
       </center>
     </div>
 
 
-    <div class="power stat" tooltip="Dinero">
+    <div class="power stat" tooltip="Monedas">
       200 <img src="images/dinero.png" />
     </div>
     <div class="defense stat" tooltip="Puntos y Rango">
@@ -81,8 +90,19 @@
   <br><br>
   <div class="tooltip"></div>
 
+  <div id="miModal" class="modal">
+    <div class="modal-contenido">
+      <a href="#"><img src="images/prompt_no.png" alt=""></a>
+      <h5>Selecciona un Mundo</h5>
+      <span>Mundo 1</span>
+      <span>Mundo 2</span>
+      <span>Mundo 3</span>
+    </div>
+  </div>
+  <script src="scripts/js.js"></script>
   <script src="scripts/tooltip.js" type="text/javascript"></script>
   <script>
+
     function myFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
