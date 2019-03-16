@@ -1,20 +1,22 @@
 var obj
 var salida = '';
 var valor;
-ft();
+var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
+ft(appi);
 window.onload = inicio;
 
 function inicio() {
 
     document.getElementById("texto").value = localStorage.getItem("id");
-    var arrayGuardado = JSON.parse(localStorage.getItem("obj"));
+    var arrayGuardado = JSON.parse(localStorage.getItem("newArray"));
+    console.log("arrayGuardado", arrayGuardado);
     salida = `
                 <h2 class="name">
                 ${arrayGuardado[0].equipo}
                 
                 </h2>
 
-                <div id="mundoActual" class="cost">Mundo 1
+                <div id="mundoActualC" class="cost ">Mundo ${localStorage.getItem("mundo")}
                 </div>
 
 
@@ -75,12 +77,43 @@ function inicio() {
     }
     document.getElementById("rangoCargado").src = rangoC;
 
+    /*   document.getElementById("actC").src = act;
+      var actC = "";
+      if (arrayGuardado[0].pROMACT < 10) {
+  
+          act = "images/sinInsigAct.png";
+      } else {
+  
+          actC = "images/insigAct.png";
+      }
+  
+      document.getElementById("actC").src = act; */
+
 };
+function cambiaMundo(num) {
+    var mundo = num;
+    localStorage.setItem("mundo", mundo);
+    if (localStorage.getItem("mundo") == 1) {
+        console.log(localStorage.getItem("mundo"));
+        document.body.style.backgroundImage = `url("images/fondo4.jpg")`;
+        appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
+        ft(appi);        
+    } else if (localStorage.getItem("mundo") == 2) {
+        console.log(localStorage.getItem("mundo"));
+        document.body.style.backgroundImage = `url("images/MundoC.png")`;
+        appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
+        ft(appi);
+    } else if (localStorage.getItem("mundo") == 3) {
+        console.log(localStorage.getItem("mundo"));
+        document.body.style.backgroundImage = `url("images/MundoD.png")`;
+        appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
+        ft(appi);
+    }
+}
 
+function ft(appi) {
 
-function ft() {
-
-    fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
+    fetch(appi)
         .then(function (response) {
             return response.json();
         })
@@ -88,31 +121,35 @@ function ft() {
             obj = data;
 
             console.log(obj);
+
         })
         .catch(function (err) {
             console.error(err);
         });
+
 }
-/* setInterval('ft()', 120000); */
-function ft2() {
+setInterval('ft(appi)', 120000);
+/* function ft2() {
     document.getElementById('mundoActual').innerHTML = `Mundo 2`;
-    document.body.style.backgroundImage=`url("images/MundoC.png")`;
+    document.body.style.backgroundImage = `url("images/MundoC.png")`;
     fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
         .then(function (response) {
             return response.json();
+            
         })
         .then(function (data) {
             obj = data;
             console.log(obj);
+            
         })
         .catch(function (err) {
             console.error(err);
         });
-}
+} */
 /* setInterval('ft2()', 120000); */
-function ft3() {
+/* function ft3() {
     document.getElementById('mundoActual').innerHTML = `Mundo 3`;
-    document.body.style.backgroundImage=`url("images/MundoD.png")`;
+    document.body.style.backgroundImage = `url("images/MundoD.png")`;
     fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
         .then(function (response) {
             return response.json();
@@ -120,11 +157,12 @@ function ft3() {
         .then(function (data) {
             obj = data;
             console.log(obj);
+            
         })
         .catch(function (err) {
             console.error(err);
         });
-}
+} */
 /* setInterval('ft3()', 120000); */
 
 function recibir() {
@@ -133,14 +171,14 @@ function recibir() {
     var newArray = obj.filter(function (el) {
         return (el.iD === localStorage.getItem("id"));
     });
-    localStorage.setItem("obj", JSON.stringify(newArray));
+    localStorage.setItem("newArray", JSON.stringify(newArray));
     salida = `
                 <h2 class="name ">
                 ${newArray[0].equipo}
                 
                 </h2>
 
-                <div id="mundoActual" class="cost">Mundo 1
+                <div id="mundoActual" class="cost ">Mundo ${localStorage.getItem("mundo")}
                 </div>
 
 
@@ -170,10 +208,10 @@ function recibir() {
                 <br>
                 <div class="insignias">Insignias conseguidas:
                     <center>
-                    <img id="cuest" title="Misión Cuestionarios" src="images//sinInsgCuest.png" />
-                    <img id="act" title="Misión Actividades" src="images//sinInsgAct.png" />
-                    <img id="bit" title="Misión Bitácora" src="images//sinInsgBit.png" />
-                    <img id="pro" title="Misión Proyecto" src="images//sinInsgPlat.png" />
+                    <img id="cuest" title="Misión Cuestionarios" src="images/sinInsgCuest.png" />
+                    <img id="act" title="Misión Actividades" src="images/sinInsgAct.png" />
+                    <img id="bit" title="Misión Bitácora" src="images/sinInsgBit.png" />
+                    <img id="pro" title="Misión Proyecto" src="images/sinInsgPlat.png" />
                     <img id="mas" title="Misión Puntos Extra" src="images/sinInsgPuntos.png" />
                     <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
                     </center>
@@ -207,8 +245,15 @@ function recibir() {
     } else if (newArray[0].fINAL == 10) {
         rango = "images/nivel3.png";
     }
-
     document.getElementById("rango").src = rango;
+
+    /* var act = "";
+    if (newArray[0].pROMACT == 10) {
+        act = "images/sinInsgAct.png";
+    } else {
+        act = "images/sinInsigAct.png";
+    }
+    document.getElementById("act").src = act; */
 
 }
 

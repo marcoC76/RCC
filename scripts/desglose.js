@@ -93,7 +93,7 @@ function inicio() {
 
 function ft() {
     
-    fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
+    fetch('https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31')
         .then(function (response) {
             return response.json();
         })
