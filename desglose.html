@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png?1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/desglose.js"></script>
 </head>
 
 <body>
@@ -16,99 +17,50 @@
         <a href="index.html">Perfil</a>
         <!-- <a href="mapa.html">Mapa</a> -->
         <a href="ayuda.html">Ayuda</a>
+        <a href="#miModal">Mundos</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
     <br>
     <br>
-
-    <h1>
-        ID: 44856D
-    </h1>
-
-
-
-
-    <div class="card">
-        <h2 class="name">
-            Datos Generales
-        </h2>
-        <div class="cost">Mundo 1
-        </div>
-        <h1>
-            STEELOS
-        </h1>
+    <div class="card2">
         <center>
-            <img src="images/caracter.png" />
-            <h2 class="name" tooltip="Clan al que perteneces">
-                Los Magios
-            </h2>
+            <form>
+                <input id="texto" onkeyup="recibir()" minlength="2" maxlength="3" type="text" name="search"
+                    placeholder="ID">
+            </form>
         </center>
-        <h2 class="name" tooltip="">
-            Asistencias:
-        </h2>
-        <h2 class="name">
-            Grupo:
-        </h2>
-        <h2 class="name">
-            Punto Extra: <img src="images/insgPuntos.png" />
-        </h2>
-        <h2 class="name" tooltip="">
-            Calificación Final:
-        </h2>
-        <center>
-            <h1>
-                APROBADO
-            </h1>
-            <img src="images/nivel2.png" />
-        </center>
-        <div class="sheen"></div>
     </div>
-    <br>
-    <div class="card">
-        <h2 class="name" tooltip="">
-            Actividades
-        </h2>
-        <div class="desglo">
-            <img tooltip="Mision Actividades" src="images/insgaAct.png" />
-        </div>
-        <div class="sheen"></div>
-    </div>
-    <br>
-    <div class="card">
-        <h2 class="name" tooltip="">
-            Cuestioanrios Previos
-        </h2>
-        <div class="desglo">
-            <img tooltip="Mision Cuestioanrios" src="images/insgCuest.png" />
-        </div>
-        <div class="sheen"></div>
-    </div>
-    <br>
-    <div class="card">
-        <h2 class="name" tooltip="">
-            Bitacora
-        </h2>
-        <div class="desglo">
-            <img tooltip="Mision Bitacora" src="images/insgBit.png" />
-        </div>
-        <div class="sheen"></div>
-    </div>
-    <br>
-    <div class="card">
-        <h2 class="name" tooltip="">
-            Proyecto
-        </h2>
-        <div class="desglo">
-            <img tooltip="Mision Proyecto" src="images/insgPlat.png" />
-        </div>
-        <div class="sheen"></div>
+
+
+
+    <div id="resultado">
+
     </div>
 
     <br><br>
     <div class="tooltip"></div>
-
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <a href="#"><img src="images/prompt_no.png" alt=""></a>
+            <h5>Selecciona un Mundo</h5>
+            <span>
+                <a href="index.html">
+                    Mundo 1
+                </a>
+            </span>
+            <span>
+                <a href="#" onclick="ft2();">
+                    Mundo 2
+                </a>
+            </span><span>
+                <a href="#" onclick="ft3();">
+                    Mundo 3
+                </a>
+            </span>
+        </div>
+    </div>
     <script src="scripts/tooltip.js" type="text/javascript"></script>
     <script>
         function myFunction() {

@@ -1,194 +1,190 @@
 var obj
 var salida = '';
+var valor;
 ft();
+window.onload = inicio;
+
+function inicio() {
+    
+    document.getElementById("texto").value = localStorage.getItem("id");
+    var arrayGuardado = JSON.parse(localStorage.getItem("obj"));
+    salida = `
+                <h2 class="name tooltip">
+                    <span class="tooltiptext">Clan al que perteneces</span>
+                    ${arrayGuardado[0].equipo}
+                </h2>
+
+                <div id="mundoActual" class="cost">Mundo 1
+                </div>
+
+
+
+                <div class="image"></div>
+                <div class="nick" style="color:white; text-align:center;font-size: 1.5em;" tooltip="Nombre de tu personaje">
+                ${arrayGuardado[0].nombre}
+                </div>
+                <br>
+
+
+                <ul class="abilities insignias" tooltip="Lista de habilidades">
+                    <span style="font-size:1em;">Habilidades:</span>
+                    <!-- <li style="text-decoration:line-through">Apuntes en examen $200</li> -->
+                    <li>Puntos Extra $300</li>
+                    <li>Pasar Puntos $300</li>
+                    <li style="text-decoration:line-through">Otro Intento $200</li>
+                </ul>
+
+
+                <div class="flavor-text" tooltip="Descripción">
+                    <center>
+                    "Algo interesante sobre mi personaje"
+                    </center>
+                </div>
+                <br>
+                <div class="insignias">Insignias conseguidas:
+                    <center>
+                    <img src="images/insgCuest.png" />
+                    <img tooltip="Misión Actividades" src="images/insgaAct.png" />
+                    <img tooltip="Misión Bitácora" src="images/insgBit.png" />
+                    <img tooltip="Misión Proyecto" src="images/insgPlat.png" />
+                    <img tooltip="Misión Puntos extra" src="images/sinInsgPuntos.png" />
+                    <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
+                    </center>
+                </div>
+
+
+                <div class="power stat" tooltip="Monedas">
+                    200 <img src="images/dinero.png" />
+                </div>
+                <div class="defense stat" tooltip="Puntos y Rango">
+                ${arrayGuardado[0].fINAL} <img src="images/nivel2.png" />
+                </div>
+                <div class="sheen"></div>   
+                `;
+    document.getElementById("resultado").innerHTML = salida;
+    
+};
+
+
 function ft() {
-    fetch('https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31')
+    
+    fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            obj = data
+            obj = data;
+            
+            console.log(obj);
         })
         .catch(function (err) {
             console.error(err);
         });
 }
 setInterval('ft()', 120000);
+function ft2() {
+    document.getElementById('mundoActual').innerHTML = `Mundo 2`;
+    
+    fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            obj = data;
+            console.log(obj);
+        })
+        .catch(function (err) {
+            console.error(err);
+        });
+}
+setInterval('ft2()', 120000);
+function ft3() {
+    document.getElementById('mundoActual').innerHTML = `Mundo 3`;
+   
+    fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            obj = data;
+            console.log(obj);
+        })
+        .catch(function (err) {
+            console.error(err);
+        });
+}
+setInterval('ft3()', 120000);
 
 function recibir() {
-    var valor = document.getElementById("texto").value;
+    valor = document.getElementById("texto").value;
+    localStorage.setItem("id", valor);
     var newArray = obj.filter(function (el) {
-        return (el.iD === valor);
+        return (el.iD === localStorage.getItem("id"));
     });
-
+    localStorage.setItem("obj",JSON.stringify(newArray));
     salida = `
-            <center> <h2 style="text-transform: uppercase;">${newArray[0].aPaterno.substr(0,1)+"·····"} ${newArray[0].aMaterno.substr(0,1)+"·····"} ${newArray[0].nombre.substr(0,1)+"·····"}</h2></center>            
-            <hr>
-            <div class="row">
-                <div class="col s12 m3 center">
-                    <h4>Grupo:<br> <a class="waves-effect waves-light btn-large btn-floating teal darken-4" style="font-size:90%;">${newArray[0].grupo}</a></h4>
+                <h2 class="name tooltip">
+                    <span class="tooltiptext">Clan al que perteneces</span>
+                    ${newArray[0].equipo}
+                </h2>
+
+                <div id="mundoActual" class="cost">Mundo 1
                 </div>
-                <div class="col s12 m3 center">
-                    <h5 style="text-transform: uppercase;"><a class="waves-effect btn waves-blue white blue-text" style="font-size:100%;">${newArray[0].equipo}</a> </h5>
+
+
+
+                <div class="image"></div>
+                <div class="nick" style="color:white; text-align:center;font-size: 1.5em;" tooltip="Nombre de tu personaje">
+                ${newArray[0].nombre}
                 </div>
-                <div class="col s12 m3 center">
-                    <h4>Asistencias:<br> <a class="waves-effect waves-light btn-large btn-floating red" style="font-size:90%;"> ${newArray[0].tOTALASIS}</a>
+                <br>
+
+
+                <ul class="abilities insignias" tooltip="Lista de habilidades">
+                    <span style="font-size:1em;">Habilidades:</span>
+                    <!-- <li style="text-decoration:line-through">Apuntes en examen $200</li> -->
+                    <li>Puntos Extra $300</li>
+                    <li>Pasar Puntos $300</li>
+                    <li style="text-decoration:line-through">Otro Intento $200</li>
+                </ul>
+
+
+                <div class="flavor-text" tooltip="Descripción">
+                    <center>
+                    "Algo interesante sobre mi personaje"
+                    </center>
                 </div>
-                <div class="col s12 m3 center">
-                    <h4>Punto Extra:<br> <a class="waves-effect waves-light btn-large btn-floating green" style="font-size:90%;"> ${newArray[0].pUNTOEX}</a></h4> 
-                    
+                <br>
+                <div class="insignias">Insignias conseguidas:
+                    <center>
+                    <img src="images/insgCuest.png" />
+                    <img tooltip="Misión Actividades" src="images/insgaAct.png" />
+                    <img tooltip="Misión Bitácora" src="images/insgBit.png" />
+                    <img tooltip="Misión Proyecto" src="images/insgPlat.png" />
+                    <img tooltip="Misión Puntos extra" src="images/sinInsgPuntos.png" />
+                    <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
+                    </center>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m12 center">
-                    <h4 id="estado" class="waves-effect waves-light btn-large purple pulse" style="font-size:2em;"></h4>
-                    <h3>Calificación Final: <a onclick="M.toast({html: 'Se obtiene sumando todos los puntos totales'})" class="waves-effect waves-light btn-large black pulse" style="font-size:90%;"> ${newArray[0].fINAL}</a> </h3>
+
+
+                <div class="power stat" tooltip="Monedas">
+                    200 <img src="images/dinero.png" />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card grey lighten-2 hoverable">
-                        <div class="card-content center">
-                            <span style="font-size:3em;font-weight:bold;" class="card-title center" >Actividades</span>
-                            <hr>
-                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;">${newArray[0].pUNTOSACT}</a>  
-                            <canvas id="myChart" width="100%"></canvas>
-                        </div>
-                        <div class="card-action center">
-                            Promedio: <a class="waves-effect waves-light btn green" style="font-size:90%;">${newArray[0].pROMACT}</a></h5>    
-                        </div>
-                    </div>
+                <div class="defense stat" tooltip="Puntos y Rango">
+                ${newArray[0].fINAL} <img src="images/nivel2.png" />
                 </div>
-                <div class="col s12 m6">
-                    <div class="card  teal lighten-4 hoverable">
-                        <div class="card-content center">
-                            <span style="font-size:3em;font-weight:bold;" class="card-title center">Cuestionarios</span>
-                            <hr>  
-                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;"> ${newArray[0].pUNTOSCUES}</a> 
-                            <canvas id="myChart2" width="100%"></canvas>
-                        </div>
-                        <div class="card-action center">
-                            Promedio: <a class="waves-effect waves-light btn green " style="font-size:90%;">${newArray[0].pROMCUES}</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card red lighten-4 hoverable">
-                        <div class="card-content center">
-                            <span style="font-size:3em;font-weight:bold;" class="card-title center">Proyecto</span>
-                            <hr>
-                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;">${newArray[0].pUNTOSPRO}</a></h5>
-                            <canvas id="myChart3" width="100%"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6">
-                    <div class="card blue lighten-4 hoverable">
-                        <div class="card-content center">
-                            <span style="font-size:3em;font-weight:bold;" class="card-title center">Bitácora</span>
-                            <hr>
-                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;">${newArray[0].pUNTOSBIT}</a></h5>
-                            <canvas id="myChart4" width="50"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    `;
+                <div class="sheen"></div>   
+                `;
     document.getElementById("resultado").innerHTML = salida;
-    var estado = "";
+    /* var estado = "";
     if (newArray[0].fINAL < 6) {
-        estado = "REPROBADO";
+    estado = "REPROBADO";
     } else {
-        estado = "APROBADO";
+    estado = "APROBADO";
     }
-    document.getElementById("estado").innerHTML = estado;
+    document.getElementById("estado").innerHTML = estado; */
 
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Act1", "Act2", "Act4", "Act5", "ActR"],
-            datasets: [{
-                label: 'Calificación',
-                data: [newArray[0].aCTIVIDAD1, newArray[0].aCTIVIDAD2, newArray[0].aCTIVIDAD4, newArray[0].aCTIVIDAD5, newArray[0].aCTIVIDADR],
-                backgroundColor: [
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(200, 100, 150, 0.6)',
-                    'rgba(153, 102, 255, 0.6)'
-                ]
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
-    var ctx = document.getElementById("myChart2");
-    var myChart2 = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Cuest1", "Cuest2", "Cuest3", "Cuest4", "Cuest5"],
-            datasets: [{
-                label: 'Calificación',
-                data: [newArray[0].cUESTIONARIO1, newArray[0].cUESTIONARIO2, newArray[0].cUESTIONARIO3, newArray[0].cUESTIONARIO4, newArray[0].cUESTIONARIO5],
-                backgroundColor: [
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(153, 102, 255, 0.6)'
-                ]
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
-    var ctx = document.getElementById("myChart3");
-    var myChart3 = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ["Proyecto", ""],
-            datasets: [{
-                label: 'Calificación',
-                data: [newArray[0].pROYECTO, 10 - newArray[0].pROYECTO],
-                backgroundColor: [
-                    'rgba(54, 162, 235, 0.6)'
-
-                ]
-            }]
-        }
-    });
-    var ctx = document.getElementById("myChart4");
-    var myChart4 = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ["Bitácora", ""],
-            datasets: [{
-                label: 'Calificación',
-                data: [newArray[0].bITACORA, 10 - newArray[0].bITACORA],
-                backgroundColor: [
-                    'rgba(153, 102, 255, 0.6)'
-                ]
-            }]
-        }
-
-    });
 }
+
 
 

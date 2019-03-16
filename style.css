@@ -262,37 +262,32 @@ p {
 }
 
 /* Tooltip styles */
-
 .tooltip {
-  display: none;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
-.tooltip {
-  position: fixed;
-  background: rgba(0, 0, 0, .85);
-  color: white;
-  font-weight: 400;
-  text-align: left;
-  font-size: 14px;
-  padding: 7px 10px 9px 10px;
-  z-index: 90000;
-  color: rgba(255, 255, 255, .8);
-  animation: tooltipPop .15s ease-out;
-  transform-origin: bottom left;
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
 }
 
-@keyframes tooltipPop {
-  0% {
-    transform: scale(.6);
-  }
-  60% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
-
 /* The shine on the card when you hover over it */
 
 .sheen {
@@ -440,6 +435,7 @@ input[type=text]:focus {
 }
 
 .modal-contenido{
+  
   color: white;
   font-family: "Pixel";
   text-align: center;
@@ -453,9 +449,14 @@ input[type=text]:focus {
   margin: 20% auto;
   position: relative;
 }
+.modal-contenido a{
+  text-decoration: none;
+  color: white;
+}
 .modal{
   background-color: rgba(0,0,0,.8);
   position:fixed;
+  
   top:0;
   right:0;
   bottom:0;

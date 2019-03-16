@@ -1,0 +1,73 @@
+<center> <h2 style="text-transform: uppercase;">${newArray[0].aPaterno.substr(0, 1) + "·····"} ${newArray[0].aMaterno.substr(0, 1) + "·····"} ${newArray[0].nombre.substr(0, 1) + "·····"}</h2></center>            
+            <hr>
+            <div class="row">
+                <div class="col s12 m3 center">
+                    <h4>Grupo:<br> <a class="waves-effect waves-light btn-large btn-floating teal darken-4" style="font-size:90%;">${newArray[0].grupo}</a></h4>
+                </div>
+                <div class="col s12 m3 center">
+                    <h5 style="text-transform: uppercase;"><a class="waves-effect btn waves-blue white blue-text" style="font-size:100%;">${newArray[0].equipo}</a> </h5>
+                </div>
+                <div class="col s12 m3 center">
+                    <h4>Asistencias:<br> <a class="waves-effect waves-light btn-large btn-floating red" style="font-size:90%;"> ${newArray[0].tOTALASIS}</a>
+                </div>
+                <div class="col s12 m3 center">
+                    <h4>Punto Extra:<br> <a class="waves-effect waves-light btn-large btn-floating green" style="font-size:90%;"> ${newArray[0].pUNTOEX}</a></h4> 
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 center">
+                    <h4 id="estado" class="waves-effect waves-light btn-large purple pulse" style="font-size:2em;"></h4>
+                    <h3>Calificación Final: <a onclick="M.toast({html: 'Se obtiene sumando todos los puntos totales'})" class="waves-effect waves-light btn-large black pulse" style="font-size:90%;"> ${newArray[0].fINAL}</a> </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card grey lighten-2 hoverable">
+                        <div class="card-content center">
+                            <span style="font-size:3em;font-weight:bold;" class="card-title center" >Actividades</span>
+                            <hr>
+                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;">${newArray[0].pUNTOSACT}</a>  
+                            <canvas id="myChart" width="100%"></canvas>
+                        </div>
+                        <div class="card-action center">
+                            Promedio: <a class="waves-effect waves-light btn green" style="font-size:90%;">${newArray[0].pROMACT}</a></h5>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card  teal lighten-4 hoverable">
+                        <div class="card-content center">
+                            <span style="font-size:3em;font-weight:bold;" class="card-title center">Cuestionarios</span>
+                            <hr>  
+                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;"> ${newArray[0].pUNTOSCUES}</a> 
+                            <canvas id="myChart2" width="100%"></canvas>
+                        </div>
+                        <div class="card-action center">
+                            Promedio: <a class="waves-effect waves-light btn green " style="font-size:90%;">${newArray[0].pROMCUES}</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card red lighten-4 hoverable">
+                        <div class="card-content center">
+                            <span style="font-size:3em;font-weight:bold;" class="card-title center">Proyecto</span>
+                            <hr>
+                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;">${newArray[0].pUNTOSPRO}</a></h5>
+                            <canvas id="myChart3" width="100%"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card blue lighten-4 hoverable">
+                        <div class="card-content center">
+                            <span style="font-size:3em;font-weight:bold;" class="card-title center">Bitácora</span>
+                            <hr>
+                            <h5>Puntos totales: <a class="waves-effect waves-light btn blue" style="font-size:90%;">${newArray[0].pUNTOSBIT}</a></h5>
+                            <canvas id="myChart4" width="50"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
