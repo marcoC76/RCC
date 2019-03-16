@@ -49,7 +49,7 @@ function inicio() {
             Actividades
         </h2>
         <div class="desglo">
-            <img tooltip="Mision Actividades" src="images/insgaAct.png" />
+            <img tooltip="Mision Actividades" src="images/insgAct.png" />
         </div>
         <div class="sheen"></div>
     </div>
@@ -92,7 +92,7 @@ function inicio() {
 
 
 function ft() {
-
+    
     fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
         .then(function (response) {
             return response.json();
@@ -108,7 +108,7 @@ function ft() {
 }
 setInterval('ft()', 120000);
 function ft2() {
-    
+    document.body.style.backgroundImage=`url("images/MundoC.png")`;
     document.getElementById('mundoActualDesg').innerHTML = `Mundo 2`;
     fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
         .then(function (response) {
@@ -124,7 +124,7 @@ function ft2() {
 }
 setInterval('ft2()', 120000);
 function ft3() {
-   
+    document.body.style.backgroundImage=`url("images/MundoD.png")`;
     document.getElementById('mundoActualDesg').innerHTML = `Mundo 3`;
     fetch('https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814')
         .then(function (response) {
@@ -189,7 +189,7 @@ function recibir() {
             Actividades
         </h2>
         <div class="desglo">
-            <img tooltip="Mision Actividades" src="images/insgaAct.png" />
+            <img tooltip="Mision Actividades" src="images/insgAct.png" />
         </div>
         <div class="sheen"></div>
     </div>
