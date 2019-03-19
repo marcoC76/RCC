@@ -15,12 +15,15 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-.ayuda{
+
+.ayuda {
   color: white;
 }
-.ayuda img{
+
+.ayuda img {
   width: 15%;
 }
+
 .title {
   color: aliceblue;
   text-align: center;
@@ -53,6 +56,7 @@ p {
   overflow: hidden;
   transition: all ease-out .2s;
 }
+
 .card2 {
   width: 280px;
   padding: 0 0 1% 0;
@@ -119,7 +123,6 @@ p {
   margin: 0 0 10px 0;
 }
 
-
 .cost {
   padding: 8px 20px 0px 0px;
   position: absolute;
@@ -135,6 +138,7 @@ p {
   width: 40%;
   right: 0;
 }
+
 .desglo {
   padding: 8px 20px 0px 0px;
   position: absolute;
@@ -145,6 +149,7 @@ p {
   color: aliceblue;
   vertical-align: middle;
 }
+
 .desglo img {
   width: 70%;
   right: 0;
@@ -163,7 +168,8 @@ p {
   background-repeat: no-repeat;
   animation: anima 1s forwards 0.5s ease;
 }
-.image:hover{
+
+.image:hover {
   background-image: url(images/personaje2.png);
 }
 
@@ -189,7 +195,8 @@ p {
 .abilities img {
   width: 9%;
 }
-.name img{
+
+.name img {
   width: 10%;
 }
 
@@ -260,8 +267,6 @@ p {
 .defense {
   right: 0;
 }
-
-
 
 /* The shine on the card when you hover over it */
 
@@ -342,7 +347,17 @@ p {
   color: white;
 }
 
+.cali {
+  background-color: #000;
+  font-size: 2em;
+}
+.tamaño {
+  font-size: 1.5em;
+}
+
 .topnav .icon {
+  color: #000;
+  background-color: rgb(255, 255, 255);
   display: none;
 }
 
@@ -398,7 +413,7 @@ input[type=text] {
   font-size: 2em;
   background-image: url('images/find_you.png');
   background-position: 10px 10px;
-  background-size: 25px; 
+  background-size: 25px;
   background-repeat: no-repeat;
   color: white;
   -webkit-transition: width 0.4s ease-in-out;
@@ -409,8 +424,7 @@ input[type=text]:focus {
   width: 100%;
 }
 
-.modal-contenido{
-  
+.modal-contenido {
   color: white;
   font-family: "Pixel";
   text-align: center;
@@ -424,28 +438,31 @@ input[type=text]:focus {
   margin: 20% auto;
   position: relative;
 }
-.modal-contenido a{
+
+.modal-contenido a {
   text-decoration: none;
   color: white;
 }
-.modal{
-  background-color: rgba(0,0,0,.8);
-  position:fixed;
-  
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  opacity:0;
-  pointer-events:none;
+
+.modal {
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
   transition: all 1s;
 }
 
-#miModal:target{
-  opacity:1;
-  pointer-events:auto;
+#miModal:target {
+  opacity: 1;
+  pointer-events: auto;
 }
+
 /* Tooltip styles */
+
 [data-tooltip] {
   position: relative;
   z-index: 10000;
@@ -453,8 +470,8 @@ input[type=text]:focus {
 }
 
 /* Hide the tooltip content by default */
-[data-tooltip]:before,
-[data-tooltip]:after {
+
+[data-tooltip]:before, [data-tooltip]:after {
   visibility: hidden;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -463,6 +480,7 @@ input[type=text]:focus {
 }
 
 /* Position tooltip above the element */
+
 [data-tooltip]:before {
   position: absolute;
   bottom: 150%;
@@ -484,6 +502,7 @@ input[type=text]:focus {
 }
 
 /* Triangle hack to make tooltip look like a speech bubble */
+
 [data-tooltip]:after {
   position: absolute;
   bottom: 150%;
@@ -500,8 +519,8 @@ input[type=text]:focus {
 }
 
 /* Show tooltip content on hover */
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
+
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
   visibility: visible;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
