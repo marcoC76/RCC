@@ -22,14 +22,14 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 2) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/MundoC.png")`;
+        document.body.style.backgroundImage = `url("images/fondo3.png")`;
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
         document.getElementById("resultado").innerHTML = "";
         document.getElementById('mundoActual').innerHTML = `Mundo 2`;
     } else if (localStorage.getItem("mundo") == 3) {
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/MundoD.png")`;
+        document.body.style.backgroundImage = `url("images/fondo5.jpg")`;
         document.getElementById('mundoActual').innerHTML = `Mundo 3`;
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
@@ -64,7 +64,8 @@ function recibir() {
     var newArray = obj.filter(function (el) {
         return (el.iD === localStorage.getItem("id"));
     });
-    localStorage.setItem("newArray", JSON.stringify(newArray));
+    console.log(newArray);
+    /* localStorage.setItem("newArray", JSON.stringify(newArray)); */
     salida = `
                 <h2 class="name ">
                     ${newArray[0].equipo}
@@ -76,7 +77,9 @@ function recibir() {
 
 
 
-                <div class="image"></div>
+                <div class="image">
+                    <img id="avatar" src="" width="100%">
+                </div>
                 <div class="nick" style="color:white; text-align:center;font-size: 1.5em;">
                 ${newArray[0].nombre}
                
@@ -179,6 +182,16 @@ function recibir() {
         mas = "images/sinInsgPuntos.png";
     }
     document.getElementById("mas").src = mas;
+   
+    var avatar = "";
+    if (newArray[0].avatar == 1) {
+        avatar = "images/personaje.png";
+        console.log("avatar", avatar);
+    } else {
+        avatar = "images/personaje2.png";
+        console.log("avatar", avatar);
+    }
+    document.getElementById("avatar").src = avatar;
 
 }
 
