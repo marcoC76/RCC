@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/RCC/?utm_source=homescreen",
   "icons": [
     {
       "src": "images/icon-72x72.png",
