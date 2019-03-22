@@ -50,7 +50,7 @@ p {
   background-color: #272b28;
   border: solid 10px #000000;
   width: 280px;
-  padding: 8px 12px 55px 12px;
+  padding: 8px 12px 20px 12px;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -149,7 +149,9 @@ p {
   color: aliceblue;
   vertical-align: middle;
 }
-
+#caracter{
+  width: 40%;
+}
 .desglo img {
   width: 70%;
   right: 0;
@@ -209,13 +211,24 @@ p {
   padding: 3px 12px;
   margin: 0 0 15px 0;
 }
-
+#mas{
+  width: 15%;
+}
 .insignias img {
   opacity: 0;
   width: 15%;
   animation: anima 1s forwards 1s ease;
 }
-
+#rango{
+  width: 15%;
+  opacity: 0;
+  animation: anima 1s forwards 1s ease;
+}
+#rango1{
+  width: 32%;
+  opacity: 0;
+  animation: anima 1s forwards 1s ease;
+}
 .nick {
   background: rgba(255, 255, 255, .3);
   margin-top: 0.5%;
@@ -348,8 +361,8 @@ p {
 }
 
 .cali {
-  background-color: #000;
-  font-size: 2em;
+  font-weight: bolder;
+  font-size: 1em;
 }
 .tamaño {
   font-size: 1.5em;
@@ -526,3 +539,10 @@ input[type=text]:focus {
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+#reaccion{
+  opacity: 0;
+  animation: anima 1s forwards 1s ease;
+}
+
+/* toast */

@@ -8,10 +8,12 @@
     <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png?1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="js-snackbar.min.css" />
     <script src="scripts/desglose.js"></script>
+    <script src="scripts/js.js"></script>
 </head>
 
-<body>
+<body >
     <div class="topnav" id="myTopnav">
         <a href="#" class="active">Desglose</a>
         <a href="index.html">Perfil</a>
@@ -66,15 +68,35 @@
             </span>
         </div>
     </div>
+    
+    <script src="scripts/js-snackbar.min.js"></script>
     <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
+      var mundoInfo = function () {
+        SnackBar({
+          message: "Mundo (periodo) que estas consultando",
+          status: "info"
+        })
+      }
+      var clanInfo = function () {
+        SnackBar({
+          message: "Clan al que perteneces",
+          status: "info"
+        })
+      }
+      var finalInfo = function () {
+        SnackBar({
+          message: "Se obtiene dividiendo tus puntos entre 100",
+          status: "info"
+        })
+      }
+      var pFinalInfo = function () {
+        SnackBar({
+          message: "Se obtiene sumando los puntos de cada misión",
+          status: "info"
+        })
+      }
+      
+  
     </script>
     <script>
             if('serviceWorker' in navigator){

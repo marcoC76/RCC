@@ -8,11 +8,11 @@
   <link rel="icon" type="image/png" sizes="128x128" href="images/icon-128x128.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="js-snackbar.min.css" />
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#000">
   <script src="scripts/busca.js"></script>
   <script src="scripts/js.js"></script>
-  <!-- <script src="scripts/tooltip.js" type="text/javascript"></script> -->
 
 </head>
 
@@ -72,26 +72,84 @@
       </span>
     </div>
   </div>
-  
+  <script src="scripts/js-snackbar.min.js"></script>
   <script>
-      if('serviceWorker' in navigator){
-        console.log("El Navegador admite service workers");
-        window.addEventListener('load', function(){
-          //navigator.serviceWorker.register('sw_offlinepage.js')
-          //navigator.serviceWorker.register('sw_offlinesite.js')
-          navigator.serviceWorker.register('sw.js')
-           
-           .then(function(registration){
-             console.log('Service worker registrado de modo correcto');
-             console.log('Scope: ' + registration.scope)
-          }, function(error){
+    var mundoInfo = function () {
+      SnackBar({
+        message: "Mundo (periodo) que estas consultando",
+        status: "info"
+      })
+    }
+    var clanInfo = function () {
+      SnackBar({
+        message: "Clan al que perteneces",
+        status: "info"
+      })
+    }
+    var actInfo = function () {
+      SnackBar({
+        message: "Misión Actividades",
+        status: "info"
+      })
+    }
+    var bitInfo = function () {
+      SnackBar({
+        message: "Misión Bitácora",
+        status: "info"
+      })
+    }
+    var proInfo = function () {
+      SnackBar({
+        message: "Misión Proyecto",
+        status: "info"
+      })
+    }
+    var cuestInfo = function () {
+      SnackBar({
+        message: "Misión Cuestionarios",
+        status: "info"
+      })
+    }
+    var puntosInfo = function () {
+      SnackBar({
+        message: "Tus puntos totales y rango",
+        status: "info"
+      })
+    }
+    var monedasInfo = function () {
+      SnackBar({
+        message: "Tus monedas",
+        status: "info"
+      })
+    }
+    var masInfo = function () {
+      SnackBar({
+        message: "Misión Puntos extra",
+        status: "info"
+      })
+    }
+
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      console.log("El Navegador admite service workers");
+      window.addEventListener('load', function () {
+        //navigator.serviceWorker.register('sw_offlinepage.js')
+        //navigator.serviceWorker.register('sw_offlinesite.js')
+        navigator.serviceWorker.register('sw.js')
+
+          .then(function (registration) {
+            console.log('Service worker registrado de modo correcto');
+            console.log('Scope: ' + registration.scope)
+          }, function (error) {
             console.log('El registro del Service worker ha fallado');
             console.log(error)
           });
-        });
-      }
-    </script>
-    
+      });
+    }
+  </script>
+
+
 </body>
 
 </html>

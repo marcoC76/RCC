@@ -14,27 +14,48 @@ function cambiaMundo(num) {
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
         document.body.style.backgroundImage = `url("images/fondo4.jpg")`;
-        document.getElementById('mundoActual').innerHTML = `Mundo 1`;
+        /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
         appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
         ft(appi);
-        document.getElementById("resultado").innerHTML = "";
+        document.getElementById("card").innerHTML = `                                                    
+                                                            
+                                                                <br>
+                                                                <h1>
+                                                                    Ingresa un ID valido
+                                                                </h1>
+                                                          
+                                                        `;
         limpiar();
     } else if (localStorage.getItem("mundo") == 2) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/fondo3.png")`;
+        document.body.style.backgroundImage = `url("images/MundoC.png")`;
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
-        document.getElementById("resultado").innerHTML = "";
-        document.getElementById('mundoActual').innerHTML = `Mundo 2`;
+        document.getElementById("card").innerHTML = `
+                                                            
+                                                                <br>
+                                                                <h1>
+                                                                    Ingresa un ID valido
+                                                                </h1>
+                                                            
+                                                        `;
+        /* document.getElementById('mundoActualDes').innerHTML = `Mundo 2`; */
     } else if (localStorage.getItem("mundo") == 3) {
+        limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/fondo5.jpg")`;
-        document.getElementById('mundoActual').innerHTML = `Mundo 3`;
+        document.body.style.backgroundImage = `url("images/MundoD.png")`;
+        /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
-        document.getElementById("resultado").innerHTML = "";
-        limpiar();
+        document.getElementById("card").innerHTML = `
+                                                            
+                                                                <br>
+                                                                <h1>
+                                                                    Ingresa un ID valido
+                                                                </h1>
+                                                            
+                                                        `;
     }
 }
 
@@ -67,12 +88,12 @@ function recibir() {
     console.log(newArray);
     /* localStorage.setItem("newArray", JSON.stringify(newArray)); */
     salida = `
-                <h2 class="name ">
+                <h2 onclick="clanInfo();" class="name ">
                     ${newArray[0].equipo}
                 
                 </h2>
 
-                <div id="mundoActual" class="cost">Mundo ${localStorage.getItem("mundo")}
+                <div onclick="mundoInfo();" id="mundoActual" class="cost">Mundo ${localStorage.getItem("mundo")}
                 </div>
 
 
@@ -104,33 +125,29 @@ function recibir() {
                 <br>
                 <div class="insignias">Insignias conseguidas:
                     <center>
-                    <img id="cuest" title="Misión Cuestionarios" src="images/sinInsgCuest.png" />
-                    <img id="act" title="Misión Actividades" src="images/sinInsgAct.png" />
-                    <img id="bit" title="Misión Bitácora" src="images/sinInsgBit.png" />
-                    <img id="pro" title="Misión Proyecto" src="images/sinInsgPlat.png" />
-                    <img id="mas" title="Misión Puntos Extra" src="images/sinInsgPuntos.png" />
+                    <img onclick="cuestInfo();" id="cuest" title="Misión Cuestionarios" src="images/sinInsgCuest.png" />
+                    <img onclick="actInfo();" id="act" title="Misión Actividades" src="images/sinInsgAct.png" />
+                    <img onclick="bitInfo();" id="bit" title="Misión Bitácora" src="images/sinInsgBit.png" />
+                    <img onclick="proInfo();" id="pro" title="Misión Proyecto" src="images/sinInsgPlat.png" />
+                    <img onclick="masInfo();" id="mas" title="Misión Puntos Extra" src="images/sinInsgPuntos.png" />
                     <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
                     </center>
                 </div>
 
 
-                <div class="power stat">
+                <div class="power stat" onclick="monedasInfo();">
                     0 <img title="Monedas" src="images/dinero.png" />
                 </div>
-                <div class="defense stat">
-                ${newArray[0].fINAL * 100}<img title="Puntos y rango" id="rango" src="images/nivel2.png" />
+                <div class="defense stat" onclick="puntosInfo();">
+                ${newArray[0].fINAL * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
                 </div>
                 <div class="sheen"></div>   
+                <br>
+                <br>
+                
                 `;
     document.getElementById("resultado").innerHTML = salida;
-    /* var estado = "";
-    if (newArray[0].fINAL < 6) {
-    estado = "REPROBADO";
-    } else {
-    estado = "APROBADO";
-    }
-    document.getElementById("estado").innerHTML = estado; */
-
+    
     var rango = "";
     if (newArray[0].fINAL < 6) {
         rango = "images/sinNivel.png";
@@ -141,7 +158,7 @@ function recibir() {
     } else if (newArray[0].fINAL == 10) {
         rango = "images/nivel3.png";
     }
-    document.getElementById("rango").src = rango;
+    document.getElementById("rango1").src = rango;
 
     var act = "";
     if (newArray[0].pROMACT == 10) {
@@ -184,12 +201,72 @@ function recibir() {
     document.getElementById("mas").src = mas;
    
     var avatar = "";
-    if (newArray[0].avatar == 1) {
-        avatar = "images/personaje.png";
-        console.log("avatar", avatar);
-    } else {
-        avatar = "images/personaje2.png";
-        console.log("avatar", avatar);
+    switch (newArray[0].avatar) {
+        case 1:
+            avatar = "images/personaje1.png";
+            break;
+        case 2:
+            avatar = "images/personaje1_H.png";
+            break;
+        case 3:
+            avatar = "images/personaje2.png";
+            break;
+        case 4:
+            avatar = "images/personaje2_H.png";
+            break;
+        case 5:
+            avatar = "images/personaje3.png";
+            break;
+        case 6:
+            avatar = "images/personaje3_H.png";
+            break;
+        case 7:
+            avatar = "images/personaje4.png";
+            break;
+        case 8:
+            avatar = "images/personaje4_H.png";
+            break;
+        case 9:
+            avatar = "images/personaje5.png";
+            break;
+        case 10:
+            avatar = "images/personaje5_H.png";
+            break;
+        case 11:
+            avatar = "images/personaje6.png";
+            break;
+        case 12:
+            avatar = "images/personaje6_H.png";
+            break;
+        case 13:
+            avatar = "images/personaje7.png";
+            break;
+        case 14:
+            avatar = "images/personaje7_H.png";
+            break;
+        case 15:
+            avatar = "images/personaje8.png";
+            break;
+        case 16:
+            avatar = "images/personaje8_H.png";
+            break;
+        case 17:
+            avatar = "images/personaje9.png";
+            break;
+        case 18:
+            avatar = "images/personaje9_H.png";
+            break;
+        case 19:
+            avatar = "images/personaje10.png";
+            break;
+        case 20:
+            avatar = "images/personaje10_H.png";
+            break;
+        case 0:
+            avatar = "images/personaje0.png";
+            break;
+        default:
+            break;
     }
     document.getElementById("avatar").src = avatar;
 
@@ -199,3 +276,8 @@ function limpiar() {
     document.getElementById("texto").value = "";
 }
 
+function launch_toast() {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
