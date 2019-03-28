@@ -13,7 +13,7 @@ function cambiaMundo(num) {
     localStorage.setItem("mundo", mundo);
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/fondo4.jpg")`;
+        document.body.style.backgroundColor = `url("images/fondo4.jpg")`;
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
         appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
         ft(appi);
