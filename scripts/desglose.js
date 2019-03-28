@@ -125,7 +125,7 @@ function recibir() {
                         </div>
                         <div class="abilities cali">
                             <br>
-                            <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> ${Math.round(newArray[0].pUNTOSACT+newArray[0].pUNTOSCUES+newArray[0].pUNTOSBIT+newArray[0].pUNTOSPRO) * 100}<span style="font-size:0.5em;">p</span></span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
+                            <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> ${(newArray[0].pUNTOSACT+newArray[0].pUNTOSCUES+newArray[0].pUNTOSBIT+newArray[0].pUNTOSPRO+newArray[0].pUNTOEX) * 100}<span style="font-size:0.5em;">p</span></span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
                             <h1 id="estado">
                                 REPROBADO
                             </h1>
@@ -434,18 +434,17 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act6", "Act7", "Act8", "Act9", "ActR", "LuzOnd", "Prac2"],
+                labels: ["Act6", "Act7", "Act8", "Act9", "ActR", "LuzOnd"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].aCTIVIDAD6, newArray[0].aCTIVIDAD7, newArray[0].aCTIVIDAD8, newArray[0].aCTIVIDAD9, newArray[0].aCTIVIDADR, newArray[0].lUZ_Y_ONDAS, newArray[0].pRACTICA2],
+                    data: [newArray[0].aCTIVIDAD6, newArray[0].aCTIVIDAD7, newArray[0].aCTIVIDAD8, newArray[0].aCTIVIDAD9, newArray[0].aCTIVIDADR, newArray[0].lUZ_Y_ONDAS],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
                         'rgba(255, 99, 132, 0.6)',
                         'rgba(200, 100, 150, 0.6)',
                         'rgba(153, 102, 255, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
                     ]
                 }]
             },

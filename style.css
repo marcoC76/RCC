@@ -149,9 +149,11 @@ p {
   color: aliceblue;
   vertical-align: middle;
 }
-#caracter{
+
+#caracter {
   width: 40%;
 }
+
 .desglo img {
   width: 70%;
   right: 0;
@@ -211,24 +213,29 @@ p {
   padding: 3px 12px;
   margin: 0 0 15px 0;
 }
-#mas{
+
+#mas {
   width: 15%;
 }
+
 .insignias img {
   opacity: 0;
   width: 15%;
   animation: anima 1s forwards 1s ease;
 }
-#rango{
+
+#rango {
   width: 15%;
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#rango1{
+
+#rango1 {
   width: 32%;
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
+
 .nick {
   background: rgba(255, 255, 255, .3);
   margin-top: 0.5%;
@@ -364,6 +371,7 @@ p {
   font-weight: bolder;
   font-size: 1em;
 }
+
 .tamaño {
   font-size: 1.5em;
 }
@@ -540,9 +548,8 @@ input[type=text]:focus {
   opacity: 1;
 }
 
-#reaccion{
+#reaccion {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
 
-/* toast */
