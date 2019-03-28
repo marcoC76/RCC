@@ -7,23 +7,23 @@ window.onload = inicio;
 
 function inicio() {
     localStorage.setItem("mundo", 1);
-};
+}
 function cambiaMundo(num) {
     var mundo = num;
     localStorage.setItem("mundo", mundo);
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundColor = `url("images/fondo4.jpg")`;
+        document.body.style.backgroundImage = `url("images/fondo4.jpg")`;
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
         appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
         ft(appi);
-        document.getElementById("card").innerHTML = `                                                    
-                                                            
+        document.getElementById("resultado").innerHTML = `                                                    
+                                                            <div class="card">
                                                                 <br>
                                                                 <h1>
                                                                     Ingresa un ID valido
                                                                 </h1>
-                                                          
+                                                            </div>
                                                         `;
         limpiar();
     } else if (localStorage.getItem("mundo") == 2) {
@@ -32,13 +32,13 @@ function cambiaMundo(num) {
         document.body.style.backgroundImage = `url("images/MundoC.png")`;
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
-        document.getElementById("card").innerHTML = `
-                                                            
+        document.getElementById("resultado").innerHTML = `
+                                                            <div class="card">
                                                                 <br>
                                                                 <h1>
                                                                     Ingresa un ID valido
                                                                 </h1>
-                                                            
+                                                            </div>
                                                         `;
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 2`; */
     } else if (localStorage.getItem("mundo") == 3) {
@@ -48,13 +48,13 @@ function cambiaMundo(num) {
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
-        document.getElementById("card").innerHTML = `
-                                                            
+        document.getElementById("resultado").innerHTML = `
+                                                            <div class="card">
                                                                 <br>
                                                                 <h1>
                                                                     Ingresa un ID valido
                                                                 </h1>
-                                                            
+                                                            </div>
                                                         `;
     }
 }
@@ -88,6 +88,7 @@ function recibir() {
     console.log(newArray);
     /* localStorage.setItem("newArray", JSON.stringify(newArray)); */
     salida = `
+    <div  class="card">
                 <h2 onclick="clanInfo();" class="name ">
                     ${newArray[0].equipo}
                 
@@ -144,7 +145,7 @@ function recibir() {
                 <div class="sheen"></div>   
                 <br>
                 <br>
-                
+            </div>
                 `;
     document.getElementById("resultado").innerHTML = salida;
     
