@@ -15,7 +15,7 @@ function cambiaMundo(num) {
     localStorage.setItem("mundo", mundo);
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/fondo4.jpg")`;
+        document.body.className= 'fondo1';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
         appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
         ft(appi);
@@ -31,7 +31,7 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 2) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/MundoC.png")`;
+        document.body.className= 'fondo2';
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -46,7 +46,7 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 3) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.style.backgroundImage = `url("images/MundoD.png")`;
+        document.body.className= 'fondo3';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
         appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
         ft(appi);
