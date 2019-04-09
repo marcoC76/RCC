@@ -68,55 +68,75 @@
             </span>
         </div>
     </div>
-    
+    <div id="miModal2" class="modal">
+        <div class="modal-contenido">
+            <a href="#"><img src="images/prompt_no.png" alt=""></a>
+            <ul style="list-style-type: none;">
+                <h4>Evaluación</h4>
+                <li>Cuestionarios: 20% <span>200 puntos</span>
+                </li>
+                <li>Actividades: 25% <span>250 puntos</span>
+                </li>
+                <li>Bitácora: 25% <span>250 puntos</span></li>
+                <li>Proyecto: 30% <span>300 puntos</span></li>
+            </ul>
+        </div>
+    </div>
+    <nav class="container2">
+
+
+
+        <a class="buttons" href="#miModal2"></a>
+
+    </nav>
     <script src="scripts/js-snackbar.min.js"></script>
     <script>
-      var mundoInfo = function () {
-        SnackBar({
-          message: "Mundo (periodo) que estas consultando",
-          status: "info"
-        })
-      }
-      var clanInfo = function () {
-        SnackBar({
-          message: "Clan al que perteneces",
-          status: "info"
-        })
-      }
-      var finalInfo = function () {
-        SnackBar({
-          message: "Se obtiene dividiendo tus puntos entre 100",
-          status: "info"
-        })
-      }
-      var pFinalInfo = function () {
-        SnackBar({
-          message: "Se obtiene sumando los puntos de cada misión",
-          status: "info"
-        })
-      }
-      
-  
+        var mundoInfo = function () {
+            SnackBar({
+                message: "Mundo (periodo) que estas consultando",
+                status: "info"
+            })
+        }
+        var clanInfo = function () {
+            SnackBar({
+                message: "Clan al que perteneces",
+                status: "info"
+            })
+        }
+        var finalInfo = function () {
+            SnackBar({
+                message: "Se obtiene dividiendo tus puntos entre 100",
+                status: "info"
+            })
+        }
+        var pFinalInfo = function () {
+            SnackBar({
+                message: "Se obtiene sumando los puntos de cada misión",
+                status: "info"
+            })
+        }
+
+
     </script>
     <script>
-            if('serviceWorker' in navigator){
-                console.log("El Navegador admite service workers");
-                window.addEventListener('load', function(){
-                    //navigator.serviceWorker.register('sw_offlinepage.js')
-                    //navigator.serviceWorker.register('sw_offlinesite.js')
-                    navigator.serviceWorker.register('sw.js')
-                   
-                   .then(function(registration){
-                       console.log('Service worker registrado de modo correcto');
-                       console.log('Scope: ' + registration.scope)
-                    }, function(error){
+        if ('serviceWorker' in navigator) {
+            console.log("El Navegador admite service workers");
+            window.addEventListener('load', function () {
+                //navigator.serviceWorker.register('sw_offlinepage.js')
+                //navigator.serviceWorker.register('sw_offlinesite.js')
+                navigator.serviceWorker.register('sw.js')
+
+                    .then(function (registration) {
+                        console.log('Service worker registrado de modo correcto');
+                        console.log('Scope: ' + registration.scope)
+                    }, function (error) {
                         console.log('El registro del Service worker ha fallado');
                         console.log(error)
                     });
-                });
-            }
-        </script>
-        
+            });
+        }
+    </script>
+
     <script src="scripts/Chart.min.js"></script>
 </body>
 
