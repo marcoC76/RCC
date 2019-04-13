@@ -639,6 +639,7 @@ input[type=text]:focus {
 }
 
 .edit {
+  color: white;
   position: absolute;
   top: 0;
   display: block;
