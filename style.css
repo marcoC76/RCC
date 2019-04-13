@@ -713,7 +713,7 @@ input[type=text]:focus {
   position: fixed;
   z-index: 300;
   transform: scale(0);
-  cursor: pointer;
+  
   box-shadow: 0px 2px 5px #666;
 }
 
@@ -805,7 +805,7 @@ input[type=text]:focus {
   line-height: 40px;
 }
 
-.reminder {
+/* .reminder {
   position: absolute;
   left: 0;
   right: 0;
@@ -813,9 +813,9 @@ input[type=text]:focus {
   top: 0;
   bottom: 0;
   line-height: 40px;
-}
+} */
 
-.profile {
+/* .profile {
   border-radius: 50%;
   width: 40px;
   position: absolute;
@@ -823,4 +823,4 @@ input[type=text]:focus {
   bottom: 0;
   margin: auto;
   right: 20px;
-}
+} */
