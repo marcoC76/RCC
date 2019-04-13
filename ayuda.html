@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" sizes="128x128" href="images/icon-128x128.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <meta name="theme-color" content="#000">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -61,25 +61,28 @@
             Cada habilidad tiene un costo y solo puede ser usada una vez por cada mundo.
         </p>
         <h3 style="color:white;">Puntos Extra: </h3>
-        <p>Activar esta habilidad cuesta 300 monedas, te da acceso una misión especial para obtener la insignia de Puntos Extra.
+        <p>Activar esta habilidad cuesta 300 monedas, te da acceso una misión especial para obtener la insignia de
+            Puntos Extra.
         </p>
         <h3 style="color:white;">Pasar Puntos: </h3>
-        <p>Activar esta habilidad cuesta 300 monedas te permite seleccionar a un compañero de cualquier Clan para pasarle 100 de tus puntos.
+        <p>Activar esta habilidad cuesta 300 monedas te permite seleccionar a un compañero de cualquier Clan para
+            pasarle 100 de tus puntos.
         </p>
         <h3 style="color:white;">Otro Intento: </h3>
         <p>Activar esta habilidad cuesta 200 monedas y te permite repetir una Misión para obtener mejor puntaje
         </p>
-       
+
         <div class="sheen"></div>
     </div>
     <br>
     <div class="card">
         <h1>Misiones</h1>
-        <p>Recibirás los puntos correspondientes a cada misión, pero la insignia y las monedas se consiguen con la puntuación máxima de cada misión</p>
-        <h3 class="ayuda" >Actividades: <img src="images/insgAct.png" /></h3>
+        <p>Recibirás los puntos correspondientes a cada misión, pero la insignia y las monedas se consiguen con la
+            puntuación máxima de cada misión</p>
+        <h3 class="ayuda">Actividades: <img src="images/insgAct.png" /></h3>
         <p>Completar esta misión otorga 200 monedas y un maximo de 250 puntos.
         </p>
-        <h3 class="ayuda" >Cuestionarios previos: <img src="images/insgCuest.png" /></h3>
+        <h3 class="ayuda">Cuestionarios previos: <img src="images/insgCuest.png" /></h3>
         <p>Completar esta misión otorga 200 monedas y un maximo de 200 puntos.
         </p>
         <h3 class="ayuda">Bitácora: <img src="images/insgBit.png" /></h3>
@@ -91,7 +94,7 @@
         <h3 class="ayuda">Puntos extra: <img src="images/insgPuntos.png" /></h3>
         <p>Completar esta misión otorga 100 monedas y 100 puntos.
         </p>
-        
+
 
         <div class="sheen"></div>
     </div>
@@ -110,24 +113,24 @@
         }
     </script>
     <script>
-            if('serviceWorker' in navigator){
-                console.log("El Navegador admite service workers");
-                window.addEventListener('load', function(){
-                    //navigator.serviceWorker.register('sw_offlinepage.js')
-                    //navigator.serviceWorker.register('sw_offlinesite.js')
-                    navigator.serviceWorker.register('sw.js')
-                   
-                   .then(function(registration){
-                       console.log('Service worker registrado de modo correcto');
-                       console.log('Scope: ' + registration.scope)
-                    }, function(error){
+        if ('serviceWorker' in navigator) {
+            console.log("El Navegador admite service workers");
+            window.addEventListener('load', function () {
+                //navigator.serviceWorker.register('sw_offlinepage.js')
+                //navigator.serviceWorker.register('sw_offlinesite.js')
+                navigator.serviceWorker.register('sw.js')
+
+                    .then(function (registration) {
+                        console.log('Service worker registrado de modo correcto');
+                        console.log('Scope: ' + registration.scope)
+                    }, function (error) {
                         console.log('El registro del Service worker ha fallado');
                         console.log(error)
                     });
-                });
-            }
-        </script>
-        
+            });
+        }
+    </script>
+
 </body>
 
 </html>
