@@ -48,7 +48,7 @@ function cambiaMundo(num) {
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo3';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
-        appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
+        appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
                                                             <div class="card">
@@ -260,15 +260,16 @@ function recibir() {
     } else if (newArray[0].fINAL <= 2) {
         reaccion = "images/reaccion_verguenza.png";
     } else if (newArray[0].fINAL <= 4) {
-        reaccion = "images/reaccion_resignacion.png";
+        reaccion = "images/reaccion_desepcion.png";
     } else if (newArray[0].fINAL == 5) {
-        reaccion = "images/reaccion_esfuerzo.png";
+        reaccion = "images/reaccion_resignacion.png";
     } else if (newArray[0].fINAL < 8) {
-        reaccion = "images/reaccion_neutral.png";
+        reaccion = "images/reaccion_esfuerzo.png";
     } else if (newArray[0].fINAL < 10) {
-        reaccion = "images/reaccion_orgullo.png";
+        reaccion = "images/reaccion_neutral.png";
     }else if (newArray[0].fINAL == 10) {
-        reaccion = "images/reaccion_alegre.png";
+        reaccion = "images/reaccion_orgullo.png";
+        /* reaccion = "images/reaccion_alegre.png"; */
     }
     document.getElementById("reaccion").src = reaccion;
 
@@ -470,6 +471,89 @@ function recibir() {
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
                         'rgba(75, 192, 192, 0.6)',
+                        'rgba(255, 99, 132, 0.6)'
+                    ]
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        var ctx = document.getElementById("proChart");
+        var proChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Proyecto", ""],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].pROYECTO, 10 - newArray[0].pROYECTO],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.6)'
+    
+                    ]
+                }]
+            }
+        });
+        var ctx = document.getElementById("bitChart");
+        var bitChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Bitácora", ""],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].bITACORA, 10 - newArray[0].bITACORA],
+                    backgroundColor: [
+                        'rgba(153, 102, 255, 0.6)'
+                    ]
+                }]
+            }
+    
+        });
+    }else if (localStorage.getItem("mundo") == 3){
+        var ctx = document.getElementById("actChart");
+        var actChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Act10", "Act11", "Act12", "ActR", "ElecMag"],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].aCTIVIDAD10, newArray[0].aCTIVIDAD11, newArray[0].aCTIVIDAD12, newArray[0].aCTIVIDADR, newArray[0].eLEC_Y_MAG],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(200, 100, 150, 0.6)',
+                        'rgba(54, 162, 235, 0.6)'
+                    ]
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        var ctx = document.getElementById("cuestChart");
+        var cuestChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Cuest10", "Cuest11", "Cuest12"],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].cUESTIONARIO10, newArray[0].cUESTIONARIO11, newArray[0].cUESTIONARIO12],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
                         'rgba(255, 99, 132, 0.6)'
                     ]
                 }]

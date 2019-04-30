@@ -49,7 +49,7 @@ function cambiaMundo(num) {
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #5e0303, #660304, #6f0304, #770304, #800404);`; */
         document.body.className= 'fondo3';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
-        appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
+        appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
                                                             <div class="card">

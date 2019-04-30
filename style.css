@@ -780,16 +780,19 @@ input[type=text]:focus {
   animation-fill-mode: forwards;
 }
 
+#container-floating:hover .nd1 {
+  animation-delay: 0.1s;
+}
+#container-floating:hover .nd2 {
+  animation-delay: 0.1s;
+}
+
 #container-floating:hover .nd3 {
-  animation-delay: 0.08s;
+  animation-delay: 0.12s;
 }
 
 #container-floating:hover .nd4 {
-  animation-delay: 0.15s;
-}
-
-#container-floating:hover .nd5 {
-  animation-delay: 0.2s;
+  animation-delay: 0.14s;
 }
 
 .letter {
