@@ -104,7 +104,9 @@
         </div>
 
     </div>
+    <footer id="footer">
 
+    </footer>
 
     <script src="scripts/js-snackbar.min.js"></script>
     <script>
@@ -132,7 +134,20 @@
                 status: "info"
             })
         }
-
+        if (navigator.onLine) {
+            // el navegador está conectado a la red
+        } else {
+            // el navegador NO está conectado a la red
+            console.log("No hay internet");
+            var internet = `
+                              <div class="">
+                                <span class="white-text" style="font-size:2em;text-transform:upperCase;">
+                                  Necesitas conexión a internet para consultar las calificaciones más recientes
+                                </span>
+                              </div>
+                        `;
+            document.getElementById("footer").innerHTML = internet;
+        }
 
     </script>
     <script>

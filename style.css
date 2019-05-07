@@ -593,7 +593,7 @@ input[type=text]:focus {
   border-radius: 50%;
   background: #003a1d;
   position: fixed;
-  bottom: 10px;
+  bottom: 25px;
   right: 10px;
   
   box-shadow: 0px 2px 5px #666;
@@ -809,22 +809,15 @@ input[type=text]:focus {
   line-height: 40px;
 }
 
-/* .reminder {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  line-height: 40px;
-} */
+/* footer */
 
-/* .profile {
-  border-radius: 50%;
-  width: 40px;
-  position: absolute;
-  top: 0;
+#footer {
+  position: fixed;
+  left: 0;
   bottom: 0;
-  margin: auto;
-  right: 20px;
-} */
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 0.5em;
+}
