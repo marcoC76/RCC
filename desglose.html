@@ -21,7 +21,7 @@
         <!-- <a href="mapa.html">Mapa</a> -->
         <a href="ayuda.html">Ayuda</a>
         <a href="#miModal" onclick="myFunction()">Mundos</a>
-        <a nclick="javascript:self.close();" href="#">Salir</a>
+        
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -135,26 +135,8 @@
                 status: "info"
             })
         }
-        if (navigator.onLine) {
-            // el navegador está conectado a la red
-        } else {
-            // el navegador NO está conectado a la red
-            console.log("No hay internet");
-            var internet = `
-                              <div class="">
-                                <span class="white-text" style="font-size:2em;text-transform:upperCase;">
-                                  Necesitas conexión a internet para consultar las calificaciones más recientes
-                                </span>
-                              </div>
-                        `;
-            document.getElementById("footer").innerHTML = internet;
-        }
+        
 
-    </script>
-    <script language="javascript" type="text/javascript">
-        function cerrar() {
-            window.close();
-        } 
     </script>
     <script>
         if ('serviceWorker' in navigator) {

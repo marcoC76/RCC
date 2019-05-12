@@ -7,6 +7,20 @@ window.onload = inicio;
 
 function inicio() {
     localStorage.setItem("mundo", 1);
+    if (navigator.onLine) {
+        // el navegador está conectado a la red
+    } else {
+        // el navegador NO está conectado a la red
+        console.log("No hay internet");
+        var internet = `
+                          <div class="">
+                            <span class="white-text" style="font-size:2em;text-transform:upperCase;">
+                              Necesitas conexión a internet para consultar las calificaciones más recientes
+                            </span>
+                          </div>
+                    `;
+        document.getElementById("footer").innerHTML = internet;
+    }
 }
 function cambiaMundo(num) {
     var mundo = num;

@@ -23,7 +23,7 @@
     <!--  <a href="/mapa.html">Mapa</a> -->
     <a href="ayuda.html">Ayuda</a>
     <a href="#miModal" onclick="myFunction()">Mundos</a>
-    <a nclick="javascript:self.close();" href="#">Salir</a>
+    
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -171,7 +171,7 @@
         status: "info"
       })
     }
-    if (navigator.onLine) {
+    /* if (navigator.onLine) {
       // el navegador está conectado a la red
     } else {
       // el navegador NO está conectado a la red
@@ -184,13 +184,9 @@
                               </div>
                         `;
       document.getElementById("footer").innerHTML = internet;
-    }
+    } */
   </script>
-  <script language="javascript" type="text/javascript">
-    function cerrar() {
-      window.close();
-    } 
-  </script>
+  
   <script>
     if ('serviceWorker' in navigator) {
       console.log("El Navegador admite service workers");
