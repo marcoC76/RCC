@@ -21,6 +21,7 @@
         <!-- <a href="mapa.html">Mapa</a> -->
         <a href="ayuda.html">Ayuda</a>
         <a href="#miModal" onclick="myFunction()">Mundos</a>
+        <a href="#" onclick="cerrar();">Salir</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -149,6 +150,12 @@
             document.getElementById("footer").innerHTML = internet;
         }
 
+    </script>
+    <script language="javascript" type="text/javascript">
+        function cerrar() {
+            window.open('', '_parent', '');
+            window.close();
+        } 
     </script>
     <script>
         if ('serviceWorker' in navigator) {
