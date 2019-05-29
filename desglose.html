@@ -21,7 +21,7 @@
         <!-- <a href="mapa.html">Mapa</a> -->
         <a href="ayuda.html">Ayuda</a>
         <a href="#miModal" onclick="myFunction()">Mundos</a>
-        
+
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -135,7 +135,12 @@
                 status: "info"
             })
         }
-        
+        var conexion = function () {
+            SnackBar({
+                message: "Necesitas conexión para consultar las calificaciones mas recientes",
+                status: "danger"
+            })
+        }
 
     </script>
     <script>

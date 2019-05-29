@@ -171,6 +171,12 @@
         status: "info"
       })
     }
+    var conexion = function () {
+      SnackBar({
+        message: "Necesitas conexión para consultar las calificaciones mas recientes",
+        status: "danger"
+      })
+    }
     /* if (navigator.onLine) {
       // el navegador está conectado a la red
     } else {

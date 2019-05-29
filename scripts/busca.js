@@ -1,7 +1,8 @@
 var obj
 var salida = '';
 var valor;
-var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
+/* var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31"; */
+var appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
 ft(appi);
 window.onload = inicio;
 
@@ -13,9 +14,9 @@ function inicio() {
         // el navegador NO está conectado a la red
         console.log("No hay internet");
         var internet = `
-                          <div class="">
-                            <span class="white-text" style="font-size:2em;text-transform:upperCase;">
-                              Necesitas conexión a internet para consultar las calificaciones más recientes
+                          <div onclick="conexion();" class="">
+                            <span  class="white-text" style="font-size:2em;text-transform:upperCase;">
+                                SIN CONEXIÓN
                             </span>
                           </div>
                     `;
@@ -28,9 +29,10 @@ function cambiaMundo(num) {
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #3d2f66, #4a3470, #58397a, #673e83, #76438c);`; */
-        document.body.className= 'fondo1';
+        document.body.className = 'fondo1';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
-        appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
+        /* appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31"; */
+        appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
         ft(appi);
         document.getElementById("resultado").innerHTML = `                                                    
                                                             <div class="card">
@@ -45,8 +47,9 @@ function cambiaMundo(num) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #1a035e, #24057c, #2e079c, #380abc, #430dde);`; */
-        document.body.className= 'fondo2';
-        appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
+        document.body.className = 'fondo2';
+        /* appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814"; */
+        appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
                                                             <div class="card">
@@ -61,7 +64,7 @@ function cambiaMundo(num) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #5e0303, #660304, #6f0304, #770304, #800404);`; */
-        document.body.className= 'fondo3';
+        document.body.className = 'fondo3';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
         appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
         ft(appi);
@@ -128,16 +131,16 @@ function recibir() {
 
                 <ul class="abilities insignias" >
                     <span style="font-size:1em;">Habilidades:</span>
-                    <!-- <li style="text-decoration:line-through">Apuntes en examen $200</li> -->
-                    <li style="text-decoration:line-through">Puntos Extra $300</li>
-                    <li style="text-decoration:line-through">Pasar Puntos $300</li>
+                    <li id="habilidad1" >Apuntes en examen $200</li>
+                    <li id="habilidad2" >Puntos Extra $300</li>
+                    <li id="habilidad3" >Pasar Puntos $300</li>
                     <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
                 </ul>
 
 
                 <div class="flavor-text">
                     <center>
-                    "Algo interesante sobre mi personaje"
+                    " ${newArray[0].dESCRIPCION}"
                     </center>
                 </div>
                 <br>
@@ -154,7 +157,7 @@ function recibir() {
 
 
                 <div class="power stat" onclick="monedasInfo();">
-                    0 <img title="Monedas" src="images/dinero.png" />
+                ${newArray[0].mONEDAS_TOTAL} <img title="Monedas" src="images/dinero.png" />
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
                 ${newArray[0].fINAL * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
@@ -165,7 +168,7 @@ function recibir() {
             </div>
                 `;
     document.getElementById("resultado").innerHTML = salida;
-    
+
     var rango = "";
     if (newArray[0].fINAL < 6) {
         rango = "images/sinNivel.png";
@@ -209,7 +212,7 @@ function recibir() {
         pro = "images/sinInsgPlat.png";
     }
     document.getElementById("pro").src = pro;
-   
+
     var mas = "";
     if (newArray[0].pUNTOEX == 1) {
         mas = "images/insgPuntos.png";
@@ -217,7 +220,18 @@ function recibir() {
         mas = "images/sinInsgPuntos.png";
     }
     document.getElementById("mas").src = mas;
-   
+
+    /* habilidades */
+    if (newArray[0].hABILIDAD1 == 1) {
+        document.getElementById("habilidad1").style.textDecoration = "line-through";
+        
+    } 
+    if (newArray[0].hABILIDAD2 == 1) {
+        document.getElementById("habilidad2").style.textDecoration = "line-through";
+    }
+    if (newArray[0].hABILIDAD3 == 1) {
+        document.getElementById("habilidad3").style.textDecoration = "line-through";
+    }
     var avatar = "";
     switch (newArray[0].avatar) {
         case 1:
@@ -297,5 +311,5 @@ function limpiar() {
 function launch_toast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
 }

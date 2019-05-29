@@ -14,11 +14,11 @@ function inicio() {
         // el navegador NO está conectado a la red
         console.log("No hay internet");
         var internet = `
-                          <div class="">
-                            <span class="white-text" style="font-size:2em;text-transform:upperCase;">
-                              Necesitas conexión a internet para consultar las calificaciones más recientes
+                        <div onclick="conexion();" class="">
+                            <span  class="white-text" style="font-size:2em;text-transform:upperCase;">
+                                SIN CONEXIÓN
                             </span>
-                          </div>
+                        </div>
                     `;
         document.getElementById("footer").innerHTML = internet;
     }
