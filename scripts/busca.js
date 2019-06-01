@@ -15,7 +15,7 @@ function inicio() {
         console.log("No hay internet");
         var internet = `
                           <div onclick="conexion();" class="">
-                            <span  class="white-text" style="font-size:2em;text-transform:upperCase;">
+                            <span  class="white-text" style="font-size:1.8em;text-transform:upperCase;">
                                 SIN CONEXIÓN
                             </span>
                           </div>
