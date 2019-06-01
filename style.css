@@ -827,9 +827,9 @@ input[type=text]:focus {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2%;
   background-color: red;
   color: white;
   text-align: center;
+  vertical-align: middle;
   /* font-size: 0.5em; */
 }
