@@ -156,7 +156,7 @@ function recibir() {
                         Actividades
                     </h2>
                     <div class="desglo">
-                        <img id="act"  src="images/insgAct.png" />
+                        <img onclick="actInfo()" id="act"  src="images/insgAct.png" />
                     </div>
                     <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${newArray[0].pUNTOSACT*100}</span></h4>
                     <canvas id="actChart" width="100%"></canvas>
@@ -171,7 +171,7 @@ function recibir() {
                         Cuestionarios Previos
                     </h2>
                     <div class="desglo">
-                        <img id="cuest" src="images/insgCuest.png" />
+                        <img onclick="cuestInfo()" id="cuest" src="images/insgCuest.png" />
                     </div>
                     <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;"> ${newArray[0].pUNTOSCUES*100}</a> </h4>
                     <canvas id="cuestChart" width="100%"></canvas>
@@ -187,7 +187,7 @@ function recibir() {
                         Bitácora
                     </h2>
                     <div class="desglo">
-                        <img id="bit"  src="images/insgBit.png" />
+                        <img onclick="bitInfo()" id="bit"  src="images/insgBit.png" />
                     </div>
                     <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].pUNTOSBIT*100}</a></h4>
                     <canvas id="bitChart" width="50"></canvas>
@@ -199,7 +199,7 @@ function recibir() {
                     Proyecto
                     </h2>
                     <div class="desglo">
-                        <img id="pro" src="images/insgPlat.png" />
+                        <img onclick="proInfo()" id="pro" src="images/insgPlat.png" />
                     </div>
                     <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].pUNTOSPRO*100}</a></h4>
                     <canvas id="proChart" width="100%"></canvas>

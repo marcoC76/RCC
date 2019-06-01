@@ -128,22 +128,22 @@ function recibir() {
                 </div>
                 <br>
 
-
-                <ul class="abilities insignias" >
-                    <span style="font-size:1em;">Habilidades:</span>
-                    <li id="habilidad1" >Apuntes en examen $200</li>
-                    <li id="habilidad2" >Puntos Extra $300</li>
-                    <li id="habilidad3" >Pasar Puntos $300</li>
-                    <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
-                </ul>
-
-
                 <div class="flavor-text">
                     <center>
                     " ${newArray[0].dESCRIPCION}"
                     </center>
                 </div>
                 <br>
+                <ul class="abilities insignias" >
+                    <span style="font-size:1em;">Habilidades:</span>
+                    <li id="habilidad1" >Apuntes en examen <span style="font-family:Poke;font-size:0.6em;">$</span>200</li>
+                    <li id="habilidad2" >Puntos Extra <span style="font-family:Poke;font-size:0.6em;">$</span>300</li>
+                    <li id="habilidad3" >Pasar Puntos <span style="font-family:Poke;font-size:0.6em;">$</span>300</li>
+                    <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
+                </ul>
+
+
+               
                 <div class="insignias">Insignias conseguidas:
                     <center>
                     <img onclick="cuestInfo();" id="cuest" title="Misión Cuestionarios" src="images/sinInsgCuest.png" />
@@ -157,7 +157,7 @@ function recibir() {
 
 
                 <div class="power stat" onclick="monedasInfo();">
-                ${newArray[0].mONEDAS_TOTAL} <img title="Monedas" src="images/dinero.png" />
+                ${newArray[0].mONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span> <img title="Monedas" src="images/dinero.png" />
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
                 ${newArray[0].fINAL * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
