@@ -823,6 +823,7 @@ input[type=text]:focus {
 /* footer */
 
 #footer {
+  padding-top: 5px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -830,6 +831,4 @@ input[type=text]:focus {
   background-color: red;
   color: white;
   text-align: center;
-  vertical-align: middle;
-  /* font-size: 0.5em; */
 }

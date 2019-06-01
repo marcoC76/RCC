@@ -14,8 +14,8 @@ function inicio() {
         // el navegador NO está conectado a la red
         console.log("No hay internet");
         var internet = `
-                        <div onclick="conexion();" class="">
-                            <span  class="white-text" style="font-size:1.5em;text-transform:upperCase;">
+                        <div onclick="conexion();" class="conexion">
+                            <span  class="white-text" style="font-size:2em;text-transform:upperCase;">
                                 SIN CONEXIÓN
                             </span>
                         </div>
