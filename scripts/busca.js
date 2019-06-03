@@ -136,9 +136,9 @@ function recibir() {
                 <br>
                 <ul class="abilities insignias" >
                     <span style="font-size:1em;">Habilidades:</span>
-                    <li id="habilidad1" >Apuntes en examen <span style="font-family:Poke;font-size:0.6em;">$</span>200</li>
-                    <li id="habilidad2" >Puntos Extra <span style="font-family:Poke;font-size:0.6em;">$</span>300</li>
-                    <li id="habilidad3" >Pasar Puntos <span style="font-family:Poke;font-size:0.6em;">$</span>300</li>
+                    <li id="habilidad1" >Apuntes en examen 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad2" >Puntos Extra 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad3" >Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
                     <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
                 </ul>
 

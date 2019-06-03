@@ -160,6 +160,7 @@ function recibir() {
                     </div>
                     <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${newArray[0].pUNTOSACT*100}</span></h4>
                     <canvas id="actChart" width="100%"></canvas>
+
                     <center class="abilities">
                     <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].pROMACT}</span></h4>
                     </center>
@@ -191,6 +192,10 @@ function recibir() {
                     </div>
                     <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].pUNTOSBIT*100}</a></h4>
                     <canvas id="bitChart" width="50"></canvas>
+                    <br>
+                    <center class="abilities">
+                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].bITACORA}</a></h4>
+                    </center>
                     <div class="sheen"></div>
                     </div>
                     <br>
@@ -203,6 +208,10 @@ function recibir() {
                     </div>
                     <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].pUNTOSPRO*100}</a></h4>
                     <canvas id="proChart" width="100%"></canvas>
+                    <br>
+                    <center class="abilities">
+                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].pROYECTO}</a></h4>
+                    </center>
                     <div class="sheen"></div>
                 </div>                  
                 `;
