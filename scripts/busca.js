@@ -129,16 +129,16 @@ function recibir() {
                 <br>
 
                 <div class="flavor-text">
-                    <center>
-                    " ${newArray[0].dESCRIPCION}"
+                    <center id="descripcion">
+                    "${newArray[0].dESCRIPCION}"
                     </center>
                 </div>
                 <br>
                 <ul class="abilities insignias" >
                     <span style="font-size:1em;">Habilidades:</span>
-                    <li id="habilidad1" >Apuntes en examen 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad2" >Puntos Extra 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad3" >Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad1" >Puntos Extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad2" >Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad3"></li>
                     <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
                 </ul>
 
@@ -233,74 +233,115 @@ function recibir() {
         document.getElementById("habilidad3").style.textDecoration = "line-through";
     }
     var avatar = "";
+    var habilidad="";
+    var descipcion="";
     switch (newArray[0].avatar) {
         case 1:
             avatar = "images/personaje1.png";
+            habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='Ama la ciudad, su fortaleza es una memoria prodigiosa';
             break;
         case 2:
             avatar = "images/personaje1_H.png";
+            habilidad = 'Otro Intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 3:
             avatar = "images/personaje2.png";
+            habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 4:
             avatar = "images/personaje2_H.png";
+            habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             break;
         case 5:
             avatar = "images/personaje3.png";
+            habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 6:
             avatar = "images/personaje3_H.png";
+            habilidad = 'Escuchar Música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             break;
         case 7:
             avatar = "images/personaje4.png";
+            habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 8:
             avatar = "images/personaje4_H.png";
+            habilidad = 'Otro Intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 9:
             avatar = "images/personaje5.png";
+            habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 10:
             avatar = "images/personaje5_H.png";
+            habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             break;
         case 11:
             avatar = "images/personaje6.png";
+            habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 12:
             avatar = "images/personaje6_H.png";
+            habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             break;
         case 13:
             avatar = "images/personaje7.png";
+            habilidad = 'Escuchar Música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 14:
             avatar = "images/personaje7_H.png";
+            habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 15:
             avatar = "images/personaje8.png";
+            habilidad = 'Otro Intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 16:
             avatar = "images/personaje8_H.png";
+            habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 17:
             avatar = "images/personaje9.png";
+            habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 18:
             avatar = "images/personaje9_H.png";
+            habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 19:
             avatar = "images/personaje10.png";
+            habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 20:
             avatar = "images/personaje10_H.png";
+            habilidad = 'Escuchar Música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         case 0:
             avatar = "images/personaje0.png";
+            habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion ='';
             break;
         default:
             break;
     }
     document.getElementById("avatar").src = avatar;
+    document.getElementById("habilidad3").innerHTML = habilidad;
 
 }
 
