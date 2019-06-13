@@ -294,6 +294,7 @@ function recibir() {
         case 12:
             avatar = "images/personaje6_H.png";
             habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            descripcion = 'Su mente prodigiosa le permite actuar con rápidez';
             break;
         case 13:
             avatar = "images/personaje7.png";
