@@ -9,6 +9,7 @@
   src: url("Pokemon-Classic.woff");
 }
 
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 body {
   font-family: "Pixel";
@@ -73,7 +74,8 @@ p {
 }
 
 .card {
-  background-color: #272b28;
+  /* background-color: #272b28; */
+  background: linear-gradient(to left, #1f1d1d 0%,#1f1d1d 50%,#1f1d1d 50%,#242222 50%,#242222 100%);
   border: solid 10px #000000;
   width: 280px;
   padding: 8px 12px 20px 12px;
@@ -82,6 +84,7 @@ p {
   overflow: hidden;
   transition: all ease-out .2s;
 }
+
 
 .card2 {
   width: 280px;
@@ -226,6 +229,7 @@ p {
 
 .abilities img {
   width: 9%;
+ 
 }
 
 .name img {
@@ -243,12 +247,12 @@ p {
 }
 
 #mas {
-  width: 15%;
+  /* width: 10%; */
 }
 
 .insignias img {
   opacity: 0;
-  width: 15%;
+  width: 14%;
   animation: anima 1s forwards 1s ease;
 }
 
@@ -271,6 +275,7 @@ p {
 }
 
 .abilities li {
+	
   color: aliceblue;
   padding: 8px 0;
   font-size: 14px;
@@ -279,6 +284,7 @@ p {
 
 .abilities li:last-child {
   border: none;
+
 }
 
 .flavor-text {

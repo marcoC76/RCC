@@ -114,7 +114,7 @@ function recibir() {
     salida = `
     <div  class="card">
                 <h2 onclick="clanInfo();" class="name ">
-                    ${newArray[0].Equipo}
+                    ${newArray[0].EQUIPO}
                 
                 </h2>
 
@@ -127,7 +127,7 @@ function recibir() {
                     <img id="avatar" src="" width="100%">
                 </div>
                 <div class="nick" style="color:white; text-align:center;font-size: 1.5em;">
-                ${newArray[0].nICK}
+                ${newArray[0].NICK}
                
                 </div>
                 <br>
@@ -140,8 +140,8 @@ function recibir() {
                 <br>
                 <ul class="abilities insignias" >
                     <span style="font-size:1em;">Habilidades:</span>
-                    <li id="habilidad1" >Puntos Extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad2" >Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad1" > Puntos Extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad2" > Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
                     <li id="habilidad3"></li>
                     <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
                 </ul>
@@ -154,6 +154,7 @@ function recibir() {
                     <img onclick="actInfo();" id="act" title="Misión Actividades" src="images/sinInsgAct.png" />
                     <img onclick="bitInfo();" id="bit" title="Misión Bitácora" src="images/sinInsgBit.png" />
                     <img onclick="proInfo();" id="pro" title="Misión Proyecto" src="images/sinInsgPlat.png" />
+                    <img onclick="plaInfo();" id="pla" title="Misión Plataforma" src="images/sinInsgPro.png" />
                     <img onclick="masInfo();" id="mas" title="Misión Puntos Extra" src="images/sinInsgPuntos.png" />
                     <!--  <img tooltip="Mision Puntos extra" src="images/insgPuntos.png" /> -->
                     </center>
@@ -161,7 +162,7 @@ function recibir() {
 
 
                 <div class="power stat" onclick="monedasInfo();">
-                ${newArray[0].mONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span> <img title="Monedas" src="images/dinero.png" />
+                ${newArray[0].MONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span> <img title="Monedas" src="images/dinero.png" />
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
                 ${newArray[0].FINAL * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
@@ -216,6 +217,14 @@ function recibir() {
         pro = "images/sinInsgPlat.png";
     }
     document.getElementById("pro").src = pro;
+    
+    var pla = "";
+    if (newArray[0].PLATAFORMA == 10) {
+        pla = "images/insgPro.png";
+    } else {
+        pla = "images/sinInsgPro.png";
+    }
+    document.getElementById("pla").src = pla;
 
     var mas = "";
     if (newArray[0].PUNTOEX == 1) {
@@ -226,20 +235,20 @@ function recibir() {
     document.getElementById("mas").src = mas;
 
     /* habilidades */
-    if (newArray[0].hABILIDAD1 == 1) {
+    if (newArray[0].HABILIDAD1 == 1) {
         document.getElementById("habilidad1").style.textDecoration = "line-through";
 
     }
-    if (newArray[0].hABILIDAD2 == 1) {
+    if (newArray[0].HABILIDAD2 == 1) {
         document.getElementById("habilidad2").style.textDecoration = "line-through";
     }
-    if (newArray[0].hABILIDAD3 == 1) {
+    if (newArray[0].HABILIDAD3 == 1) {
         document.getElementById("habilidad3").style.textDecoration = "line-through";
     }
     var avatar = "";
     var habilidad = "";
     var descipcion = "";
-    switch (newArray[0].avatar) {
+    switch (newArray[0].AVATAR) {
         case 1:
             avatar = "images/personaje1.png";
             habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
