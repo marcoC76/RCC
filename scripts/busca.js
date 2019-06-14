@@ -31,10 +31,11 @@ function cambiaMundo(num) {
         console.log(localStorage.getItem("mundo"));
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #3d2f66, #4a3470, #58397a, #673e83, #76438c);`; */
         document.body.className = 'fondo1';
+        
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
         /* appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31"; */
         /* appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37"; */
-        var appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
+        appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
         ft(appi);
         document.getElementById("resultado").innerHTML = `                                                    
                                                             <div class="card">
@@ -50,6 +51,7 @@ function cambiaMundo(num) {
         console.log(localStorage.getItem("mundo"));
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #1a035e, #24057c, #2e079c, #380abc, #430dde);`; */
         document.body.className = 'fondo2';
+        
         /* appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814"; */
         /* appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37"; */
         appi = "https://script.google.com/macros/s/AKfycby_mP3ow6lHHhp5KoZ2cp-JvapWOc6bCEDHQqEdko2k9D1Y-ali/exec";
@@ -68,6 +70,7 @@ function cambiaMundo(num) {
         console.log(localStorage.getItem("mundo"));
         /* document.body.style.backgroundColor = `linear-gradient(to right top, #5e0303, #660304, #6f0304, #770304, #800404);`; */
         document.body.className = 'fondo3';
+        
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
         appi = "https://script.google.com/macros/s/AKfycbwh4AaAthKZ9R9n0aaYdXa4GnINTOWVImp1s9C5U6ZifKUBw6o2/exec";
         /* appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37"; */
@@ -100,7 +103,7 @@ function ft(appi) {
         });
 
 }
-setInterval('ft(appi)', 120000);
+setInterval('ft(appi)', 60000);
 
 
 function recibir() {
@@ -139,16 +142,16 @@ function recibir() {
                 </div>
                 <br>
                 <ul class="abilities insignias" >
-                    <span style="font-size:1em;">Habilidades:</span>
-                    <li id="habilidad1" > Puntos Extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad2" > Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <span style="font-size:1em;">Habilidades:</span><hr>
+                    <li id="habilidad1" ><img src="images/habilidad1.png" /> Puntos Extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad2" ><img src="images/habilidad2.png" /> Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
                     <li id="habilidad3"></li>
                     <!-- <li style="text-decoration:line-through">Otro Intento $200</li> -->
                 </ul>
 
 
                
-                <div class="insignias">Insignias conseguidas:
+                <div class="insignias">Insignias conseguidas: <hr>
                     <center>
                     <img onclick="cuestInfo();" id="cuest" title="Misión Cuestionarios" src="images/sinInsgCuest.png" />
                     <img onclick="actInfo();" id="act" title="Misión Actividades" src="images/sinInsgAct.png" />
@@ -358,7 +361,7 @@ function recibir() {
             break;
     }
     document.getElementById("avatar").src = avatar;
-    document.getElementById("habilidad3").innerHTML = habilidad;
+    document.getElementById("habilidad3").innerHTML ='<img class="habilidad"  src="images/habilidad3.png" /> '+habilidad;
     document.getElementById("descripcion").innerHTML = descripcion;
 
 }

@@ -1,8 +1,10 @@
 var obj
 var salida = '';
 var valor;
-var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
-/* ft(appi); */
+/* var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31"; */
+var appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
+
+ft(appi); 
 window.onload = inicio;
 
 function inicio() {
@@ -30,8 +32,10 @@ function cambiaMundo(num) {
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo1';
+        document.getElementById('pie').className='pie1';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
-        appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31";
+        appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
+
         ft(appi);
         document.getElementById("resultado").innerHTML = `                                                    
                                                             <div class="card">
@@ -46,7 +50,8 @@ function cambiaMundo(num) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo2';
-        appi = "https://api.sheety.co/659c221f-bf2d-40e6-850a-2456afc11814";
+        document.getElementById('pie').className='pie2';
+        appi = "https://script.google.com/macros/s/AKfycby_mP3ow6lHHhp5KoZ2cp-JvapWOc6bCEDHQqEdko2k9D1Y-ali/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
                                                             <div class="card">
@@ -61,8 +66,9 @@ function cambiaMundo(num) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo3';
+        document.getElementById('pie').className='pie3';
         /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
-        appi = "https://api.sheety.co/56fdd1ff-80eb-4876-b01f-e7f992d2ee37";
+        appi = "https://script.google.com/macros/s/AKfycbwh4AaAthKZ9R9n0aaYdXa4GnINTOWVImp1s9C5U6ZifKUBw6o2/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
                                                             <div class="card">
@@ -92,14 +98,14 @@ function ft(appi) {
         });
 
 }
-setInterval('ft(appi)', 120000);
+setInterval('ft(appi)', 60000);
 
 
 function recibir() {
     valor = document.getElementById("texto").value;
     localStorage.setItem("id", valor);
     var newArray = obj.filter(function (el) {
-        return (el.iD === localStorage.getItem("id"));
+        return (el.ID === localStorage.getItem("id"));
     });
     localStorage.setItem("newArray", JSON.stringify(newArray));
     salida = `
@@ -111,21 +117,22 @@ function recibir() {
                     </div>
                     <center>
                         <h2 style="color:white;">
-                            ${newArray[0].nombre}
+                            ${newArray[0].NICK}
                         </h2>
-                    
-                        <img id="caracter" src="images/caracter.png" />
+                        <div id="pie">
+                            <img id="caracter" src="images/caracter.png" />
+                        </div>
                         <div class="abilities" onclick="clanInfo();" >
                             <h1 class="name" >
-                                ${newArray[0].equipo}
+                                ${newArray[0].EQUIPO}
                             </h1>
                         </div>
                     </center>
                     <h2 class="name" >
-                        Asistencias: <span class="tamaño">${newArray[0].tOTALASIS}</span>
+                        Asistencias: <span class="tamaño">${newArray[0].TOTALASIS}</span>
                     </h2>
                     <h2 class="name">
-                        Grupo: <span class="tamaño">${newArray[0].grupo}</span>
+                        Grupo: <span class="tamaño">${newArray[0].GRUPO}</span>
                     </h2>
                     <h2 class="name">
                         Punto Extra: <img id="mas" src="images/insgPuntos.png" />
@@ -135,11 +142,11 @@ function recibir() {
                     </h2>
                     <center>
                         <div class="abilities cali" onclick="finalInfo();">
-                            <h1>${newArray[0].fINAL}</h1>
+                            <h1>${newArray[0].FINAL}</h1>
                         </div>
                         <div class="abilities cali">
                             <br>
-                            <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> ${Math.round(newArray[0].pUNTOSACT+newArray[0].pUNTOSCUES+newArray[0].pUNTOSBIT+newArray[0].pUNTOSPRO+newArray[0].pUNTOEX) * 100}<span style="font-size:0.5em;">p</span></span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
+                            <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> ${Math.round(newArray[0].PUNTOSACT+newArray[0].PUNTOSCUES+newArray[0].PUNTOSBIT+newArray[0].PUNTOSPRO+newArray[0].PUNTOEX) * 100}<span style="font-size:0.5em;">p</span></span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
                             <h1 id="estado">
                                 REPROBADO
                             </h1>
@@ -158,11 +165,11 @@ function recibir() {
                     <div class="desglo">
                         <img onclick="actInfo()" id="act"  src="images/insgAct.png" />
                     </div>
-                    <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${newArray[0].pUNTOSACT*100}</span></h4>
+                    <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${newArray[0].PUNTOSACT*100}</span></h4>
                     <canvas id="actChart" width="100%"></canvas>
 
                     <center class="abilities">
-                    <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].pROMACT}</span></h4>
+                    <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
                     </center>
                     <div class="sheen"></div>
                 </div>
@@ -174,11 +181,11 @@ function recibir() {
                     <div class="desglo">
                         <img onclick="cuestInfo()" id="cuest" src="images/insgCuest.png" />
                     </div>
-                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;"> ${newArray[0].pUNTOSCUES*100}</a> </h4>
+                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;"> ${newArray[0].PUNTOSCUES*100}</a> </h4>
                     <canvas id="cuestChart" width="100%"></canvas>
                    
                     <center class="abilities">
-                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].pROMCUES}</a></h4>
+                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
                     </center>
                     <div class="sheen"></div>
                 </div>
@@ -190,34 +197,49 @@ function recibir() {
                     <div class="desglo">
                         <img onclick="bitInfo()" id="bit"  src="images/insgBit.png" />
                     </div>
-                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].pUNTOSBIT*100}</a></h4>
+                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSBIT*100}</a></h4>
                     <canvas id="bitChart" width="50"></canvas>
                     <br>
                     <center class="abilities">
-                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].bITACORA}</a></h4>
+                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
                     </center>
                     <div class="sheen"></div>
                     </div>
                     <br>
-                <div class="card">
-                    <h2 class="name" >
-                    Proyecto
-                    </h2>
-                    <div class="desglo">
-                        <img onclick="proInfo()" id="pro" src="images/insgPlat.png" />
-                    </div>
-                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].pUNTOSPRO*100}</a></h4>
-                    <canvas id="proChart" width="100%"></canvas>
-                    <br>
-                    <center class="abilities">
-                    <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].pROYECTO}</a></h4>
-                    </center>
-                    <div class="sheen"></div>
-                </div>                  
+                    <div class="card">
+                        <h2 class="name" >
+                        Plataforma
+                        </h2>
+                        <div class="desglo">
+                            <img onclick="plaInfo()" id="pla" src="images/insgPro.png" />
+                        </div>
+                        <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSPLA*100}</a></h4>
+                        <canvas id="plaChart" width="100%"></canvas>
+                        <br>
+                        <center class="abilities">
+                        <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PLATAFORMA}</a></h4>
+                        </center>
+                        <div class="sheen"></div>
+                    </div>                  
+                    <div class="card">
+                        <h2 class="name" >
+                        Proyecto
+                        </h2>
+                        <div class="desglo">
+                            <img onclick="proInfo()" id="pro" src="images/insgPlat.png" />
+                        </div>
+                        <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSPRO*100}</a></h4>
+                        <canvas id="proChart" width="100%"></canvas>
+                        <br>
+                        <center class="abilities">
+                        <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
+                        </center>
+                        <div class="sheen"></div>
+                    </div>                  
                 `;
     document.getElementById("resultado").innerHTML = salida;
     var estado = "";
-    if (newArray[0].fINAL < 6) {
+    if (newArray[0].FINAL < 6) {
         estado = "REPROBADO";
     } else {
         estado = "APROBADO";
@@ -225,19 +247,19 @@ function recibir() {
     document.getElementById("estado").innerHTML = estado;
 
     var rango = "";
-    if (newArray[0].fINAL < 6) {
+    if (newArray[0].FINAL < 6) {
         rango = "images/sinNivel.png";
-    } else if (newArray[0].fINAL < 8) {
+    } else if (newArray[0].FINAL < 8) {
         rango = "images/nivel1.png";
-    } else if (newArray[0].fINAL < 10) {
+    } else if (newArray[0].FINAL < 10) {
         rango = "images/nivel2.png";
-    } else if (newArray[0].fINAL == 10) {
+    } else if (newArray[0].FINAL == 10) {
         rango = "images/nivel3.png";
     }
     document.getElementById("rango").src = rango;
 
     var act = "";
-    if (newArray[0].pROMACT == 10) {
+    if (newArray[0].PROMACT == 10) {
         act = "images/insgAct.png";
     } else {
         act = "images/sinInsgAct.png";
@@ -245,7 +267,7 @@ function recibir() {
     document.getElementById("act").src = act;
 
     var cuest = "";
-    if (newArray[0].pROMCUES == 10) {
+    if (newArray[0].PROMCUES == 10) {
         cuest = "images/insgCuest.png";
     } else {
         cuest = "images/sinInsgCuest.png";
@@ -253,7 +275,7 @@ function recibir() {
     document.getElementById("cuest").src = cuest;
 
     var bit = "";
-    if (newArray[0].bITACORA == 10) {
+    if (newArray[0].BITACORA == 10) {
         bit = "images/insgBit.png";
     } else {
         bit = "images/sinInsgBit.png";
@@ -261,15 +283,23 @@ function recibir() {
     document.getElementById("bit").src = bit;
 
     var pro = "";
-    if (newArray[0].pROYECTO == 10) {
+    if (newArray[0].PROYECTO == 10) {
         pro = "images/insgPlat.png";
     } else {
         pro = "images/sinInsgPlat.png";
     }
     document.getElementById("pro").src = pro;
 
+    var pla = "";
+    if (newArray[0].PLATAFORMA == 10) {
+        pla = "images/insgPro.png";
+    } else {
+        pla = "images/sinInsgPro.png";
+    }
+    document.getElementById("pla").src = pla;
+
     var mas = "";
-    if (newArray[0].pUNTOEX == 1) {
+    if (newArray[0].PUNTOEX == 1) {
         mas = "images/insgPuntos.png";
     } else {
         mas = "images/sinInsgPuntos.png";
@@ -278,26 +308,26 @@ function recibir() {
     
     
     var reaccion = "";
-    if (newArray[0].fINAL == 0) {
+    if (newArray[0].FINAL == 0) {
         reaccion = "images/reaccion_horror.png";
-    } else if (newArray[0].fINAL <= 2) {
+    } else if (newArray[0].FINAL <= 2) {
         reaccion = "images/reaccion_verguenza.png";
-    } else if (newArray[0].fINAL <= 4) {
+    } else if (newArray[0].FINAL <= 4) {
         reaccion = "images/reaccion_desepcion.png";
-    } else if (newArray[0].fINAL == 5) {
+    } else if (newArray[0].FINAL == 5) {
         reaccion = "images/reaccion_resignacion.png";
-    } else if (newArray[0].fINAL < 8) {
+    } else if (newArray[0].FINAL < 8) {
         reaccion = "images/reaccion_esfuerzo.png";
-    } else if (newArray[0].fINAL < 10) {
+    } else if (newArray[0].FINAL < 10) {
         reaccion = "images/reaccion_neutral.png";
-    }else if (newArray[0].fINAL == 10) {
+    }else if (newArray[0].FINAL == 10) {
         reaccion = "images/reaccion_orgullo.png";
         /* reaccion = "images/reaccion_alegre.png"; */
     }
     document.getElementById("reaccion").src = reaccion;
 
     var caracter = "";
-    switch (newArray[0].avatar) {
+    switch (newArray[0].AVATAR) {
         case 1:
             caracter = "images/caracter.png";
             break;
@@ -376,7 +406,7 @@ function recibir() {
                 labels: ["Act1", "Act2", "Act4", "Act5", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].aCTIVIDAD1, newArray[0].aCTIVIDAD2, newArray[0].aCTIVIDAD4, newArray[0].aCTIVIDAD5, newArray[0].aCTIVIDADR],
+                    data: [newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2, newArray[0].ACTIVIDAD4, newArray[0].ACTIVIDAD5, newArray[0].ACTIVIDADR],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
@@ -403,7 +433,7 @@ function recibir() {
                 labels: ["Cuest1", "Cuest2", "Cuest3", "Cuest4", "Cuest5"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].cUESTIONARIO1, newArray[0].cUESTIONARIO2, newArray[0].cUESTIONARIO3, newArray[0].cUESTIONARIO4, newArray[0].cUESTIONARIO5],
+                    data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3, newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
@@ -430,10 +460,25 @@ function recibir() {
                 labels: ["Proyecto", ""],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].pROYECTO, 10 - newArray[0].pROYECTO],
+                    data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)'
 
+                    ]
+                }]
+            }
+        });
+        var ctx = document.getElementById("plaChart");
+        var proChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Plataforma", ""],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].PLATAFORMA, 10 - newArray[0].PLATAFORMA],
+                    backgroundColor: [
+                        'rgba(255, 206, 86, 0.6)'
+    
                     ]
                 }]
             }
@@ -445,7 +490,7 @@ function recibir() {
                 labels: ["Bitácora", ""],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].bITACORA, 10 - newArray[0].bITACORA],
+                    data: [newArray[0].BITACORA, 10 - newArray[0].BITACORA],
                     backgroundColor: [
                         'rgba(153, 102, 255, 0.6)'
                     ]
@@ -461,7 +506,7 @@ function recibir() {
                 labels: ["Act6", "Act7", "Act8", "Act9", "ActR", "LuzOnd"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].aCTIVIDAD6, newArray[0].aCTIVIDAD7, newArray[0].aCTIVIDAD8, newArray[0].aCTIVIDAD9, newArray[0].aCTIVIDADR, newArray[0].lUZ_Y_ONDAS],
+                    data: [newArray[0].ACTIVIDAD6, newArray[0].ACTIVIDAD7, newArray[0].ACTIVIDAD8, newArray[0].ACTIVIDAD9, newArray[0].ACTIVIDADR, newArray[0].lUZ_Y_ONDAS],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
@@ -489,7 +534,7 @@ function recibir() {
                 labels: ["Cuest6", "Cuest7", "Cuest8", "Cuest9"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].cUESTIONARIO6, newArray[0].cUESTIONARIO7, newArray[0].cUESTIONARIO8, newArray[0].cUESTIONARIO9],
+                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7, newArray[0].CUESTIONARIO8, newArray[0].CUESTIONARIO9],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
@@ -515,9 +560,24 @@ function recibir() {
                 labels: ["Proyecto", ""],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].pROYECTO, 10 - newArray[0].pROYECTO],
+                    data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)'
+    
+                    ]
+                }]
+            }
+        });
+        var ctx = document.getElementById("plaChart");
+        var proChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Plataforma", ""],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].PLATAFORMA, 10 - newArray[0].PLATAFORMA],
+                    backgroundColor: [
+                        'rgba(255, 206, 86, 0.6)'
     
                     ]
                 }]
@@ -530,7 +590,7 @@ function recibir() {
                 labels: ["Bitácora", ""],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].bITACORA, 10 - newArray[0].bITACORA],
+                    data: [newArray[0].BITACORA, 10 - newArray[0].BITACORA],
                     backgroundColor: [
                         'rgba(153, 102, 255, 0.6)'
                     ]
@@ -546,7 +606,7 @@ function recibir() {
                 labels: ["Act10", "Act11", "Act12", "ActR", "ElecMag"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].aCTIVIDAD10, newArray[0].aCTIVIDAD11, newArray[0].aCTIVIDAD12, newArray[0].aCTIVIDADR, newArray[0].eLEC_Y_MAG],
+                    data: [newArray[0].ACTIVIDAD10, newArray[0].ACTIVIDAD11, newArray[0].ACTIVIDAD12, newArray[0].ACTIVIDADR, newArray[0].eLEC_Y_MAG],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
@@ -573,7 +633,7 @@ function recibir() {
                 labels: ["Cuest10", "Cuest11", "Cuest12"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].cUESTIONARIO10, newArray[0].cUESTIONARIO11, newArray[0].cUESTIONARIO12],
+                    data: [newArray[0].CUESTIONARIO10, newArray[0].CUESTIONARIO11, newArray[0].CUESTIONARIO12],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
@@ -598,9 +658,24 @@ function recibir() {
                 labels: ["Proyecto", ""],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].pROYECTO, 10 - newArray[0].pROYECTO],
+                    data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)'
+    
+                    ]
+                }]
+            }
+        });
+        var ctx = document.getElementById("plaChart");
+        var proChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ["Plataforma", ""],
+                datasets: [{
+                    label: 'Calificación',
+                    data: [newArray[0].PLATAFORMA, 10 - newArray[0].PLATAFORMA],
+                    backgroundColor: [
+                        'rgba(255, 206, 86, 0.6)'
     
                     ]
                 }]
@@ -613,7 +688,7 @@ function recibir() {
                 labels: ["Bitácora", ""],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].bITACORA, 10 - newArray[0].bITACORA],
+                    data: [newArray[0].BITACORA, 10 - newArray[0].BITACORA],
                     backgroundColor: [
                         'rgba(153, 102, 255, 0.6)'
                     ]
