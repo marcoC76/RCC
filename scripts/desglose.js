@@ -220,7 +220,8 @@ function recibir() {
                         <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PLATAFORMA}</a></h4>
                         </center>
                         <div class="sheen"></div>
-                    </div>                  
+                    </div>   
+<br>               
                     <div class="card">
                         <h2 class="name" >
                         Proyecto
