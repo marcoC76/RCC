@@ -220,7 +220,7 @@ p {
   text-align: left;
   font-size: 1em;
   border-radius: 10px;
-  padding: 3px 12px;
+  padding: 8px 12px;
   margin: 0 0 15px 0;
 }
 
@@ -266,9 +266,9 @@ p {
 }
 
 .flavor-text {
-  color: aliceblue;
+  color: #fdfdfd;
   font-style: italic;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 /* Power and Defense stats at the bottom */

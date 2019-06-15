@@ -146,7 +146,7 @@ function recibir() {
 
 
                 <div class="power stat" onclick="monedasInfo();">
-                ${newArray[0].MONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span> <img title="Monedas" src="images/dinero.png" />
+                <img title="Monedas" src="images/dinero.png" /> ${newArray[0].MONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span>
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
                 ${newArray[0].FINAL * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
