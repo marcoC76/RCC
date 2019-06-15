@@ -1,7 +1,6 @@
 var obj;
 var salida = '';
 var valor;
-/* var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31"; */
 var appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
 
 ft(appi); 
@@ -16,15 +15,15 @@ function inicio() {
         // el navegador NO está conectado a la red
         console.log("No hay internet");
         var internet = `
-                        <div onclick="conexion();" class="conexion">
-                            <span  class="white-text" style="font-size:2em;text-transform:upperCase;">
+                          <div onclick="conexion();" class="conexion">
+                            <span  class="white-text" style="font-size:1.2em;">
                                 SIN CONEXIÓN
                             </span>
-                        </div>
+                          </div>
                     `;
-        document.getElementById("footer").innerHTML = internet;
+        document.getElementById("footer2").innerHTML = internet;
     }
-};
+}
 
 function cambiaMundo(num) {
     var mundo = num;
@@ -32,8 +31,6 @@ function cambiaMundo(num) {
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo1';
-        document.getElementById('pie').className='pie1';
-        /* document.getElementById('mundoActualDes').innerHTML = `Mundo 1`; */
         appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
 
         ft(appi);
@@ -50,7 +47,6 @@ function cambiaMundo(num) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo2';
-        document.getElementById('pie').className='pie2';
         appi = "https://script.google.com/macros/s/AKfycby_mP3ow6lHHhp5KoZ2cp-JvapWOc6bCEDHQqEdko2k9D1Y-ali/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -61,13 +57,10 @@ function cambiaMundo(num) {
                                                                 </h1>
                                                             </div>
                                                         `;
-        /* document.getElementById('mundoActualDes').innerHTML = `Mundo 2`; */
     } else if (localStorage.getItem("mundo") == 3) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         document.body.className= 'fondo3';
-        document.getElementById('pie').className='pie3';
-        /* document.getElementById('mundoActualDes').innerHTML = `Mundo 3`; */
         appi = "https://script.google.com/macros/s/AKfycbwh4AaAthKZ9R9n0aaYdXa4GnINTOWVImp1s9C5U6ZifKUBw6o2/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -323,7 +316,6 @@ function recibir() {
         reaccion = "images/reaccion_neutral.png";
     }else if (newArray[0].FINAL == 10) {
         reaccion = "images/reaccion_orgullo.png";
-        /* reaccion = "images/reaccion_alegre.png"; */
     }
     document.getElementById("reaccion").src = reaccion;
 
