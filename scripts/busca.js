@@ -1,4 +1,4 @@
-var obj
+var obj;
 var salida = '';
 var valor;
 /* var appi = "https://api.sheety.co/cba083a5-cc85-4703-a5d0-2307f8968d31"; */
