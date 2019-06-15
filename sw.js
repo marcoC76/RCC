@@ -1,4 +1,4 @@
-var offlineCacheName = "wholeSiteCachedv2";
+var offlineCacheName = "wholeSiteCachedv3";
 
 var offlinePageCache = "customOfflinePage";
 
