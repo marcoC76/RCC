@@ -126,8 +126,8 @@ function recibir() {
                 <br>
                 <ul class="abilities insignias" >
                     <span style="font-size:1em;">Habilidades:</span><hr>
-                    <li id="habilidad1" ><img src="images/habilidad1.png" /> Puntos Extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad2" ><img src="images/habilidad2.png" /> Pasar Puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad1" ><img src="images/habilidad1.png" /> Puntos extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
+                    <li id="habilidad2" ><img src="images/habilidad2.png" /> Pasar puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
                     <li id="habilidad3"></li>
                 </ul>
 
@@ -135,12 +135,12 @@ function recibir() {
                
                 <div class="insignias">Insignias conseguidas: <hr>
                     <center>
-                    <img onclick="cuestInfo();" id="cuest" title="Misión Cuestionarios" src="images/sinInsgCuest.png" />
-                    <img onclick="actInfo();" id="act" title="Misión Actividades" src="images/sinInsgAct.png" />
-                    <img onclick="bitInfo();" id="bit" title="Misión Bitácora" src="images/sinInsgBit.png" />
-                    <img onclick="proInfo();" id="pro" title="Misión Proyecto" src="images/sinInsgPlat.png" />
-                    <img onclick="plaInfo();" id="pla" title="Misión Plataforma" src="images/sinInsgPro.png" />
-                    <img onclick="masInfo();" id="mas" title="Misión Puntos Extra" src="images/sinInsgPuntos.png" />
+                    <img onclick="cuestInfo();" id="cuest" title="Misión cuestionarios" src="images/sinInsgCuest.png" />
+                    <img onclick="actInfo();" id="act" title="Misión actividades" src="images/sinInsgAct.png" />
+                    <img onclick="bitInfo();" id="bit" title="Misión bitácora" src="images/sinInsgBit.png" />
+                    <img onclick="proInfo();" id="pro" title="Misión proyecto" src="images/sinInsgPlat.png" />
+                    <img onclick="plaInfo();" id="pla" title="Misión plataforma" src="images/sinInsgPro.png" />
+                    <img onclick="masInfo();" id="mas" title="Misión puntos Extra" src="images/sinInsgPuntos.png" />
                     </center>
                 </div>
 
@@ -240,7 +240,7 @@ function recibir() {
             break;
         case 2:
             avatar = "images/personaje1_H.png";
-            habilidad = 'Otro Intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             descripcion = 'Imposible de engañar, siempre tiene mucho cuidado';
             break;
         case 3:
@@ -260,7 +260,7 @@ function recibir() {
             break;
         case 6:
             avatar = "images/personaje3_H.png";
-            habilidad = 'Escuchar Música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             descripcion = 'De pocas palabras pero muchas mas acciones';
             break;
         case 7:
@@ -270,7 +270,7 @@ function recibir() {
             break;
         case 8:
             avatar = "images/personaje4_H.png";
-            habilidad = 'Otro Intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             descripcion = 'Muy fuerte, usa correctamente su astucia';
             break;
         case 9:
@@ -295,7 +295,7 @@ function recibir() {
             break;
         case 13:
             avatar = "images/personaje7.png";
-            habilidad = 'Escuchar Música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             descripcion = 'Imposible de engañar, siempre tiene mucho cuidado';
             break;
         case 14:
@@ -305,7 +305,7 @@ function recibir() {
             break;
         case 15:
             avatar = "images/personaje8.png";
-            habilidad = 'Otro Intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             descripcion = 'No olvida su cabeza porque la tiene pegada al cuello';
             break;
         case 16:
@@ -330,7 +330,7 @@ function recibir() {
             break;
         case 20:
             avatar = "images/personaje10_H.png";
-            habilidad = 'Escuchar Música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
             descripcion = 'Tiene una voluntad de hierro al mismo nivel de su rudeza';
             break;
         case 0:
