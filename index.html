@@ -23,7 +23,7 @@
     <!--  <a href="/mapa.html">Mapa</a> -->
     <a href="ayuda.html">Ayuda</a>
     <a href="#miModal" onclick="myFunction()">Mundos</a>
-    
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -34,8 +34,9 @@
   <br>
   <div class="card2">
     <center>
-      <form >
-        <input  id="texto" onkeyup="recibir()" minlength="4" maxlength="4" type="password" name="search" placeholder="ID">
+      <form>
+        <input id="texto" onkeyup="recibir()" minlength="4" maxlength="4" type="password" name="search"
+          placeholder="ID">
       </form>
     </center>
   </div>
@@ -76,7 +77,7 @@
       </span>
     </div>
   </div>
- <!--  <div id="miModal2" class="modal">
+  <!--  <div id="miModal2" class="modal">
     <div class="modal-contenido">
       <a href="#"><img src="images/prompt_no.png" alt=""></a>
       <ul style="list-style-type: none;">
@@ -116,6 +117,18 @@
   </footer>
 
   <script src="scripts/js-snackbar.min.js"></script>
+  <!-- <script>
+    var lastScrollTop = 0;
+    navbar = document.getElementById("myTopnav");
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px";
+      } else {
+        navbar.style.top = "0";
+      }
+    });
+  </script> -->
   <script>
     var mundoInfo = function () {
       SnackBar({
@@ -198,7 +211,7 @@
       document.getElementById("footer").innerHTML = internet;
     } */
   </script>
-  
+
   <script>
     if ('serviceWorker' in navigator) {
       console.log("El Navegador admite service workers");
