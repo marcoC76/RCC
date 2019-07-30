@@ -158,7 +158,7 @@ function recibir() {
                     <div class="desglo">
                         <img onclick="actInfo()" id="act"  src="images/insgAct.png" />
                     </div>
-                    <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${newArray[0].PUNTOSACT*100}</span></h4>
+                    <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${Math.round(newArray[0].PUNTOSACT*100)}</span></h4>
                     <canvas id="actChart" width="100%"></canvas>
 
                     <center class="abilities">
