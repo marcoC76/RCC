@@ -67,16 +67,24 @@ p {
 }
 
 .card {
-  background: linear-gradient(to left, #272b28 0%,#272b28 50%,#272b28 50%,#3e3e3e 50%,#3e3e3e 100%);
+  background: linear-gradient(to left, #191b19,#4d4d4d ,#191b19);
+  background-size: 200%;
+  /* background: linear-gradient(to left, #272b28 0%,#272b28 50%,#272b28 50%,#3e3e3e 50%,#3e3e3e 100%); */
   border: solid 10px #000000;
   width: 280px;
   padding: 8px 12px 20px 12px;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
-  transition: all ease-out .2s;
+  transition: all ease-out .5s;
 }
 
+.card:hover {
+  transform: scale(1.04) translateY(-5px) translateX(-5px);
+  box-shadow: 12px 12px 10px rgba(0, 0, 0, .2);
+  background-position: 100%;
+  
+}
 
 .card2 {
   width: 280px;
@@ -120,10 +128,7 @@ p {
   display: block;
 }
 
-.card:hover {
-  transform: scale(1.04) translateY(-5px) translateX(-5px);
-  box-shadow: 12px 12px 10px rgba(0, 0, 0, .2);
-}
+
 
 .name {
   font-size: 18px;
@@ -175,15 +180,21 @@ p {
   background-color: #cccccc;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100%25 100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='100%25' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23a7a7a7'/%3E%3Cstop offset='0.02' stop-color='%23cccccc'/%3E%3Cstop offset='0.02' stop-color='%23dcdcdc'/%3E%3Cstop offset='0.032' stop-color='%23cccccc'/%3E%3Cstop offset='0.032' stop-color='%23b2b2b2'/%3E%3Cstop offset='0.056' stop-color='%23cccccc'/%3E%3Cstop offset='0.056' stop-color='%23919191'/%3E%3Cstop offset='0.07' stop-color='%23cccccc'/%3E%3Cstop offset='0.07' stop-color='%23979797'/%3E%3Cstop offset='0.1' stop-color='%23cccccc'/%3E%3Cstop offset='0.1' stop-color='%23cacaca'/%3E%3Cstop offset='0.126' stop-color='%23cccccc'/%3E%3Cstop offset='0.126' stop-color='%23c4c4c4'/%3E%3Cstop offset='0.142' stop-color='%23cccccc'/%3E%3Cstop offset='0.142' stop-color='%23cecece'/%3E%3Cstop offset='0.159' stop-color='%23cccccc'/%3E%3Cstop offset='0.159' stop-color='%239a9a9a'/%3E%3Cstop offset='0.17' stop-color='%23cccccc'/%3E%3Cstop offset='0.17' stop-color='%23545454'/%3E%3Cstop offset='0.197' stop-color='%23cccccc'/%3E%3Cstop offset='0.197' stop-color='%234c4c4c'/%3E%3Cstop offset='0.218' stop-color='%23cccccc'/%3E%3Cstop offset='0.218' stop-color='%23c0c0c0'/%3E%3Cstop offset='0.239' stop-color='%23cccccc'/%3E%3Cstop offset='0.239' stop-color='%23cecece'/%3E%3Cstop offset='0.254' stop-color='%23cccccc'/%3E%3Cstop offset='0.254' stop-color='%23cbcbcb'/%3E%3Cstop offset='0.283' stop-color='%23cccccc'/%3E%3Cstop offset='0.283' stop-color='%23c0c0c0'/%3E%3Cstop offset='0.294' stop-color='%23cccccc'/%3E%3Cstop offset='0.294' stop-color='%23929292'/%3E%3Cstop offset='0.305' stop-color='%23cccccc'/%3E%3Cstop offset='0.305' stop-color='%23686868'/%3E%3Cstop offset='0.332' stop-color='%23cccccc'/%3E%3Cstop offset='0.332' stop-color='%23505050'/%3E%3Cstop offset='0.346' stop-color='%23cccccc'/%3E%3Cstop offset='0.346' stop-color='%23d3d3d3'/%3E%3Cstop offset='0.362' stop-color='%23cccccc'/%3E%3Cstop offset='0.362' stop-color='%23c1c1c1'/%3E%3Cstop offset='0.381' stop-color='%23cccccc'/%3E%3Cstop offset='0.381' stop-color='%23cccccc'/%3E%3Cstop offset='0.415' stop-color='%23cccccc'/%3E%3Cstop offset='0.415' stop-color='%23d3d3d3'/%3E%3Cstop offset='0.428' stop-color='%23cccccc'/%3E%3Cstop offset='0.428' stop-color='%23b4b4b4'/%3E%3Cstop offset='0.442' stop-color='%23cccccc'/%3E%3Cstop offset='0.442' stop-color='%23e8e8e8'/%3E%3Cstop offset='0.456' stop-color='%23cccccc'/%3E%3Cstop offset='0.456' stop-color='%23bfbfbf'/%3E%3Cstop offset='0.498' stop-color='%23cccccc'/%3E%3Cstop offset='0.498' stop-color='%23828282'/%3E%3Cstop offset='0.511' stop-color='%23cccccc'/%3E%3Cstop offset='0.511' stop-color='%23e1e1e1'/%3E%3Cstop offset='0.532' stop-color='%23cccccc'/%3E%3Cstop offset='0.532' stop-color='%235f5f5f'/%3E%3Cstop offset='0.541' stop-color='%23cccccc'/%3E%3Cstop offset='0.541' stop-color='%237d7d7d'/%3E%3Cstop offset='0.56' stop-color='%23cccccc'/%3E%3Cstop offset='0.56' stop-color='%237d7d7d'/%3E%3Cstop offset='0.581' stop-color='%23cccccc'/%3E%3Cstop offset='0.581' stop-color='%23959595'/%3E%3Cstop offset='0.6' stop-color='%23cccccc'/%3E%3Cstop offset='0.6' stop-color='%23c5c5c5'/%3E%3Cstop offset='0.618' stop-color='%23cccccc'/%3E%3Cstop offset='0.618' stop-color='%23cdcdcd'/%3E%3Cstop offset='0.656' stop-color='%23cccccc'/%3E%3Cstop offset='0.656' stop-color='%23d6d6d6'/%3E%3Cstop offset='0.679' stop-color='%23cccccc'/%3E%3Cstop offset='0.679' stop-color='%23ababab'/%3E%3Cstop offset='0.689' stop-color='%23cccccc'/%3E%3Cstop offset='0.689' stop-color='%23c1c1c1'/%3E%3Cstop offset='0.720' stop-color='%23cccccc'/%3E%3Cstop offset='0.720' stop-color='%23cbcbcb'/%3E%3Cstop offset='0.734' stop-color='%23cccccc'/%3E%3Cstop offset='0.734' stop-color='%23c2c2c2'/%3E%3Cstop offset='0.748' stop-color='%23cccccc'/%3E%3Cstop offset='0.748' stop-color='%23e7e7e7'/%3E%3Cstop offset='0.764' stop-color='%23cccccc'/%3E%3Cstop offset='0.764' stop-color='%23bdbdbd'/%3E%3Cstop offset='0.788' stop-color='%23cccccc'/%3E%3Cstop offset='0.788' stop-color='%23424242'/%3E%3Cstop offset='0.808' stop-color='%23cccccc'/%3E%3Cstop offset='0.808' stop-color='%23bababa'/%3E%3Cstop offset='0.831' stop-color='%23cccccc'/%3E%3Cstop offset='0.831' stop-color='%23626262'/%3E%3Cstop offset='0.856' stop-color='%23cccccc'/%3E%3Cstop offset='0.856' stop-color='%23c5c5c5'/%3E%3Cstop offset='0.872' stop-color='%23cccccc'/%3E%3Cstop offset='0.872' stop-color='%23a0a0a0'/%3E%3Cstop offset='0.894' stop-color='%23cccccc'/%3E%3Cstop offset='0.894' stop-color='%23bfbfbf'/%3E%3Cstop offset='0.914' stop-color='%23cccccc'/%3E%3Cstop offset='0.914' stop-color='%23424242'/%3E%3Cstop offset='0.942' stop-color='%23cccccc'/%3E%3Cstop offset='0.942' stop-color='%23959595'/%3E%3Cstop offset='0.957' stop-color='%23cccccc'/%3E%3Cstop offset='0.957' stop-color='%23888888'/%3E%3Cstop offset='0.973' stop-color='%23cccccc'/%3E%3Cstop offset='0.973' stop-color='%23bcbcbc'/%3E%3Cstop offset='1' stop-color='%23cccccc'/%3E%3Cstop offset='1' stop-color='%23cdcdcd'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' x='0' y='0' width='100%25' height='100%25'/%3E%3C/svg%3E");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 500px;
   height: 139px;
   position: relative;
   background-position: top;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
-  animation: anima 1s forwards 0.5s ease;
+  animation: anima 1s forwards 2s ease;
   border-radius: 10px 10px 0 0;
+  transition: 1s;
+}
+.image:hover{
+  background-position-y: 50px;
+  filter: drop-shadow(1px 1px 5px black) hue-rotate(360deg) saturate(200%);
+  transform: scale(1.001) translateY(-0.25px) translateX(-0.25px);
 }
 
 .type {
@@ -227,19 +238,19 @@ p {
 .insignias img {
   opacity: 0;
   width: 14%;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2.5s ease;
 }
 
 #rango {
   width: 15%;
   opacity: 0;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2s ease;
 }
 
 #rango1 {
   width: 32%;
   opacity: 0;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2s ease;
 }
 
 .nick {
@@ -289,7 +300,7 @@ p {
   display: inline;
   position: relative;
   top: 1vh;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2s ease;
 }
 
 .power {
@@ -316,7 +327,7 @@ p {
 
 .card:hover .sheen {
   display: block;
-  animation: sheen .35s linear 1;
+  animation: sheen .45s linear 1;
 }
 
 @keyframes sheen {
@@ -502,7 +513,7 @@ input[type=password]:focus {
 
 #reaccion {
   opacity: 0;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2s ease;
 }
 
 .container2 {

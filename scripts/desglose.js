@@ -139,7 +139,10 @@ function recibir() {
                         </div>
                         <div class="abilities cali">
                             <br>
-                            <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> ${Math.round(newArray[0].PUNTOSACT+newArray[0].PUNTOSCUES+newArray[0].PUNTOSBIT+newArray[0].PUNTOSPRO+newArray[0].PUNTOEX) * 100}<span style="font-size:0.5em;">p</span></span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
+                            <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> 
+                                ${(parseFloat(newArray[0].PUNTOEX)+parseFloat(newArray[0].PUNTOSBIT)+parseFloat(newArray[0].PUNTOSACT)+parseFloat(newArray[0].PUNTOSCUES)+parseFloat(newArray[0].PUNTOSPLA)+parseFloat(newArray[0].PUNTOSPRO)) * 100}
+                                <span style="font-size:0.5em;">p</span>
+                            </span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
                             <h1 id="estado">
                                 REPROBADO
                             </h1>
