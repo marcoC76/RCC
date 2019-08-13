@@ -3,7 +3,7 @@ var salida = '';
 var valor;
 var appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
 
-ft(appi); 
+ft(appi);
 window.onload = inicio;
 
 function inicio() {
@@ -30,7 +30,7 @@ function cambiaMundo(num) {
     localStorage.setItem("mundo", mundo);
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
-        document.body.className= 'fondo1';
+        document.body.className = 'fondo1';
         appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
 
         ft(appi);
@@ -46,7 +46,7 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 2) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.className= 'fondo2';
+        document.body.className = 'fondo2';
         appi = "https://script.google.com/macros/s/AKfycby_mP3ow6lHHhp5KoZ2cp-JvapWOc6bCEDHQqEdko2k9D1Y-ali/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -60,7 +60,7 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 3) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.className= 'fondo3';
+        document.body.className = 'fondo3';
         appi = "https://script.google.com/macros/s/AKfycbwh4AaAthKZ9R9n0aaYdXa4GnINTOWVImp1s9C5U6ZifKUBw6o2/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -135,12 +135,12 @@ function recibir() {
                     </h2>
                     <center>
                         <div class="abilities cali" onclick="finalInfo();">
-                            <h1>${newArray[0].FINAL}</h1>
+                            <h1>${parseInt(newArray[0].FINAL)}</h1>
                         </div>
                         <div class="abilities cali">
                             <br>
                             <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> 
-                                ${(parseFloat(newArray[0].PUNTOEX)+parseFloat(newArray[0].PUNTOSBIT)+parseFloat(newArray[0].PUNTOSACT)+parseFloat(newArray[0].PUNTOSCUES)+parseFloat(newArray[0].PUNTOSPLA)+parseFloat(newArray[0].PUNTOSPRO)) * 100}
+                                ${(parseInt(newArray[0].CALI+newArray[0].PUNTOEX)) * 100}
                                 <span style="font-size:0.5em;">p</span>
                             </span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
                             <h1 id="estado">
@@ -302,8 +302,8 @@ function recibir() {
         mas = "images/sinInsgPuntos.png";
     }
     document.getElementById("mas").src = mas;
-    
-    
+
+
     var reaccion = "";
     if (newArray[0].FINAL == 0) {
         reaccion = "images/reaccion_horror.png";
@@ -317,7 +317,7 @@ function recibir() {
         reaccion = "images/reaccion_esfuerzo.png";
     } else if (newArray[0].FINAL < 10) {
         reaccion = "images/reaccion_neutral.png";
-    }else if (newArray[0].FINAL == 10) {
+    } else if (newArray[0].FINAL == 10) {
         reaccion = "images/reaccion_orgullo.png";
     }
     document.getElementById("reaccion").src = reaccion;
@@ -388,27 +388,28 @@ function recibir() {
             caracter = "images/caracter0.png";
             break;
         default:
-        caracter = "images/caracter.png";
+            caracter = "images/caracter.png";
             break;
     }
     document.getElementById("caracter").src = caracter;
 
-    
+
     if (localStorage.getItem("mundo") == 1) {
         var ctx = document.getElementById("actChart");
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act1", "Act2", "Act4", "Act5", "ActR"],
+                labels: ["Act1.1", "Act1.2", "Act2.1", "Act3.1", "Act3.2", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2, newArray[0].ACTIVIDAD4, newArray[0].ACTIVIDAD5, newArray[0].ACTIVIDADR],
+                    data: [newArray[0].ACTIVIDAD1_1, newArray[0].ACTIVIDAD1_2, newArray[0].ACTIVIDAD2_1, newArray[0].ACTIVIDAD3_1, newArray[0].ACTIVIDAD3_2, newArray[0].ACTIVIDADR],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(200, 100, 150, 0.6)',
-                        'rgba(153, 102, 255, 0.6)'
+                        'rgba(56, 2, 59, 0.6)',
+                        'rgba(162, 136, 227, 0.6)',
+                        'rgba(187, 213, 237, 0.6)',
+                        'rgba(206, 253, 255, 0.6)',
+                        'rgba(204, 255, 203, 0.6)',
+                        'rgba(186, 232, 185, 0.6)'
                     ]
                 }]
             },
@@ -426,16 +427,14 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest1", "Cuest2", "Cuest3", "Cuest4", "Cuest5"],
+                labels: ["Cuest1", "Cuest2", "Cuest3"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3, newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
+                    data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(153, 102, 255, 0.6)'
+                        'rgba(75, 192, 192, 0.6)'
                     ]
                 }]
             },
@@ -474,7 +473,7 @@ function recibir() {
                     data: [newArray[0].PLATAFORMA, 10 - newArray[0].PLATAFORMA],
                     backgroundColor: [
                         'rgba(255, 206, 86, 0.6)'
-    
+
                     ]
                 }]
             }
@@ -494,22 +493,21 @@ function recibir() {
             }
 
         });
-    }else if (localStorage.getItem("mundo") == 2){
+    } else if (localStorage.getItem("mundo") == 2) {
         var ctx = document.getElementById("actChart");
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act6", "Act7", "Act8", "Act9", "ActR", "LuzOnd"],
+                labels: ["Act4.1", "Act5.1", "Act6.1", "Act6.2", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD6, newArray[0].ACTIVIDAD7, newArray[0].ACTIVIDAD8, newArray[0].ACTIVIDAD9, newArray[0].ACTIVIDADR, newArray[0].lUZ_Y_ONDAS],
+                    data: [newArray[0].ACTIVIDAD4_1, newArray[0].ACTIVIDAD5_1, newArray[0].ACTIVIDAD6_1, newArray[0].ACTIVIDAD6_2, newArray[0].ACTIVIDADR],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(200, 100, 150, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(54, 162, 235, 0.6)'
+                        'rgba(162, 136, 227, 0.6)',
+                        'rgba(187, 213, 237, 0.6)',
+                        'rgba(206, 253, 255, 0.6)',
+                        'rgba(204, 255, 203, 0.6)',
+                        'rgba(186, 232, 185, 0.6)'
                     ]
                 }]
             },
@@ -527,15 +525,14 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest6", "Cuest7", "Cuest8", "Cuest9"],
+                labels: ["Cuest4", "Cuest5"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7, newArray[0].CUESTIONARIO8, newArray[0].CUESTIONARIO9],
+                    data: [newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(255, 99, 132, 0.6)'
+                        'rgba(75, 192, 192, 0.6)'
                     ]
                 }]
             },
@@ -559,7 +556,7 @@ function recibir() {
                     data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)'
-    
+
                     ]
                 }]
             }
@@ -574,7 +571,7 @@ function recibir() {
                     data: [newArray[0].PLATAFORMA, 10 - newArray[0].PLATAFORMA],
                     backgroundColor: [
                         'rgba(255, 206, 86, 0.6)'
-    
+
                     ]
                 }]
             }
@@ -592,23 +589,24 @@ function recibir() {
                     ]
                 }]
             }
-    
+
         });
-    }else if (localStorage.getItem("mundo") == 3){
+    } else if (localStorage.getItem("mundo") == 3) {
         var ctx = document.getElementById("actChart");
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act10", "Act11", "Act12", "ActR", "ElecMag"],
+                labels: ["Act7.1", "Act8.0", "Act8.1", "Act9.1", "Act9.2", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD10, newArray[0].ACTIVIDAD11, newArray[0].ACTIVIDAD12, newArray[0].ACTIVIDADR, newArray[0].eLEC_Y_MAG],
+                    data: [newArray[0].ACTIVIDAD7_1, newArray[0].ACTIVIDAD8_0, newArray[0].ACTIVIDAD8_1, newArray[0].ACTIVIDAD9_1, newArray[0].ACTIVIDAD9_2, newArray[0].ACTIVIDADR],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(200, 100, 150, 0.6)',
-                        'rgba(54, 162, 235, 0.6)'
+                        'rgba(56, 2, 59, 0.6)',
+                        'rgba(162, 136, 227, 0.6)',
+                        'rgba(187, 213, 237, 0.6)',
+                        'rgba(206, 253, 255, 0.6)',
+                        'rgba(204, 255, 203, 0.6)',
+                        'rgba(186, 232, 185, 0.6)'
                     ]
                 }]
             },
@@ -626,14 +624,13 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest10", "Cuest11", "Cuest12"],
+                labels: ["Cuest6", "Cuest7"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO10, newArray[0].CUESTIONARIO11, newArray[0].CUESTIONARIO12],
+                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(255, 99, 132, 0.6)'
+                        'rgba(255, 206, 86, 0.6)'
                     ]
                 }]
             },
@@ -657,7 +654,7 @@ function recibir() {
                     data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)'
-    
+
                     ]
                 }]
             }
@@ -672,7 +669,7 @@ function recibir() {
                     data: [newArray[0].PLATAFORMA, 10 - newArray[0].PLATAFORMA],
                     backgroundColor: [
                         'rgba(255, 206, 86, 0.6)'
-    
+
                     ]
                 }]
             }
@@ -690,7 +687,7 @@ function recibir() {
                     ]
                 }]
             }
-    
+
         });
     }
 }

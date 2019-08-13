@@ -149,7 +149,7 @@ function recibir() {
                 <img title="Monedas" src="images/dinero.png" /> ${newArray[0].MONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span>
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
-                ${newArray[0].FINAL * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
+                ${parseInt(newArray[0].FINAL) * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
                 </div>
                 <div class="sheen"></div>   
                 <br>
@@ -256,7 +256,7 @@ function recibir() {
         case 5:
             avatar = "images/personaje3.png";
             habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
-            descripcion = 'Posee una voz encantadora pero también un físico fuerte ';
+            descripcion = 'Posee una voz encantadora pero también un carácter fuerte ';
             break;
         case 6:
             avatar = "images/personaje3_H.png";
@@ -311,7 +311,7 @@ function recibir() {
         case 16:
             avatar = "images/personaje8_H.png";
             habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
-            descripcion = 'Posee una voz encantadora pero también un físico fuerte ';
+            descripcion = 'Posee una voz encantadora pero también un carácter fuerte ';
             break;
         case 17:
             avatar = "images/personaje9.png";
