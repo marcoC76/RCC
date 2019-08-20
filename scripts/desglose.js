@@ -121,7 +121,7 @@ function recibir() {
                             </h1>
                         </div>
                     </center>
-                    <h2 class="name" >
+                    <h2 class="name" onclick="asisInfo();" >
                         Asistencias: <span class="tamaño">${newArray[0].TOTALASIS}</span>
                     </h2>
                     <h2 class="name">
