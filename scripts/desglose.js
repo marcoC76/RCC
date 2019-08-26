@@ -624,13 +624,14 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest6", "Cuest7"],
+                labels: ["Cuest6", "Cuest7", "Cuest8"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7],
+                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7, newArray[0].CUESTIONARIO8],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)'
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(186, 232, 185, 0.6)'
                     ]
                 }]
             },
