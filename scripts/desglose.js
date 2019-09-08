@@ -402,9 +402,8 @@ function recibir() {
                 labels: ["Act1.1", "Act1.2", "Act2.1", "Act3.1", "Act3.2", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD1_1, newArray[0].ACTIVIDAD1_2, newArray[0].ACTIVIDAD2_1, newArray[0].ACTIVIDAD3_1, newArray[0].ACTIVIDAD3_2, newArray[0].ACTIVIDADR],
+                    data: [newArray[0].ACTIVIDAD1_1, newArray[0].ACTIVIDAD1_2, newArray[0].ACTIVIDAD2_1, newArray[0].ACTIVIDAD3_1, newArray[0].ACTIVIDAD3_2],
                     backgroundColor: [
-                        'rgba(56, 2, 59, 0.6)',
                         'rgba(162, 136, 227, 0.6)',
                         'rgba(187, 213, 237, 0.6)',
                         'rgba(206, 253, 255, 0.6)',
