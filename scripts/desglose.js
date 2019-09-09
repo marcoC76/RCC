@@ -399,16 +399,17 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act1.1", "Act1.2", "Act2.1", "Act3.1", "Act3.2", "ActR"],
+                labels: ["Act1.1", "Act1.2", "Act2.1", "Act2.2", "Act3.1", "Act3.2"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD1_1, newArray[0].ACTIVIDAD1_2, newArray[0].ACTIVIDAD2_1, newArray[0].ACTIVIDAD3_1, newArray[0].ACTIVIDAD3_2],
+                    data: [newArray[0].ACTIVIDAD1_1, newArray[0].ACTIVIDAD1_2, newArray[0].ACTIVIDAD2_1,newArray[0].ACTIVIDAD2_2, newArray[0].ACTIVIDAD3_1, newArray[0].ACTIVIDAD3_2],
                     backgroundColor: [
-                        'rgba(162, 136, 227, 0.6)',
+                        'rgba(192, 236, 127, 0.6)',
                         'rgba(187, 213, 237, 0.6)',
                         'rgba(206, 253, 255, 0.6)',
                         'rgba(204, 255, 203, 0.6)',
-                        'rgba(186, 232, 185, 0.6)'
+                        'rgba(186, 232, 185, 0.6)',
+                        'rgba(286, 332, 185, 0.6)'
                     ]
                 }]
             },
