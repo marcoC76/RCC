@@ -140,7 +140,7 @@ function recibir() {
                         <div class="abilities cali">
                             <br>
                             <span class="ayuda" style="font-size: 1.5em" onclick="pFinalInfo();"> 
-                                ${(parseInt(newArray[0].CALI+newArray[0].PUNTOEX)) * 100}
+                                ${(parseInt(newArray[0].FINAL)) * 100}
                                 <span style="font-size:0.5em;">p</span>
                             </span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
                             <h1 id="estado">
