@@ -149,7 +149,7 @@ function recibir() {
                 <img title="Monedas" src="images/dinero.png" /> ${newArray[0].MONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span>
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
-                ${parseInt(newArray[0].FINAL) * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
+                ${(parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
                 </div>
                 <div class="sheen"></div>   
                 <br>
