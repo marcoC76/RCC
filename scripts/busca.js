@@ -1,6 +1,7 @@
 var obj;
 var salida = '';
 var valor;
+
 var appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
 ft(appi);
 window.onload = inicio;
@@ -22,12 +23,14 @@ function inicio() {
         document.getElementById("footer").innerHTML = internet;
     }
 }
+
 function cambiaMundo(num) {
     var mundo = num;
     localStorage.setItem("mundo", mundo);
     if (localStorage.getItem("mundo") == 1) {
         console.log(localStorage.getItem("mundo"));
         document.body.className = 'fondo1';
+
         appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
         ft(appi);
         document.getElementById("resultado").innerHTML = `                                                    
@@ -42,7 +45,7 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 2) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.className = 'fondo2';        
+        document.body.className = 'fondo2';
         appi = "https://script.google.com/macros/s/AKfycby_mP3ow6lHHhp5KoZ2cp-JvapWOc6bCEDHQqEdko2k9D1Y-ali/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -56,7 +59,7 @@ function cambiaMundo(num) {
     } else if (localStorage.getItem("mundo") == 3) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
-        document.body.className = 'fondo3';       
+        document.body.className = 'fondo3';
         appi = "https://script.google.com/macros/s/AKfycbwh4AaAthKZ9R9n0aaYdXa4GnINTOWVImp1s9C5U6ZifKUBw6o2/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -123,16 +126,12 @@ function recibir() {
                     
                     </center>
                 </div>
-                <br>
-                <ul class="abilities insignias" >
-                    <span style="font-size:1em;">Habilidades:</span><hr>
-                    <li id="habilidad1" ><img src="images/habilidad1.png" /> Puntos extra 200<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad2" ><img src="images/habilidad2.png" /> Pasar puntos 300<span style="font-family:Poke;font-size:0.6em;">$</span></li>
-                    <li id="habilidad3"></li>
-                </ul>
-
-
-               
+             
+                <div  class="abilities insignias" >
+                Resumen: <hr>
+                <canvas id="resumen" width="100%" height="70hv"></canvas>
+                </div>
+              
                 <div class="insignias">Insignias conseguidas: <hr>
                     <center>
                     <img onclick="cuestInfo();" id="cuest" title="Misión cuestionarios" src="images/sinInsgCuest.png" />
@@ -146,10 +145,10 @@ function recibir() {
 
 
                 <div class="power stat" onclick="monedasInfo();">
-                <img title="Monedas" src="images/dinero.png" /> ${newArray[0].MONEDAS_TOTAL}<span style="font-size:0.5em;font-family:Poke;">$</span>
+                ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span> 
                 </div>
                 <div class="defense stat" onclick="puntosInfo();">
-                ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span> <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
+                <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
                 </div>
                 <div class="sheen"></div>   
                 <br>
@@ -201,7 +200,7 @@ function recibir() {
         pro = "images/sinInsgPlat.png";
     }
     document.getElementById("pro").src = pro;
-    
+
     var pla = "";
     if (newArray[0].PLATAFORMA == 10) {
         pla = "images/insgPro.png";
@@ -218,8 +217,38 @@ function recibir() {
     }
     document.getElementById("mas").src = mas;
 
+    var ctx = document.getElementById("resumen");
+    Chart.defaults.global.defaultFontColor = 'black';
+    var resumenChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Actividades','Bitácora' , ['Cuestionarios', 'previos'], 'Plataforma', 'Proyecto'],
+            datasets: [{
+                label: 'Promedio',
+                fontColor: '#fff',
+                backgroundColor: '#259e2166',
+                borderColor: '#076605',
+                pointBackgroundColor: '#044702',
+                data: [
+                    newArray[0].PROMACT,  newArray[0].BITACORA, newArray[0].PROMCUES, newArray[0].PLATAFORMA, newArray[0].PROYECTO
+                ]
+            }]
+        },
+        options: {
+            legend: {
+                position: 'none',
+            },
+            scale: {
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 10
+                }
+            }
+        }
+    });
+
     /* habilidades */
-    if (newArray[0].HABILIDAD1 == 1) {
+    /* if (newArray[0].HABILIDAD1 == 1) {
         document.getElementById("habilidad1").style.textDecoration = "line-through";
 
     }
@@ -228,7 +257,7 @@ function recibir() {
     }
     if (newArray[0].HABILIDAD3 == 1) {
         document.getElementById("habilidad3").style.textDecoration = "line-through";
-    }
+    } */
     var avatar = "";
     var habilidad = "";
     var descipcion = "";
@@ -342,7 +371,7 @@ function recibir() {
             break;
     }
     document.getElementById("avatar").src = avatar;
-    document.getElementById("habilidad3").innerHTML ='<img class="habilidad"  src="images/habilidad3.png" /> '+habilidad;
+    document.getElementById("habilidad3").innerHTML = '<img class="habilidad"  src="images/habilidad3.png" /> ' + habilidad;
     document.getElementById("descripcion").innerHTML = descripcion;
 
 }
@@ -354,5 +383,7 @@ function limpiar() {
 function launch_toast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function () {
+        x.className = x.className.replace("show", "");
+    }, 5000);
 }
