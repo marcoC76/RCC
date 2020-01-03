@@ -13,13 +13,16 @@
   <meta name="theme-color" content="#000">
   <script src="scripts/busca.js"></script>
   <script src="scripts/js.js"></script>
+  <script src="scripts/script.js"></script>
 
 </head>
 
 <body class="fondo1">
+
   <div class="topnav" id="myTopnav">
     <a href="#" class="active">Perfil</a>
-    <a href="desglose.html" onclick="limpiar()">Desglose</a>
+    <!--  <a href="desglose.html" onclick="limpiar()">Desglose</a> -->
+    <a href="#desglose">Desglose</a>
     <!--  <a href="/mapa.html">Mapa</a> -->
     <a href="ayuda.html">Ayuda</a>
     <a href="#miModal" onclick="myFunction()">Mundos</a>
@@ -29,20 +32,21 @@
     </a>
   </div>
 
+  <br id="position">
   <br>
   <br>
   <br>
   <div class="card2">
     <center>
       <form>
-        <input id="texto" onkeyup="recibir()" minlength="5" maxlength="5" type="password" name="search"
+        <input id="texto" autofocus onkeyup="recibir()" minlength="5" maxlength="5" type="password" name="search"
           placeholder="ID">
       </form>
     </center>
   </div>
   <!-- <h1>
-    ID: 44856D
-  </h1> -->
+      ID: 44856D
+    </h1> -->
 
 
   <div id="resultado">
@@ -63,58 +67,61 @@
       <h5>Selecciona un Mundo</h5>
       <span>
         <a href="#" onclick="cambiaMundo(1)">
-          Mundo 1
+          Mundo <span class="MUno">1</span>
         </a>
       </span>
       <span>
         <a href="#" onclick="cambiaMundo(2)">
-          Mundo 2
+          Mundo <span class="MDos">2</span>
         </a>
       </span><span>
         <a href="#" onclick="cambiaMundo(3)">
-          Mundo 3
+          Mundo <span class="MTres">3</span>
         </a>
       </span>
     </div>
   </div>
   <!--  <div id="miModal2" class="modal">
-    <div class="modal-contenido">
-      <a href="#"><img src="images/prompt_no.png" alt=""></a>
-      <ul style="list-style-type: none;">
-        <h4>Evaluación</h4>
-        <li>Cuestionarios: 20% <span>200 puntos</span>
-        </li>
-        <li>Actividades: 25% <span>250 puntos</span>
-        </li>
-        <li>Bitácora: 25% <span>250 puntos</span></li>
-        <li>Proyecto: 30% <span>300 puntos</span></li>
-      </ul>
+      <div class="modal-contenido">
+        <a href="#"><img src="images/prompt_no.png" alt=""></a>
+        <ul style="list-style-type: none;">
+          <h4>Evaluación</h4>
+          <li>Cuestionarios: 20% <span>200 puntos</span>
+          </li>
+          <li>Actividades: 25% <span>250 puntos</span>
+          </li>
+          <li>Bitácora: 25% <span>250 puntos</span></li>
+          <li>Proyecto: 30% <span>300 puntos</span></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div id="container-floating">
-    <div class="nd1 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
-      <p class="letter">Actividades 25% = 250p</p>
-    </div>
-    <div class="nd2 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
-      <p class="letter">Proyecto 30% = 300p</p>
-    </div>
-    <div class="nd3 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
-      <p class="letter">Cuestionarios 20% = 200p</p>
-    </div>
-    <div class="nd4 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
-      <p class="letter">Bitácora 25% = 250p</p>
-    </div>
-
-    <div id="floating-button" data-toggle="tooltip" data-placement="left">
-      <p class="plus">+</p>
-      <p class="edit">-</p>
-    </div>
-
-  </div> -->
+    <div id="container-floating">
+      <div class="nd1 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
+        <p class="letter">Actividades 25% = 250p</p>
+      </div>
+      <div class="nd2 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
+        <p class="letter">Proyecto 30% = 300p</p>
+      </div>
+      <div class="nd3 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
+        <p class="letter">Cuestionarios 20% = 200p</p>
+      </div>
+      <div class="nd4 nds" data-toggle="tooltip" data-placement="left"><img class="reminder">
+        <p class="letter">Bitácora 25% = 250p</p>
+      </div>
+  
+      <div id="floating-button" data-toggle="tooltip" data-placement="left">
+        <p class="plus">+</p>
+        <p class="edit">-</p>
+      </div>
+  
+    </div> -->
+  <a id="goTop" href="#position">^</a>
 
   <footer id="footer">
 
   </footer>
+
+
 
   <script src="scripts/js-snackbar.min.js"></script>
   <!-- <script>
@@ -130,6 +137,18 @@
     });
   </script> -->
   <script>
+    var finalInfo = function () {
+      SnackBar({
+        message: "Se obtiene dividiendo tus puntos entre 100",
+        status: "info"
+      })
+    }
+    var pFinalInfo = function () {
+      SnackBar({
+        message: "Se obtiene sumando los puntos de cada misión",
+        status: "info"
+      })
+    }
     var mundoInfo = function () {
       SnackBar({
         message: "Mundo (periodo) que estas consultando",
@@ -196,6 +215,12 @@
         status: "danger"
       })
     }
+    var asisInfo = function () {
+      SnackBar({
+        message: "Cada asistencia te da 10 monedas extra",
+        status: "info"
+      })
+    }
     /* if (navigator.onLine) {
       // el navegador está conectado a la red
     } else {
@@ -210,7 +235,24 @@
                         `;
       document.getElementById("footer").innerHTML = internet;
     } */
-    
+
+    var basicScrollTop = function () {
+      // The button
+      var btnTop = document.querySelector('#goTop');
+      // Reveal the button
+      var btnReveal = function () {
+        var position = document.querySelector('#position');
+        position.innerHTML = window.scrollY + 'px';
+        if (window.scrollY >= 300) {
+          btnTop.classList.add('is-visible');
+        } else {
+          btnTop.classList.remove('is-visible');
+        }
+      }
+      // Listeners
+      window.addEventListener('scroll', btnReveal);
+    };
+    basicScrollTop();
   </script>
 
   <script>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="theme-color" content="#000">
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/js.js"></script>
 </head>
 
 <body class="fondo4">
@@ -22,7 +23,7 @@
         </a>
     </div>
 
-    <br><br><br>
+    <br id="position"><br><br>
     <div class="card">
         <h1>Historia</h1>
         <p>Tu y tú clan, deberán poner todo su empeño y compromiso para pasar todas las misiones y así obtener el rango
@@ -61,7 +62,7 @@
         <div class="sheen"></div>
     </div>
     <br>
-    <div class="card">
+    <!-- <div class="card">
         <h1>Habilidades</h1>
         <p>
             Cada habilidad tiene un costo y solo puede ser usada una vez por cada mundo.
@@ -99,7 +100,7 @@
         </p>
 
         <div class="sheen"></div>
-    </div>
+    </div> -->
     <br>
     <div class="card">
         <h1>Misiones</h1>
@@ -117,9 +118,9 @@
         <h3 class="ayuda">Proyecto: <img src="images/insgPlat.png" /></h3>
         <p>Completar esta misión otorga un máximo de 300 puntos y 200 monedas al conseguir la insignia.
         </p>
-        <h3 class="ayuda">Plataforma: <img src="images/insgPro.png" /></h3>
+       <!--  <h3 class="ayuda">Plataforma: <img src="images/insgPro.png" /></h3>
         <p>Completar esta misión otorga un máximo de 100 puntos y 200 monedas al conseguir la insignia.
-        </p>
+        </p> -->
         <h3 class="ayuda">Puntos extra: <img src="images/insgPuntos.png" /></h3>
         <p>Completar esta misión otorga 100 monedas y 100 puntos.
         </p>
@@ -127,7 +128,7 @@
 
         <div class="sheen"></div>
     </div>
-
+    <a id="goTop" href="#position">^</a>
     <br>
     <br>
     <br>
@@ -140,6 +141,25 @@
                 x.className = "topnav";
             }
         }
+
+        var basicScrollTop = function () {
+            // The button
+            var btnTop = document.querySelector('#goTop');
+            // Reveal the button
+            var btnReveal = function () {
+                var position = document.querySelector('#position');
+                position.innerHTML = window.scrollY + 'px';
+                if (window.scrollY >= 300) {
+                    btnTop.classList.add('is-visible');
+                } else {
+                    btnTop.classList.remove('is-visible');
+                }
+            }
+            // Listeners
+            window.addEventListener('scroll', btnReveal);
+        };
+        basicScrollTop();
+        
     </script>
 
     <script>
