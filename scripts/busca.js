@@ -172,14 +172,14 @@ function recibir() {
                         </div>
                     </center>
                     <h2 class="name">
-                        Grupo: <span class="tamaño tab">${newArray[0].GRUPO}</span>
+                        Grupo: <span class="tamaño ">${newArray[0].GRUPO}</span>
                     </h2>
                     <h2 class="name" onclick="asisInfo();" >
-                        Asistencias:<progress id="asisMeter" value="${newArray[0].TOTALASIS}" max="16"></progress> <span class="tamaño tab">${newArray[0].TOTALASIS}</span>
+                        Asistencias: <span class="tamaño ">${newArray[0].TOTALASIS}</span><progress id="asisMeter" value="${newArray[0].TOTALASIS}" max="16"></progress>
                     </h2>
                     
                     <h2 class="name">
-                        Punto Extra: <span class="tab" id="por1"></span><img class="tab" id="mas1" src="images/insgPuntos.png" />
+                        Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
                     </h2>
                     <br>
                     <center>
