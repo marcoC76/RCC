@@ -403,17 +403,18 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act1.1", "Act1.2", "Act2.1", "Act2.2", "Act3.1", "Act3.2"],
+                labels: ["Act0","Act1", "Act2", "Act3", "Act4", "Act5", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD1_1, newArray[0].ACTIVIDAD1_2, newArray[0].ACTIVIDAD2_1, newArray[0].ACTIVIDAD2_2, newArray[0].ACTIVIDAD3_1, newArray[0].ACTIVIDAD3_2],
+                    data: [newArray[0].ACTIVIDAD0, newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2, newArray[0].ACTIVIDAD3, newArray[0].ACTIVIDAD4, newArray[0].ACTIVIDAD5, newArray[0].ACTIVIDADR],
                     backgroundColor: [
                         'rgba(192, 236, 127, 0.6)',
                         'rgba(187, 213, 237, 0.6)',
                         'rgba(206, 253, 255, 0.6)',
                         'rgba(204, 255, 203, 0.6)',
                         'rgba(186, 232, 185, 0.6)',
-                        'rgba(286, 332, 185, 0.6)'
+                        'rgba(286, 332, 185, 0.6)',
+                        'rgba(186, 332, 175, 0.6)'
                     ]
                 }]
             },
@@ -431,14 +432,16 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest1", "Cuest2", "Cuest3"],
+                labels: ["Cuest1", "Cuest2", "Cuest3", "Cuest4", "Cuest5"],
                 datasets: [{
                     label: 'Calificación',
                     data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)'
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(105, 122, 192, 0.6)',
+                        'rgba(75, 192, 152, 0.6)'
                     ]
                 }]
             },
