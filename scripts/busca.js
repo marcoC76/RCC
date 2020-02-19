@@ -7,6 +7,8 @@ ft(appi);
 window.onload = inicio;
 
 function inicio() {
+
+    
     document.getElementById("texto").focus();
     localStorage.setItem("mundo", 1);
     if (navigator.onLine) {
@@ -101,6 +103,7 @@ function recibir() {
         return (el.ID === localStorage.getItem("id"));
     });
     console.log(newArray);
+    document.getElementById("texto").focus();
     salida = `
                 <br>
                 <div class="card">
