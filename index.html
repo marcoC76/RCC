@@ -14,7 +14,7 @@
   <script src="scripts/busca.js"></script>
   <script src="scripts/js.js"></script>
   <script src="scripts/script.js"></script>
-  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -40,8 +40,8 @@
   <div class="card2">
     <center>
       <form>
-        <input id="texto" autofocus onkeyup="recibir()" minlength="5" maxlength="5" type="password" name="search"
-          placeholder="ID">
+        <input id="texto" autofocus onKeypress="if (event.keyCode == 13) event.returnValue = false;" onkeyup="recibir()"
+          minlength="5" maxlength="5" type="password" name="search" placeholder="ID">
       </form>
     </center>
   </div>
@@ -123,7 +123,7 @@
   </footer>
 
 
- 
+
   <script src="scripts/js-snackbar.min.js"></script>
   <!-- <script>
     var lastScrollTop = 0;
@@ -276,7 +276,7 @@
   </script>
 
   <script src="scripts/Chart.min.js"></script>
-
+  
 </body>
 
 </html>

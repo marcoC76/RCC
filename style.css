@@ -111,7 +111,7 @@ p {
 }
 
 .card:hover {
-  transform: scale(1.04) translateY(-5px) translateX(-5px) ;
+  transform: scale(1.04) translateY(-5px) translateX(-5px);
   box-shadow: 12px 12px 10px rgba(0, 0, 0, .2);
   background-position: 100%;
 }
@@ -153,12 +153,12 @@ p {
   padding-right: 5px;
   animation: anima 1s forwards 1s ease;
 }
+
 #por1 {
   font-weight: bolder;
   opacity: 0;
   font-size: 1.5em;
   position: inherit;
-  
   animation: anima 1s forwards 1s ease;
 }
 
@@ -183,7 +183,7 @@ p {
   display: block;
 }
 
-.MUno{
+.MUno {
   background-image: url('images/slot_vehumet.png');
   background-size: cover;
   background-position: center;
@@ -192,9 +192,9 @@ p {
   align-items: center;
   padding: 0 10px 0 10px;
   font-weight: bold;
-  
 }
-.MDos{
+
+.MDos {
   background-image: url('images/slot_equipped.png');
   background-size: cover;
   background-position: center;
@@ -203,9 +203,9 @@ p {
   align-items: center;
   padding: 0 10px 0 10px;
   font-weight: bold;
-  
 }
-.MTres{
+
+.MTres {
   background-image: url('images/slot_equipped_cursed.png');
   background-size: cover;
   background-position: center;
@@ -214,15 +214,12 @@ p {
   align-items: center;
   padding: 0 10px 0 10px;
   font-weight: bold;
-
 }
 
-#asisMeter{
+#asisMeter {
   width: 65px;
   height: 15px;
-
 }
-
 
 .name1 {
   font-size: 1.2em;
@@ -232,6 +229,7 @@ p {
   padding: 0;
   margin: -5px 0 10px 0;
 }
+
 .name {
   font-size: 1.15em;
   color: aliceblue;
@@ -239,6 +237,7 @@ p {
   position: relative;
   padding: 0;
   margin: 10px 0 10px 0;
+  
 }
 
 .cost {
@@ -301,16 +300,16 @@ p {
   height: 139px;
 }
 
-.card:hover #avatar  {
+.card:hover #avatar {
   background-position-y: 50px;
-  filter: drop-shadow(1px 1px 5px rgba(31, 30, 30, 0.678)) hue-rotate(360deg) ;
+  filter: drop-shadow(1px 1px 5px rgba(31, 30, 30, 0.678)) hue-rotate(360deg);
   transform: scale(1.02) translateY(-0.25px) translateX(-0.25px);
   transition: 1s;
 }
-.card:hover .image   {
+
+.card:hover .image {
   background-position-y: -70px;
 }
-
 
 .type {
   text-transform: uppercase;
@@ -559,7 +558,6 @@ p {
     top: 0;
   }
   .topnav.responsive a {
-    
     background-color: rgba(12, 11, 11, 0.87);
     float: none;
     display: block;
@@ -971,6 +969,3 @@ input[type=password]:focus {
   text-align: center;
 }
 
-.estonoeciste {
-  color:
-}

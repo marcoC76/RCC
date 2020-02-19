@@ -9,7 +9,7 @@ window.onload = inicio;
 function inicio() {
 
     
-    document.getElementById("texto").focus();
+    
     localStorage.setItem("mundo", 1);
     if (navigator.onLine) {
         // el navegador está conectado a la red
