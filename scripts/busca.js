@@ -435,7 +435,7 @@ function recibir() {
                 labels: ["Cuest1", "Cuest2", "Cuest3", "Cuest4", "Cuest5"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3],
+                    data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3, newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
                     backgroundColor: [
                         'rgba(54, 162, 235, 0.6)',
                         'rgba(255, 206, 86, 0.6)',
