@@ -8,8 +8,8 @@ window.onload = inicio;
 
 function inicio() {
 
-    
-    
+
+
     localStorage.setItem("mundo", 1);
     if (navigator.onLine) {
         // el navegador está conectado a la red
@@ -152,145 +152,148 @@ function recibir() {
 
                 <br>
                 <br>
-
-                <div  class="card">
-                    <h2 class="name">
-                        Datos Generales
-                    </h2>
-                    <div id="mundoActualDesg" onclick="mundoInfo();" class="cost">
-                        Mundo ${localStorage.getItem("mundo")}
-                    </div>
-                    <center>
-                        <h2 style="color:white;" onclick="clanInfo();" >
-                            ${newArray[0].EQUIPO}
+                <div id="elemento">
+                    <div  class="card">
+                        <h2 class="name" >
+                            Datos Generales
                         </h2>
-                        
-                        <div id="pie">
-                            <img id="caracter" src="images/caracter.png" />
+                        <div id="mundoActualDesg" onclick="mundoInfo();" class="cost">
+                            Mundo ${localStorage.getItem("mundo")}
                         </div>
-                        <div class="abilities" >
-                        <h2 style="color:white;">
-                            ${newArray[0].NICK}
-                        </h2>
-                        </div>
-                    </center>
-                    <h2 class="name">
-                        Grupo: <span class="tamaño ">${newArray[0].GRUPO}</span>
-                    </h2>
-                    <h2 class="name" onclick="asisInfo();" >
-                        Asistencias: <span class="tamaño ">${newArray[0].TOTALASIS}</span><progress id="asisMeter" value="${newArray[0].TOTALASIS}" max="16"></progress>
-                    </h2>
-                    
-                    <h2 class="name">
-                        Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
-                    </h2>
-                    <br>
-                    <center>
-                        <div class="abilities cali" onclick="finalInfo();">
-                            <h2 class="name" >
-                                Calificación Final: 
+                        <center>
+                            <h2 style="color:white;" onclick="clanInfo();" >
+                                ${newArray[0].EQUIPO}
                             </h2>
-                            <hr>
-                            <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
-                            <img id="reaccion" src="images/reaccion_neutral.png" >
-                        </div>
-                        <div class="abilities cali">
-                            <br>
-                            <span class="ayuda" style="font-size: 2em" onclick="pFinalInfo();"> 
-                                ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span>
-                            </span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
-                            <h1 id="estado">
-                                REPROBADO
-                            </h1>
-                        </div>
+                            
+                            <div id="pie">
+                                <img id="caracter" src="images/caracter.png" />
+                            </div>
+                            <div class="abilities" >
+                            <h2 style="color:white;">
+                                ${newArray[0].NICK}
+                            </h2>
+                            </div>
+                        </center>
+                        <h2 class="name">
+                            Grupo: <span class="tamaño ">${newArray[0].GRUPO}</span>
+                        </h2>
+                        <h2 class="name" onclick="asisInfo();" >
+                            Asistencias: <span class="tamaño ">${newArray[0].TOTALASIS}</span><progress id="asisMeter" value="${newArray[0].TOTALASIS}" max="16"></progress>
+                        </h2>
                         
-                    </center>
-                    <div class="sheen"></div>
-                </div>
-
-                <br>
-                <br>
-
-                <div class="card">
-                    <h2 class="name">
-                        Cuestionarios Previos
-                    </h2>
-                    <div class="desglo">
-                        <img onclick="cuestInfo()" id="cuest1" src="images/insgCuest.png" />
+                        <h2 class="name">
+                            Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
+                        </h2>
+                        <br>
+                        <center>
+                            <div class="abilities cali" onclick="finalInfo();">
+                                <h2 class="name" >
+                                    Calificación Final: 
+                                </h2>
+                                <hr>
+                                <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
+                                <img id="reaccion" src="images/reaccion_neutral.png" >
+                            </div>
+                            <div class="abilities cali">
+                                <br>
+                                <span class="ayuda" style="font-size: 2em" onclick="pFinalInfo();"> 
+                                    ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span>
+                                </span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
+                                <h1 id="estado">
+                                    REPROBADO
+                                </h1>
+                            </div>
+                            
+                        </center>
+                        <div class="sheen"></div>
                     </div>
-                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;"> ${newArray[0].PUNTOSCUES*100}</a> </h4>
-                    <center class="insignias">
-                        <canvas id="cuestChart" width="100%"></canvas>
-                    </center>
-                    <center class="abilities">
-                        <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
-                    </center>
-                    <div class="sheen"></div>
                 </div>
-
                 <br>
                 <br>
 
-                <div class="card">
-                    <h2 class="name">
-                        Actividades
-                    </h2>
-                    <div class="desglo">
-                        <img onclick="actInfo()" id="act1"  src="images/insgAct.png" />
+                <div id="elemento2">
+                    <div class="card">
+                        <h2 class="name">
+                            Cuestionarios Previos
+                        </h2>
+                        <div class="desglo">
+                            <img onclick="cuestInfo()" id="cuest1" src="images/insgCuest.png" />
+                        </div>
+                        <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;"> ${newArray[0].PUNTOSCUES*100}</a> </h4>
+                        <center class="insignias">
+                            <canvas id="cuestChart" width="100%"></canvas>
+                        </center>
+                        <center class="abilities">
+                            <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
+                        </center>
+                        <div class="sheen"></div>
                     </div>
-                    <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${Math.round(newArray[0].PUNTOSACT*100)}</span></h4>
-                    <center class="insignias">
-                        <canvas id="actChart" width="100%"></canvas>
-                    </center>
-                    <center class="abilities">
-                        <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
-                    </center>
-                    <div class="sheen"></div>
                 </div>
 
                 <br>
                 <br>
-
-                <div class="card">
-                    <h2 class="name">
-                        Bitácora
-                    </h2>
-                    <div class="desglo">
-                        <img onclick="bitInfo()" id="bit1"  src="images/insgBit.png" />
+                <div id="elemento3">
+                    <div class="card">
+                        <h2 class="name">
+                            Actividades
+                        </h2>
+                        <div class="desglo">
+                            <img onclick="actInfo()" id="act1"  src="images/insgAct.png" />
+                        </div>
+                        <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${Math.round(newArray[0].PUNTOSACT*100)}</span></h4>
+                        <center class="insignias">
+                            <canvas id="actChart" width="100%"></canvas>
+                        </center>
+                        <center class="abilities">
+                            <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
+                        </center>
+                        <div class="sheen"></div>
                     </div>
-                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSBIT*100}</a></h4>
-                    <center class="insignias">
-                        <canvas id="bitChart" width="50"></canvas>
-                    </center>
-                    <br>
-                    <center class="abilities">
-                        <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
-                    </center>
-                    <div class="sheen"></div>
                 </div>
-
+                <br>
+                <br>
+                <div id="elemento4">
+                    <div class="card">
+                        <h2 class="name">
+                            Bitácora
+                        </h2>
+                        <div class="desglo">
+                            <img onclick="bitInfo()" id="bit1"  src="images/insgBit.png" />
+                        </div>
+                        <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSBIT*100}</a></h4>
+                        <center class="insignias">
+                            <canvas id="bitChart" width="50"></canvas>
+                        </center>
+                        <br>
+                        <center class="abilities">
+                            <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
+                        </center>
+                        <div class="sheen"></div>
+                    </div>
+                </div>
                 <br>
                 <br>
 
                 
-
-                <div class="card">
-                    <h2 class="name">
-                        Proyecto
-                    </h2>
-                    <div class="desglo">
-                        <img onclick="proInfo()" id="pro1" src="images/insgPlat.png" />
-                    </div>
-                    <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSPRO*100}</a></h4>
-                    <center class="insignias">
-                        <canvas id="proChart" width="100%"></canvas>
-                    </center>
-                    <br>
-                    <center class="abilities">
-                        <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
-                    </center>
-                    <div class="sheen"></div>
-                </div> 
+                <div id="elemento5">
+                    <div class="card">
+                        <h2 class="name">
+                            Proyecto
+                        </h2>
+                        <div class="desglo">
+                            <img onclick="proInfo()" id="pro1" src="images/insgPlat.png" />
+                        </div>
+                        <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSPRO*100}</a></h4>
+                        <center class="insignias">
+                            <canvas id="proChart" width="100%"></canvas>
+                        </center>
+                        <br>
+                        <center class="abilities">
+                            <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
+                        </center>
+                        <div class="sheen"></div>
+                    </div> 
+                </div>
                 `;
     document.getElementById("resultado").innerHTML = salida;
 
@@ -376,7 +379,7 @@ function recibir() {
     var resumenChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ['Actividades', 'Bitácora', ['Cuestionarios', 'previos'],  'Proyecto'],
+            labels: ['Actividades', 'Bitácora', ['Cuestionarios', 'previos'], 'Proyecto'],
             datasets: [{
                 label: 'Promedio',
                 fontColor: '#fff',
@@ -384,7 +387,7 @@ function recibir() {
                 borderColor: '#076605',
                 pointBackgroundColor: '#044702',
                 data: [
-                    newArray[0].PROMACT, newArray[0].BITACORA, newArray[0].PROMCUES,  newArray[0].PROYECTO
+                    newArray[0].PROMACT, newArray[0].BITACORA, newArray[0].PROMCUES, newArray[0].PROYECTO
                 ]
             }]
         },
@@ -406,7 +409,7 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act0","Act1", "Act2", "Act3", "Act4", "Act5", "ActR"],
+                labels: ["Act0", "Act1", "Act2", "Act3", "Act4", "Act5", "ActR"],
                 datasets: [{
                     label: 'Calificación',
                     data: [newArray[0].ACTIVIDAD0, newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2, newArray[0].ACTIVIDAD3, newArray[0].ACTIVIDAD4, newArray[0].ACTIVIDAD5, newArray[0].ACTIVIDADR],
@@ -943,3 +946,82 @@ function launch_toast() {
         x.className = x.className.replace("show", "");
     }, 5000);
 }
+
+//para los demas elementos
+var elementosScrollTop = function () {
+    // Reveal the button
+    var reveal = function () {
+        if (window.scrollY >= 400) {
+            /* console.log("se ve"); */
+            document.querySelector("#elemento").style.opacity="1"
+            
+        } else {
+            /* console.log("no se ve"); */
+            document.querySelector("#elemento").style.opacity="0"
+            
+        }
+    }
+    // Listeners
+    window.addEventListener('scroll', reveal);
+    
+    var reveal2 = function () {
+        console.log(window.scrollY);
+        if (window.scrollY >= 1200) {
+            console.log("se ve");
+            document.querySelector("#elemento2").style.opacity="1"
+            
+        } else {
+            console.log("no se ve");
+            document.querySelector("#elemento2").style.opacity="0"
+            
+        }
+    }
+    // Listeners
+    window.addEventListener('scroll', reveal2);
+
+    var reveal3 = function () {
+        console.log(window.scrollY);
+        if (window.scrollY >= 1700) {
+            console.log("se ve");
+            document.querySelector("#elemento3").style.opacity="1"
+            
+        } else {
+            console.log("no se ve");
+            document.querySelector("#elemento3").style.opacity="0"
+            
+        }
+    }
+    // Listeners
+    window.addEventListener('scroll', reveal3);
+
+    var reveal4 = function () {
+        console.log(window.scrollY);
+        if (window.scrollY >= 1900) {
+            console.log("se ve");
+            document.querySelector("#elemento4").style.opacity="1"
+            
+        } else {
+            console.log("no se ve");
+            document.querySelector("#elemento4").style.opacity="0"
+            
+        }
+    }
+    // Listeners
+    window.addEventListener('scroll', reveal4);
+    
+    var reveal5 = function () {
+        console.log(window.scrollY);
+        if (window.scrollY >= 2400) {
+            console.log("se ve");
+            document.querySelector("#elemento5").style.opacity="1"
+            
+        } else {
+            console.log("no se ve");
+            document.querySelector("#elemento5").style.opacity="0"
+            
+        }
+    }
+    // Listeners
+    window.addEventListener('scroll', reveal5);
+};
+elementosScrollTop();

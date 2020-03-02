@@ -36,6 +36,29 @@ html {
   opacity: 1;
 }
 
+#elemento {
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+#elemento2 {
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+#elemento3 {
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+#elemento4 {
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+#elemento5 {
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+
+
+
 a {
   text-decoration: none;
 }
@@ -237,7 +260,6 @@ p {
   position: relative;
   padding: 0;
   margin: 10px 0 10px 0;
-  
 }
 
 .cost {
@@ -968,4 +990,3 @@ input[type=password]:focus {
   color: white;
   text-align: center;
 }
-
