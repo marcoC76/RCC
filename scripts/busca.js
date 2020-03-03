@@ -153,9 +153,9 @@ function recibir() {
                 <br>
                 <br>
                 
-                <div  class="card" id="carta">
+                <div  class="card" id="">
 
-                    <div id="elemento">
+                    <div id="">
                         <h2 class="name" >
                             Datos Generales
                         </h2>
@@ -214,8 +214,8 @@ function recibir() {
                 <br>
                 <br>
 
-                <div class="card" id="carta2">
-                <div id="elemento2">
+                <div class="card" id="">
+                <div id="">
                         <h2 class="name">
                             Cuestionarios Previos
                         </h2>
@@ -235,8 +235,8 @@ function recibir() {
 
                 <br>
                 <br>
-                <div class="card" id="carta3">
-                <div id="elemento3">
+                <div class="card" id="">
+                <div id="">
                         <h2 class="name">
                             Actividades
                         </h2>
@@ -255,8 +255,8 @@ function recibir() {
                 </div>
                 <br>
                 <br>
-                <div class="card" id="carta4">
-                <div id="elemento4">
+                <div class="card" id="">
+                <div id="">
                         <h2 class="name">
                             Bitácora
                         </h2>
@@ -278,8 +278,8 @@ function recibir() {
                 <br>
 
                 
-                <div class="card" id="carta5">
-                <div id="elemento5">
+                <div class="card" id="">
+                <div id="">
                         <h2 class="name">
                             Proyecto
                         </h2>
