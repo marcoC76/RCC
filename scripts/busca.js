@@ -977,7 +977,7 @@ var elementosScrollTop = function () {
     var reveal2 = function () {
         var elemento = document.querySelector("#elemento2");
         var carta = document.querySelector("#carta2");
-        if (window.scrollY >= 1270) {
+        if (window.scrollY >= 1100) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
             carta.style.opacity = "1"
@@ -997,7 +997,7 @@ var elementosScrollTop = function () {
     var reveal3 = function () {
         var elemento = document.querySelector("#elemento3");
         var carta = document.querySelector("#carta3");
-        if (window.scrollY >= 1700) {
+        if (window.scrollY >= 1500) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
              carta.style.opacity="1"
@@ -1017,7 +1017,7 @@ var elementosScrollTop = function () {
     var reveal4 = function () {
         var elemento = document.querySelector("#elemento4");
         var carta = document.querySelector("#carta4");
-        if (window.scrollY >= 2120) {
+        if (window.scrollY >= 2000) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
              carta.style.opacity="1"
@@ -1037,7 +1037,7 @@ var elementosScrollTop = function () {
     var reveal5 = function () {
         var elemento = document.querySelector("#elemento5");
         var carta = document.querySelector("#carta5");
-        if (window.scrollY >= 2460) {
+        if (window.scrollY >= 2200) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
              carta.style.opacity="1"
