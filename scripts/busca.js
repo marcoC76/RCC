@@ -152,8 +152,10 @@ function recibir() {
 
                 <br>
                 <br>
-                <div id="elemento">
-                    <div  class="card">
+                
+                <div  class="card" id="carta">
+
+                    <div id="elemento">
                         <h2 class="name" >
                             Datos Generales
                         </h2>
@@ -208,11 +210,12 @@ function recibir() {
                         <div class="sheen"></div>
                     </div>
                 </div>
+                
                 <br>
                 <br>
 
+                <div class="card" id="carta2">
                 <div id="elemento2">
-                    <div class="card">
                         <h2 class="name">
                             Cuestionarios Previos
                         </h2>
@@ -232,8 +235,8 @@ function recibir() {
 
                 <br>
                 <br>
+                <div class="card" id="carta3">
                 <div id="elemento3">
-                    <div class="card">
                         <h2 class="name">
                             Actividades
                         </h2>
@@ -252,8 +255,8 @@ function recibir() {
                 </div>
                 <br>
                 <br>
+                <div class="card" id="carta4">
                 <div id="elemento4">
-                    <div class="card">
                         <h2 class="name">
                             Bitácora
                         </h2>
@@ -275,8 +278,8 @@ function recibir() {
                 <br>
 
                 
+                <div class="card" id="carta5">
                 <div id="elemento5">
-                    <div class="card">
                         <h2 class="name">
                             Proyecto
                         </h2>
@@ -951,77 +954,105 @@ function launch_toast() {
 var elementosScrollTop = function () {
     // Reveal the button
     var reveal = function () {
-        if (window.scrollY >= 400) {
+        console.log(window.scrollY);
+        var elemento = document.querySelector("#elemento");
+        var carta = document.querySelector("#carta");
+        if (window.scrollY >= 340) {
             /* console.log("se ve"); */
-            document.querySelector("#elemento").style.opacity="1"
-            
+            /*  elemento.style.opacity="1" */
+            elemento.style.display = "inline"
+            carta.style.opacity = "1"
+
         } else {
             /* console.log("no se ve"); */
-            document.querySelector("#elemento").style.opacity="0"
-            
+            /* elemento.style.opacity="0" */
+            elemento.style.display = "none"
+            carta.style.opacity = "0"
+
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal);
-    
+
     var reveal2 = function () {
-        console.log(window.scrollY);
-        if (window.scrollY >= 1200) {
-            console.log("se ve");
-            document.querySelector("#elemento2").style.opacity="1"
-            
+        var elemento = document.querySelector("#elemento2");
+        var carta = document.querySelector("#carta2");
+        if (window.scrollY >= 1270) {
+            /* console.log("se ve"); */
+            /*  elemento.style.opacity="1" */
+            carta.style.opacity = "1"
+            elemento.style.display = "inline"
+
         } else {
-            console.log("no se ve");
-            document.querySelector("#elemento2").style.opacity="0"
-            
+            /* console.log("no se ve"); */
+            /* elemento.style.opacity="0" */
+            carta.style.opacity="0"
+            elemento.style.display = "none"
+
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal2);
 
     var reveal3 = function () {
-        console.log(window.scrollY);
+        var elemento = document.querySelector("#elemento3");
+        var carta = document.querySelector("#carta3");
         if (window.scrollY >= 1700) {
-            console.log("se ve");
-            document.querySelector("#elemento3").style.opacity="1"
-            
+            /* console.log("se ve"); */
+            /*  elemento.style.opacity="1" */
+             carta.style.opacity="1"
+            elemento.style.display = "inline"
+
         } else {
-            console.log("no se ve");
-            document.querySelector("#elemento3").style.opacity="0"
-            
+            /* console.log("no se ve"); */
+            /* elemento.style.opacity="0" */
+            carta.style.opacity="0"
+            elemento.style.display = "none"
+
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal3);
 
     var reveal4 = function () {
-        console.log(window.scrollY);
-        if (window.scrollY >= 1900) {
-            console.log("se ve");
-            document.querySelector("#elemento4").style.opacity="1"
-            
+        var elemento = document.querySelector("#elemento4");
+        var carta = document.querySelector("#carta4");
+        if (window.scrollY >= 2120) {
+            /* console.log("se ve"); */
+            /*  elemento.style.opacity="1" */
+             carta.style.opacity="1"
+            elemento.style.display = "inline"
+
         } else {
-            console.log("no se ve");
-            document.querySelector("#elemento4").style.opacity="0"
-            
+            /* console.log("no se ve"); */
+            /* elemento.style.opacity="0" */
+            carta.style.opacity="0"
+            elemento.style.display = "none"
+
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal4);
-    
+
     var reveal5 = function () {
-        console.log(window.scrollY);
-        if (window.scrollY >= 2400) {
-            console.log("se ve");
-            document.querySelector("#elemento5").style.opacity="1"
-            
+        var elemento = document.querySelector("#elemento5");
+        var carta = document.querySelector("#carta5");
+        if (window.scrollY >= 2460) {
+            /* console.log("se ve"); */
+            /*  elemento.style.opacity="1" */
+             carta.style.opacity="1"
+            elemento.style.display = "inline"
+
         } else {
-            console.log("no se ve");
-            document.querySelector("#elemento5").style.opacity="0"
-            
+            /* console.log("no se ve"); */
+            /* elemento.style.opacity="0" */
+            carta.style.opacity="0"
+            elemento.style.display = "none"
+
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal5);
+
 };
 elementosScrollTop();
