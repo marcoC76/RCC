@@ -85,7 +85,7 @@ function ft(appi) {
         .then(function (data) {
             obj = data;
 
-            console.log(obj);
+           /*  console.log(obj); */
             localStorage.setItem("obj", JSON.stringify(obj));
         })
         .catch(function (err) {

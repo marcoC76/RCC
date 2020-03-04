@@ -41,52 +41,60 @@ html {
   transition: opacity 0.4s linear;  */
   display: none;
 }
+
 #carta {
   opacity: 0;
-  transition: opacity 0.4s linear; 
+  transition: opacity 0.4s linear;
   /* display: none; */
 }
+
 #elemento2 {
- /* opacity: 0;
+  /* opacity: 0;
   transition: opacity 0.4s linear;  */
   display: none;
 }
+
 #carta2 {
   opacity: 0;
-  transition: opacity 0.4s linear; 
+  transition: opacity 0.4s linear;
   /* display: none; */
 }
+
 #elemento3 {
   /* opacity: 0;
   transition: opacity 0.4s linear;  */
   display: none;
 }
+
 #carta3 {
   opacity: 0;
-  transition: opacity 0.4s linear; 
+  transition: opacity 0.4s linear;
   /* display: none; */
 }
+
 #elemento4 {
   /* opacity: 0;
   transition: opacity 0.4s linear;  */
   display: none;
 }
+
 #carta4 {
   opacity: 0;
-  transition: opacity 0.4s linear; 
+  transition: opacity 0.4s linear;
   /* display: none; */
 }
+
 #elemento5 {
   /* opacity: 0;
   transition: opacity 0.4s linear;  */
   display: none;
 }
+
 #carta5 {
   opacity: 0;
-  transition: opacity 0.4s linear; 
+  transition: opacity 0.4s linear;
   /* display: none; */
 }
-
 
 a {
   text-decoration: none;
@@ -120,8 +128,14 @@ body {
 
 .ayuda {
   color: white;
+  opacity:0;
+  animation: anima 1s forwards 2.5s ease;
 }
 
+#estado{
+  opacity:0;
+  animation: anima 1s forwards 3.5s ease;
+}
 .ayuda img {
   width: 15%;
 }
@@ -203,25 +217,30 @@ p {
   right: 37px;
   padding-left: 5px;
   padding-right: 5px;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2.7s ease;
 }
-#mas1{
+
+#mas1 {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#cuest1{
+
+#cuest1 {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#act1{
+
+#act1 {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#bit1{
+
+#bit1 {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#pro1{
+
+#pro1 {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
@@ -240,7 +259,7 @@ p {
   background-image: url(images/Ruins.png);
   background-size: cover;
   opacity: 0;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 2s ease;
 }
 
 .lightbox img {
@@ -291,8 +310,10 @@ p {
 }
 
 #asisMeter {
-  width: 65px;
+  width: 50px;
   height: 15px;
+  opacity:0;
+  animation: anima 1s forwards 3.2s ease;
 }
 
 .name1 {
@@ -311,6 +332,11 @@ p {
   position: relative;
   padding: 0;
   margin: 10px 0 10px 0;
+ 
+}
+.tamaño{
+  opacity:0;
+  animation: anima 1s forwards 2.7s ease;
 }
 
 .cost {
@@ -342,6 +368,11 @@ p {
 
 #caracter {
   width: 40%;
+}
+
+#pie img {
+  opacity: 0;
+  animation: anima 1s forwards 2.5s ease;
 }
 
 .desglo img {
@@ -419,25 +450,25 @@ p {
   padding: 8px 12px;
   margin: 0 0 15px 0;
   opacity: 0;
-  animation: anima 1s forwards 1s ease;
+  animation: anima 1s forwards 1.5s ease;
 }
 
 .insignias img {
   opacity: 0;
   width: 14%;
-  animation: anima 1s forwards 1.5s ease;
+  animation: anima 1s forwards 2.5s ease;
 }
 
 #rango {
   width: 15%;
   opacity: 0;
-  animation: anima 1s forwards 2s ease;
+  animation: anima 1s forwards 3.1s ease;
 }
 
 #rango1 {
   width: 85%;
   opacity: 0;
-  animation: anima 1s forwards 2s ease;
+  animation: anima 1s forwards 3.5s ease;
 }
 
 .nick {
@@ -487,7 +518,7 @@ p {
   position: relative;
   top: 1vh;
   left: 1vh;
-  animation: anima 1s forwards 2s ease;
+  animation: anima 1s forwards 3.5s ease;
 }
 
 .power {
@@ -499,9 +530,11 @@ p {
 }
 
 /* The shine on the card when you hover over it */
-canvas{
+
+canvas {
   animation: anima 1s forwards 1s ease;
 }
+
 .sheen {
   position: absolute;
   top: 0;
@@ -605,6 +638,8 @@ canvas{
   margin-bottom: 6%;
   font-size: 4em;
   color: white;
+  opacity:0;
+  animation: anima 1s forwards 3s ease;
 }
 
 .topnav .icon {
@@ -724,7 +759,7 @@ input[type=password]:focus {
 #reaccion {
   opacity: 0;
   width: 30%;
-  animation: anima 1s forwards 2s ease;
+  animation: anima 1s forwards 3.5s ease;
 }
 
 .container2 {
