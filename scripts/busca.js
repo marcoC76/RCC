@@ -34,6 +34,7 @@ function cambiaMundo(num) {
         console.log(localStorage.getItem("mundo"));
         document.body.className = 'fondo1';
 
+
         appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
         ft(appi);
         document.getElementById("resultado").innerHTML = `                                                    
@@ -49,6 +50,7 @@ function cambiaMundo(num) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
         document.body.className = 'fondo2';
+
         appi = "https://script.google.com/macros/s/AKfycby_mP3ow6lHHhp5KoZ2cp-JvapWOc6bCEDHQqEdko2k9D1Y-ali/exec";
         ft(appi);
         document.getElementById("resultado").innerHTML = `
@@ -59,6 +61,7 @@ function cambiaMundo(num) {
                                                                 </h1>
                                                             </div>
                                                         `;
+
     } else if (localStorage.getItem("mundo") == 3) {
         limpiar();
         console.log(localStorage.getItem("mundo"));
@@ -85,7 +88,7 @@ function ft(appi) {
         .then(function (data) {
             obj = data;
 
-           /*  console.log(obj); */
+            /*  console.log(obj); */
             localStorage.setItem("obj", JSON.stringify(obj));
         })
         .catch(function (err) {
@@ -106,7 +109,7 @@ function recibir() {
     document.getElementById("texto").focus();
     salida = `
                 <br>
-                <div class="card">
+                <div id="carta0" class="card">
                     <h2 onclick="clanInfo();" class="name1 ">
                         ${newArray[0].EQUIPO}   
                     </h2>
@@ -120,10 +123,8 @@ function recibir() {
                         ${newArray[0].NICK}
                     </div>
                     <br>
-                    <div class="flavor-text">
-                        <center id="descripcion">
-
-                        </center>
+                    <div  >
+                        <center id="descripcion"></center>
                     </div>
                     <div  class="abilities insignias" >
                         Resumen: <hr>
@@ -153,7 +154,7 @@ function recibir() {
                 <br>
                 <br>
                 
-                <div  class="card" id="carta">
+                <div id="carta"  class="card" >
 
                     <div id="elemento">
                         <h2 class="name" >
@@ -303,6 +304,8 @@ function recibir() {
                 </div>
                 `;
     document.getElementById("resultado").innerHTML = salida;
+
+    
 
     var rango = "";
     if (newArray[0].FINAL < 6) {
@@ -729,75 +732,218 @@ function recibir() {
         document.getElementById("habilidad3").style.textDecoration = "line-through";
     } */
 
+    //TODO: cambiar caracteres por mundo 
     var caracter = "";
-    switch (newArray[0].AVATAR) {
-        case 1:
-            caracter = "images/caracter.png";
-            break;
-        case 2:
-            caracter = "images/caracter_H.png";
-            break;
-        case 3:
-            caracter = "images/caracter2.png";
-            break;
-        case 4:
-            caracter = "images/caracter2_H.png";
-            break;
-        case 5:
-            caracter = "images/caracter3.png";
-            break;
-        case 6:
-            caracter = "images/caracter3_H.png";
-            break;
-        case 7:
-            caracter = "images/caracter4.png";
-            break;
-        case 8:
-            caracter = "images/caracter4_H.png";
-            break;
-        case 9:
-            caracter = "images/caracter5.png";
-            break;
-        case 10:
-            caracter = "images/caracter5_H.png";
-            break;
-        case 11:
-            caracter = "images/caracter6.png";
-            break;
-        case 12:
-            caracter = "images/caracter6_H.png";
-            break;
-        case 13:
-            caracter = "images/caracter7.png";
-            break;
-        case 14:
-            caracter = "images/caracter7_H.png";
-            break;
-        case 15:
-            caracter = "images/caracter8.png";
-            break;
-        case 16:
-            caracter = "images/caracter8_H.png";
-            break;
-        case 17:
-            caracter = "images/caracter9.png";
-            break;
-        case 18:
-            caracter = "images/caracter9_H.png";
-            break;
-        case 19:
-            caracter = "images/caracter10.png";
-            break;
-        case 20:
-            caracter = "images/caracter10_H.png";
-            break;
-        case 0:
-            caracter = "images/caracter0.png";
-            break;
-        default:
-            caracter = "images/caracter.png";
-            break;
+    if (localStorage.getItem("mundo") == 1) {
+        switch (newArray[0].AVATAR) {
+            case 1:
+                caracter = "images/caracter.png";
+                break;
+            case 2:
+                caracter = "images/caracter_H.png";
+                break;
+            case 3:
+                caracter = "images/caracter2.png";
+                break;
+            case 4:
+                caracter = "images/caracter2_H.png";
+                break;
+            case 5:
+                caracter = "images/caracter3.png";
+                break;
+            case 6:
+                caracter = "images/caracter3_H.png";
+                break;
+            case 7:
+                caracter = "images/caracter4.png";
+                break;
+            case 8:
+                caracter = "images/caracter4_H.png";
+                break;
+            case 9:
+                caracter = "images/caracter5.png";
+                break;
+            case 10:
+                caracter = "images/caracter5_H.png";
+                break;
+            case 11:
+                caracter = "images/caracter6.png";
+                break;
+            case 12:
+                caracter = "images/caracter6_H.png";
+                break;
+            case 13:
+                caracter = "images/caracter7.png";
+                break;
+            case 14:
+                caracter = "images/caracter7_H.png";
+                break;
+            case 15:
+                caracter = "images/caracter8.png";
+                break;
+            case 16:
+                caracter = "images/caracter8_H.png";
+                break;
+            case 17:
+                caracter = "images/caracter9.png";
+                break;
+            case 18:
+                caracter = "images/caracter9_H.png";
+                break;
+            case 19:
+                caracter = "images/caracter10.png";
+                break;
+            case 20:
+                caracter = "images/caracter10_H.png";
+                break;
+            case 0:
+                caracter = "images/caracter0.png";
+                break;
+            default:
+                caracter = "images/caracter.png";
+                break;
+        }
+    } else if (localStorage.getItem("mundo") == 2) {
+
+        switch (newArray[0].AVATAR) {
+            case 1:
+                caracter = "images/caracter.png";
+                break;
+            case 2:
+                caracter = "images/caracter_H.png";
+                break;
+            case 3:
+                caracter = "images/caracter2.png";
+                break;
+            case 4:
+                caracter = "images/caracter2_H.png";
+                break;
+            case 5:
+                caracter = "images/caracter3.png";
+                break;
+            case 6:
+                caracter = "images/caracter3_H.png";
+                break;
+            case 7:
+                caracter = "images/caracter4.png";
+                break;
+            case 8:
+                caracter = "images/caracter4_H.png";
+                break;
+            case 9:
+                caracter = "images/caracter5.png";
+                break;
+            case 10:
+                caracter = "images/caracter5_H.png";
+                break;
+            case 11:
+                caracter = "images/caracter6.png";
+                break;
+            case 12:
+                caracter = "images/caracter6_H.png";
+                break;
+            case 13:
+                caracter = "images/caracter7.png";
+                break;
+            case 14:
+                caracter = "images/caracter7_H.png";
+                break;
+            case 15:
+                caracter = "images/caracter8.png";
+                break;
+            case 16:
+                caracter = "images/caracter8_H.png";
+                break;
+            case 17:
+                caracter = "images/caracter9.png";
+                break;
+            case 18:
+                caracter = "images/caracter9_H.png";
+                break;
+            case 19:
+                caracter = "images/caracter10.png";
+                break;
+            case 20:
+                caracter = "images/caracter10_H.png";
+                break;
+            case 0:
+                caracter = "images/caracter0.png";
+                break;
+            default:
+                caracter = "images/caracter.png";
+                break;
+        }
+    } else if (localStorage.getItem("mundo") == 3) {
+        switch (newArray[0].AVATAR) {
+            case 1:
+                caracter = "images/caracter.png";
+                break;
+            case 2:
+                caracter = "images/caracter_H.png";
+                break;
+            case 3:
+                caracter = "images/caracter2.png";
+                break;
+            case 4:
+                caracter = "images/caracter2_H.png";
+                break;
+            case 5:
+                caracter = "images/caracter3.png";
+                break;
+            case 6:
+                caracter = "images/caracter3_H.png";
+                break;
+            case 7:
+                caracter = "images/caracter4.png";
+                break;
+            case 8:
+                caracter = "images/caracter4_H.png";
+                break;
+            case 9:
+                caracter = "images/caracter5.png";
+                break;
+            case 10:
+                caracter = "images/caracter5_H.png";
+                break;
+            case 11:
+                caracter = "images/caracter6.png";
+                break;
+            case 12:
+                caracter = "images/caracter6_H.png";
+                break;
+            case 13:
+                caracter = "images/caracter7.png";
+                break;
+            case 14:
+                caracter = "images/caracter7_H.png";
+                break;
+            case 15:
+                caracter = "images/caracter8.png";
+                break;
+            case 16:
+                caracter = "images/caracter8_H.png";
+                break;
+            case 17:
+                caracter = "images/caracter9.png";
+                break;
+            case 18:
+                caracter = "images/caracter9_H.png";
+                break;
+            case 19:
+                caracter = "images/caracter10.png";
+                break;
+            case 20:
+                caracter = "images/caracter10_H.png";
+                break;
+            case 0:
+                caracter = "images/caracter0.png";
+                break;
+            default:
+                caracter = "images/caracter.png";
+                break;
+        }
     }
+    
     document.getElementById("caracter").src = caracter;
 
     var estado = "";
@@ -829,122 +975,124 @@ function recibir() {
 
     var avatar = "";
     var habilidad = "";
-    var descipcion = "";
+    var descripcion = "";
     switch (newArray[0].AVATAR) {
         case 1:
             avatar = "images/personaje1.png";
-            habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Ama la ciudad, su fortaleza es una memoria prodigiosa';
             break;
         case 2:
             avatar = "images/personaje1_H.png";
-            habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Imposible de engañar, siempre tiene mucho cuidado';
             break;
         case 3:
             avatar = "images/personaje2.png";
-            habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Tiene mucho carisma y una envidiable ágilidad';
             break;
         case 4:
             avatar = "images/personaje2_H.png";
-            habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'No olvida su cabeza porque la tiene pegada al cuello';
             break;
         case 5:
             avatar = "images/personaje3.png";
-            habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Posee una voz encantadora pero también un carácter fuerte ';
             break;
         case 6:
             avatar = "images/personaje3_H.png";
-            habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+           /*  habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'De pocas palabras pero muchas mas acciones';
             break;
         case 7:
             avatar = "images/personaje4.png";
-            habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+           /*  habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Su sigilo y ágilidad le dan una amplia ventaja';
             break;
         case 8:
             avatar = "images/personaje4_H.png";
-            habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Muy fuerte, usa correctamente su astucia';
             break;
         case 9:
             avatar = "images/personaje5.png";
-            habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Tiene una voluntad de hierro al mismo nivel de su rudeza';
             break;
         case 10:
             avatar = "images/personaje5_H.png";
-            habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Su mente prodigiosa le permite actuar con rápidez';
             break;
         case 11:
             avatar = "images/personaje6.png";
-            habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Ama la ciudad, su fortaleza es una memoria prodigiosa';
             break;
         case 12:
             avatar = "images/personaje6_H.png";
-            habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Su mente prodigiosa le permite actuar con rápidez';
             break;
         case 13:
             avatar = "images/personaje7.png";
-            habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Imposible de engañar, siempre tiene mucho cuidado';
             break;
         case 14:
             avatar = "images/personaje7_H.png";
-            habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Tiene mucho carisma y una envidiable ágilidad';
             break;
         case 15:
             avatar = "images/personaje8.png";
-            habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+            /* habilidad = 'Otro intento 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'No olvida su cabeza porque la tiene pegada al cuello';
             break;
         case 16:
             avatar = "images/personaje8_H.png";
-            habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+           /*  habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Posee una voz encantadora pero también un carácter fuerte ';
             break;
         case 17:
             avatar = "images/personaje9.png";
-            habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+           /*  habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'De pocas palabras pero muchas mas acciones';
             break;
         case 18:
             avatar = "images/personaje9_H.png";
-            habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+           /*  habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Su sigilo y ágilidad le dan una amplia ventaja';
             break;
         case 19:
             avatar = "images/personaje10.png";
-            habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+          /*   habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Muy fuerte, usa correctamente su astucia';
             break;
         case 20:
             avatar = "images/personaje10_H.png";
-            habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+          /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Tiene una voluntad de hierro al mismo nivel de su rudeza';
             break;
         case 0:
             avatar = "images/personaje0.png";
-            habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>';
+          /*   habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Único';
             break;
         default:
             break;
     }
     document.getElementById("avatar").src = avatar;
-    document.getElementById("habilidad3").innerHTML = '<img class="habilidad"  src="images/habilidad3.png" /> ' + habilidad;
+    /* document.getElementById("habilidad3").innerHTML = '<img class="habilidad"  src="images/habilidad3.png" /> ' + habilidad; */
     document.getElementById("descripcion").innerHTML = descripcion;
 
 
 }
+
+    
 
 function limpiar() {
     document.getElementById("texto").value = "";
@@ -994,7 +1142,7 @@ var elementosScrollTop = function () {
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity="0"
+            carta.style.opacity = "0"
             elemento.style.display = "none"
 
         }
@@ -1008,13 +1156,13 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 1480) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-             carta.style.opacity="1"
+            carta.style.opacity = "1"
             elemento.style.display = "inline"
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity="0"
+            carta.style.opacity = "0"
             elemento.style.display = "none"
 
         }
@@ -1028,13 +1176,13 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 1860) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-             carta.style.opacity="1"
+            carta.style.opacity = "1"
             elemento.style.display = "inline"
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity="0"
+            carta.style.opacity = "0"
             elemento.style.display = "none"
 
         }
@@ -1048,13 +1196,13 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 2200) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-             carta.style.opacity="1"
+            carta.style.opacity = "1"
             elemento.style.display = "inline"
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity="0"
+            carta.style.opacity = "0"
             elemento.style.display = "none"
 
         }
