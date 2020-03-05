@@ -421,13 +421,13 @@ function recibir() {
                     label: 'Calificación',
                     data: [newArray[0].ACTIVIDAD0, newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2, newArray[0].ACTIVIDAD3, newArray[0].ACTIVIDAD4, newArray[0].ACTIVIDAD5, newArray[0].ACTIVIDADR],
                     backgroundColor: [
-                        'rgba(192, 236, 127, 0.6)',
-                        'rgba(187, 213, 237, 0.6)',
-                        'rgba(206, 253, 255, 0.6)',
-                        'rgba(204, 255, 203, 0.6)',
-                        'rgba(186, 232, 185, 0.6)',
-                        'rgba(286, 332, 185, 0.6)',
-                        'rgba(186, 332, 175, 0.6)'
+                        'rgba(243, 145, 159, 0.6)',
+                        'rgba(208, 97, 112, 0.6)',
+                        'rgba(167, 58, 73, 0.6)',
+                        'rgba(126, 28, 42, 0.6)',
+                        'rgba(120, 19, 14, 0.6)',
+                        'rgba(85, 8, 19, 0.6)',
+                        'rgba(60, 3, 0, 0.6)'
                     ]
                 }]
             },
@@ -450,11 +450,11 @@ function recibir() {
                     label: 'Calificación',
                     data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3, newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(105, 122, 192, 0.6)',
-                        'rgba(75, 192, 152, 0.6)'
+                        'rgba(147, 155, 186, 0.6)',
+                        'rgba(93, 106, 152, 0.6)',
+                        'rgba(50, 65, 119, 0.6)',
+                        'rgba(22, 36, 89, 0.6)',
+                        'rgba(5, 17, 57, 0.6)'
                     ]
                 }]
             },
@@ -477,7 +477,7 @@ function recibir() {
                     label: 'Calificación',
                     data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)'
+                        'rgba(255, 227, 194, 0.6)'
 
                     ]
                 }]
@@ -520,16 +520,17 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act4.1", "Act5.1", "Act6.1", "Act6.2", "ActR"],
+                labels: ["Act6", "Act7", "Act8", "Act9", "Ondas", "ActR"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD4_1, newArray[0].ACTIVIDAD5_1, newArray[0].ACTIVIDAD6_1, newArray[0].ACTIVIDAD6_2, newArray[0].ACTIVIDADR],
+                    data: [newArray[0].ACTIVIDAD6, newArray[0].ACTIVIDAD7, newArray[0].ACTIVIDAD8, newArray[0].ACTIVIDAD9, newArray[0].ONDAS, newArray[0].ACTIVIDADR],
                     backgroundColor: [
-                        'rgba(162, 136, 227, 0.6)',
-                        'rgba(187, 213, 237, 0.6)',
-                        'rgba(206, 253, 255, 0.6)',
-                        'rgba(204, 255, 203, 0.6)',
-                        'rgba(186, 232, 185, 0.6)'
+                        'rgba(197, 204, 215, 0.6)',
+                        'rgba(106, 127, 159, 0.6)',
+                        'rgba(47, 74, 116, 0.6)',
+                        'rgba(12, 37, 76, 0.6)',
+                        'rgba(1, 13, 32, 0.6)',
+                        'rgba(0, 8, 21, 0.6)'
                     ]
                 }]
             },
@@ -547,14 +548,15 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest4", "Cuest5"],
+                labels: ["Cuest6", "Cuest7", "Cuest8", "Cuest9"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
+                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7, newArray[0].CUESTIONARIO8, newArray[0].CUESTIONARIO9],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)'
+                        'rgba(92, 171, 137, 0.6)',
+                        'rgba(64, 146, 111, 0.6)',
+                        'rgba(42, 120, 87, 0.6)',
+                        'rgba(24, 95, 65, 0.6)'
                     ]
                 }]
             },
@@ -577,7 +579,7 @@ function recibir() {
                     label: 'Calificación',
                     data: [newArray[0].PROYECTO, 10 - newArray[0].PROYECTO],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)'
+                        'rgba(136, 47, 105, 0.6)'
 
                     ]
                 }]
@@ -607,13 +609,15 @@ function recibir() {
                     label: 'Calificación',
                     data: [newArray[0].BITACORA, 10 - newArray[0].BITACORA],
                     backgroundColor: [
-                        'rgba(153, 102, 255, 0.6)'
+                        'rgba(176, 131, 61, 0.6)'
                     ]
                 }]
             }
 
         });
     } else if (localStorage.getItem("mundo") == 3) {
+
+        /*generar paleta http://paletton.com/#uid=55C050kkZm31qv5aYqCuJhzVNc+ */
         var ctx = document.getElementById("actChart");
         var actChart = new Chart(ctx, {
             type: 'bar',
