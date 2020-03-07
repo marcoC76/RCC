@@ -737,8 +737,10 @@ function recibir() {
     //TODO: cambiar caracteres por mundo 
     var caracter = "";
     if (localStorage.getItem("mundo") == 1) {
+        animaHover=""
         switch (newArray[0].AVATAR) {
             case 1:
+               
                 caracter = "images/caracter.png";
                 break;
             case 2:
@@ -809,139 +811,139 @@ function recibir() {
 
         switch (newArray[0].AVATAR) {
             case 1:
-                caracter = "images/caracter.png";
+                caracter = "images/caracter_2.png";
                 break;
             case 2:
-                caracter = "images/caracter_H.png";
+                caracter = "images/caracter_H_2.png";
                 break;
             case 3:
-                caracter = "images/caracter2.png";
+                caracter = "images/caracter2_2.png";
                 break;
             case 4:
-                caracter = "images/caracter2_H.png";
+                caracter = "images/caracter2_H_2.png";
                 break;
             case 5:
-                caracter = "images/caracter3.png";
+                caracter = "images/caracter3_2.png";
                 break;
             case 6:
-                caracter = "images/caracter3_H.png";
+                caracter = "images/caracter3_H_2.png";
                 break;
             case 7:
-                caracter = "images/caracter4.png";
+                caracter = "images/caracter4_2.png";
                 break;
             case 8:
-                caracter = "images/caracter4_H.png";
+                caracter = "images/caracter4_H_2.png";
                 break;
             case 9:
-                caracter = "images/caracter5.png";
+                caracter = "images/caracter5_2.png";
                 break;
             case 10:
-                caracter = "images/caracter5_H.png";
+                caracter = "images/caracter5_H_2.png";
                 break;
             case 11:
-                caracter = "images/caracter6.png";
+                caracter = "images/caracter6_2.png";
                 break;
             case 12:
-                caracter = "images/caracter6_H.png";
+                caracter = "images/caracter6_H_2.png";
                 break;
             case 13:
-                caracter = "images/caracter7.png";
+                caracter = "images/caracter7_2.png";
                 break;
             case 14:
-                caracter = "images/caracter7_H.png";
+                caracter = "images/caracter7_H_2.png";
                 break;
             case 15:
-                caracter = "images/caracter8.png";
+                caracter = "images/caracter8_2.png";
                 break;
             case 16:
-                caracter = "images/caracter8_H.png";
+                caracter = "images/caracter8_H_2.png";
                 break;
             case 17:
-                caracter = "images/caracter9.png";
+                caracter = "images/caracter9_2.png";
                 break;
             case 18:
-                caracter = "images/caracter9_H.png";
+                caracter = "images/caracter9_H_2.png";
                 break;
             case 19:
-                caracter = "images/caracter10.png";
+                caracter = "images/caracter10_2.png";
                 break;
             case 20:
-                caracter = "images/caracter10_H.png";
+                caracter = "images/caracter10_H_2.png";
                 break;
             case 0:
-                caracter = "images/caracter0.png";
+                caracter = "images/caracter0_2.png";
                 break;
             default:
-                caracter = "images/caracter.png";
+                caracter = "images/caracter_2.png";
                 break;
         }
     } else if (localStorage.getItem("mundo") == 3) {
         switch (newArray[0].AVATAR) {
             case 1:
-                caracter = "images/caracter.png";
+                caracter = "images/caracter_3.png";
                 break;
             case 2:
-                caracter = "images/caracter_H.png";
+                caracter = "images/caracter_H_3.png";
                 break;
             case 3:
-                caracter = "images/caracter2.png";
+                caracter = "images/caracter2_3.png";
                 break;
             case 4:
-                caracter = "images/caracter2_H.png";
+                caracter = "images/caracter2_H_3.png";
                 break;
             case 5:
-                caracter = "images/caracter3.png";
+                caracter = "images/caracter3_3.png";
                 break;
             case 6:
-                caracter = "images/caracter3_H.png";
+                caracter = "images/caracter3_H_3.png";
                 break;
             case 7:
-                caracter = "images/caracter4.png";
+                caracter = "images/caracter4_3.png";
                 break;
             case 8:
-                caracter = "images/caracter4_H.png";
+                caracter = "images/caracter4_H_3.png";
                 break;
             case 9:
-                caracter = "images/caracter5.png";
+                caracter = "images/caracter5_3.png";
                 break;
             case 10:
-                caracter = "images/caracter5_H.png";
+                caracter = "images/caracter5_H_3.png";
                 break;
             case 11:
-                caracter = "images/caracter6.png";
+                caracter = "images/caracter6_3.png";
                 break;
             case 12:
-                caracter = "images/caracter6_H.png";
+                caracter = "images/caracter6_H_3.png";
                 break;
             case 13:
-                caracter = "images/caracter7.png";
+                caracter = "images/caracter7_3.png";
                 break;
             case 14:
-                caracter = "images/caracter7_H.png";
+                caracter = "images/caracter7_H_3.png";
                 break;
             case 15:
-                caracter = "images/caracter8.png";
+                caracter = "images/caracter8_3.png";
                 break;
             case 16:
-                caracter = "images/caracter8_H.png";
+                caracter = "images/caracter8_H_3.png";
                 break;
             case 17:
-                caracter = "images/caracter9.png";
+                caracter = "images/caracter9_3.png";
                 break;
             case 18:
-                caracter = "images/caracter9_H.png";
+                caracter = "images/caracter9_H_3.png";
                 break;
             case 19:
-                caracter = "images/caracter10.png";
+                caracter = "images/caracter10_3.png";
                 break;
             case 20:
-                caracter = "images/caracter10_H.png";
+                caracter = "images/caracter10_H_3.png";
                 break;
             case 0:
-                caracter = "images/caracter0.png";
+                caracter = "images/caracter0_3.png";
                 break;
             default:
-                caracter = "images/caracter.png";
+                caracter = "images/caracter_3.png";
                 break;
         }
     }
@@ -1127,9 +1129,9 @@ var elementosScrollTop = function () {
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            elemento.style.display = "none";
+            /* elemento.style.display = "none";
             carta.style.opacity = "0";
-            carta.style ="animation: va 1.2s forwards 0s ease-in";
+            carta.style ="animation: va 1.2s forwards 0s ease-in"; */
         }
     }
     // Listeners
@@ -1148,9 +1150,9 @@ var elementosScrollTop = function () {
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            elemento.style.display = "none";
+            /* elemento.style.display = "none";
             carta.style.opacity = "0";
-            carta.style ="animation: va 1.2s forwards 0s ease-in";
+            carta.style ="animation: va 1.2s forwards 0s ease-in"; */
         }
     }
     // Listeners
@@ -1169,9 +1171,9 @@ var elementosScrollTop = function () {
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            elemento.style.display = "none";
+            /* elemento.style.display = "none";
             carta.style.opacity = "0";
-            carta.style ="animation: va 1.2s forwards 0s ease-in";
+            carta.style ="animation: va 1.2s forwards 0s ease-in"; */
         }
     }
     // Listeners
@@ -1190,9 +1192,9 @@ var elementosScrollTop = function () {
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            elemento.style.display = "none";
+            /* elemento.style.display = "none";
             carta.style.opacity = "0";
-            carta.style ="animation: va 1.2s forwards 0s ease-in";
+            carta.style ="animation: va 1.2s forwards 0s ease-in"; */
         }
     }
     // Listeners
@@ -1211,9 +1213,9 @@ var elementosScrollTop = function () {
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            elemento.style.display = "none";
+          /*   elemento.style.display = "none";
             carta.style.opacity = "0";
-            carta.style ="animation: va 1.2s forwards 0s ease-in";
+            carta.style ="animation: va 1.2s forwards 0s ease-in"; */
         }
     }
     // Listeners

@@ -41,13 +41,17 @@ html {
   transition: opacity 0.4s linear;  */
   display: none;
 }
-#carta0{
-  opacity:0;
+
+#carta0 {
+  opacity: 0;
   animation: llega 1s forwards 0s ease-in;
+  transition: 2s;
 }
+
 #carta {
   opacity: 0;
   transition: opacity 0.4s linear;
+  transition: 2s;
   /* display: none; */
 }
 
@@ -60,6 +64,7 @@ html {
 #carta2 {
   opacity: 0;
   transition: opacity 0.4s linear;
+  transition: 2s;
   /* display: none; */
 }
 
@@ -72,6 +77,7 @@ html {
 #carta3 {
   opacity: 0;
   transition: opacity 0.4s linear;
+  transition: 2s;
   /* display: none; */
 }
 
@@ -85,6 +91,7 @@ html {
   opacity: 0;
   transition: opacity 0.4s linear;
   /* display: none; */
+  transition: 2s;
 }
 
 #elemento5 {
@@ -97,6 +104,7 @@ html {
   opacity: 0;
   transition: opacity 0.4s linear;
   /* display: none; */
+  transition: 2s;
 }
 
 a {
@@ -178,14 +186,35 @@ p {
   margin: 0 auto;
   overflow: hidden;
   transition: all ease-out .5s;
+  opacity: 0;
+  
+  animation: llega-izq 0.7s forwards 0.5s ease-in;
 }
 
-
+@keyframes hover1 {
+  0% {
+    transform: ;
+  }
+  25% {
+    transform: ;
+  }
+  50% {
+    transform: ;
+  }
+  75% {
+    transform: ;
+  }
+  100% {
+    transform: ;
+  }
+}
 
 .card:hover {
+  
   transform: scale(1.04) translateY(-5px) translateX(-5px);
   box-shadow: 12px 12px 10px rgba(0, 0, 0, .2);
   background-position: 100%;
+ 
 }
 
 .card2 {
@@ -262,6 +291,7 @@ p {
 #pie {
   border-radius: 10px;
   padding-top: 10px;
+  min-height: 10em;
   background-image: url(images/Ruins.png);
   background-size: cover;
   opacity: 0;
@@ -373,25 +403,36 @@ p {
 }
 
 #caracter {
-  width: 40%;
+  /* width: 40%; */
+  height: 17vh;
+}
+
+.card:hover #caracter {
+  filter: drop-shadow(1px 1px 5px rgba(31, 30, 30, 0.678)) hue-rotate(360deg);
+  transition: 2s;
 }
 
 #pie img {
+
   opacity: 0;
   animation: llega-izq 1s forwards 2.5s ease;
 }
+
 #eq {
   opacity: 0;
   animation: llega 1s forwards 2.2s ease;
 }
+
 #nic {
   opacity: 0;
   animation: llega 1s forwards 2.2s ease;
 }
+
 .name1 {
   opacity: 0;
   animation: llega 1s forwards 1.5s ease;
 }
+
 .nick {
   opacity: 0;
   animation: llega-izq 1s forwards 1.5s ease;
@@ -1044,9 +1085,10 @@ input[type=password]:focus {
     opacity: 1;
   }
 }
+
 @keyframes llega-izq {
   0% {
-    transform: translateX(250%) scale(0);
+    transform: translateX(200%) scale(0);
     opacity: 0.2;
   }
   70% {
@@ -1058,14 +1100,12 @@ input[type=password]:focus {
     opacity: 1;
   }
 }
+
 @keyframes va {
   0% {
-    
     opacity: 1;
   }
-  
   100% {
-    
     opacity: 0;
   }
 }
