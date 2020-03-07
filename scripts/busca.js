@@ -110,45 +110,47 @@ function recibir() {
     salida = `
                 <br>
                 <div id="carta0" class="card">
-                    <h2 onclick="clanInfo();" class="name1 ">
-                        ${newArray[0].EQUIPO}   
-                    </h2>
-                    <div onclick="mundoInfo();" id="mundoActual" class="cost">
-                        Mundo ${localStorage.getItem("mundo")}
+                    <div id="elemento0">
+                        <h2 onclick="clanInfo();" class="name1 ">
+                            ${newArray[0].EQUIPO}   
+                        </h2>
+                        <div onclick="mundoInfo();" id="mundoActual" class="cost">
+                            Mundo ${localStorage.getItem("mundo")}
+                        </div>
+                        <div class="image">
+                            <img id="avatar" src="" width="100%">
+                        </div>
+                        <div class="nick" style="color:white; text-align:center;font-size: 1.5em;">
+                            ${newArray[0].NICK}
+                        </div>
+                        <br>
+                        <div  >
+                            <center id="descripcion"></center>
+                        </div>
+                        <div class="abilities insignias" >
+                            Resumen: <hr>
+                            <canvas id="resumen" width="100%" height="70hv"></canvas>
+                        </div>
+                        <div class="insignias">Insignias conseguidas: <hr>
+                            <center>
+                                <img onclick="cuestInfo();" id="cuest" title="Misión cuestionarios" src="images/sinInsgCuest.png" />
+                                <img onclick="actInfo();" id="act" title="Misión actividades" src="images/sinInsgAct.png" />
+                                <img onclick="bitInfo();" id="bit" title="Misión bitácora" src="images/sinInsgBit.png" />
+                                <img onclick="proInfo();" id="pro" title="Misión proyecto" src="images/sinInsgPlat.png" />
+                                
+                                <img onclick="masInfo();" id="mas" title="Misión puntos Extra" src="images/sinInsgPuntos.png" /><span id="por"></span>
+                            </center>
+                        </div>
+                        <div class="power stat" onclick="monedasInfo();">
+                            ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span> 
+                        </div>
+                        <div class="defense stat" onclick="puntosInfo();">
+                            <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
+                        </div>
+                        <div class="sheen"></div>   
+                        <br id="desglose">
+                        <br>
                     </div>
-                    <div class="image">
-                        <img id="avatar" src="" width="100%">
-                    </div>
-                    <div class="nick" style="color:white; text-align:center;font-size: 1.5em;">
-                        ${newArray[0].NICK}
-                    </div>
-                    <br>
-                    <div  >
-                        <center id="descripcion"></center>
-                    </div>
-                    <div  class="abilities insignias" >
-                        Resumen: <hr>
-                        <canvas id="resumen" width="100%" height="70hv"></canvas>
-                    </div>
-                    <div class="insignias">Insignias conseguidas: <hr>
-                        <center>
-                            <img onclick="cuestInfo();" id="cuest" title="Misión cuestionarios" src="images/sinInsgCuest.png" />
-                            <img onclick="actInfo();" id="act" title="Misión actividades" src="images/sinInsgAct.png" />
-                            <img onclick="bitInfo();" id="bit" title="Misión bitácora" src="images/sinInsgBit.png" />
-                            <img onclick="proInfo();" id="pro" title="Misión proyecto" src="images/sinInsgPlat.png" />
-                            
-                            <img onclick="masInfo();" id="mas" title="Misión puntos Extra" src="images/sinInsgPuntos.png" /><span id="por"></span>
-                        </center>
-                    </div>
-                    <div class="power stat" onclick="monedasInfo();">
-                        ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span> 
-                    </div>
-                    <div class="defense stat" onclick="puntosInfo();">
-                        <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
-                    </div>
-                    <div class="sheen"></div>   
-                    <br id="desglose">
-                    <br>
                 </div>
 
                 <br>
@@ -164,7 +166,7 @@ function recibir() {
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
                         <center>
-                            <h2 style="color:white;" onclick="clanInfo();" >
+                            <h2 id="eq" style="color:white;" onclick="clanInfo();" >
                                 ${newArray[0].EQUIPO}
                             </h2>
                             
@@ -172,7 +174,7 @@ function recibir() {
                                 <img id="caracter" src="images/caracter.png" />
                             </div>
                             <div class="abilities" >
-                            <h2 style="color:white;">
+                            <h2 id="nic" style="color:white;">
                                 ${newArray[0].NICK}
                             </h2>
                             </div>
@@ -1109,6 +1111,8 @@ function launch_toast() {
 //para los demas elementos
 var elementosScrollTop = function () {
     // Reveal the button
+    
+
     var reveal = function () {
         console.log(window.scrollY);
         var elemento = document.querySelector("#elemento");
@@ -1116,15 +1120,16 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 110) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-            elemento.style.display = "inline"
-            carta.style.opacity = "1"
+            elemento.style.display = "inline";
+            carta.style.opacity = "1";
+            carta.style ="animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            elemento.style.display = "none"
-            carta.style.opacity = "0"
-
+            elemento.style.display = "none";
+            carta.style.opacity = "0";
+            carta.style ="animation: va 1.2s forwards 0s ease-in";
         }
     }
     // Listeners
@@ -1136,15 +1141,16 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 1030) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-            carta.style.opacity = "1"
-            elemento.style.display = "inline"
+            elemento.style.display = "inline";
+            carta.style.opacity = "1";
+            carta.style ="animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity = "0"
-            elemento.style.display = "none"
-
+            elemento.style.display = "none";
+            carta.style.opacity = "0";
+            carta.style ="animation: va 1.2s forwards 0s ease-in";
         }
     }
     // Listeners
@@ -1156,15 +1162,16 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 1480) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-            carta.style.opacity = "1"
-            elemento.style.display = "inline"
+            elemento.style.display = "inline";
+            carta.style.opacity = "1";
+            carta.style ="animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity = "0"
-            elemento.style.display = "none"
-
+            elemento.style.display = "none";
+            carta.style.opacity = "0";
+            carta.style ="animation: va 1.2s forwards 0s ease-in";
         }
     }
     // Listeners
@@ -1176,15 +1183,16 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 1860) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-            carta.style.opacity = "1"
-            elemento.style.display = "inline"
+            elemento.style.display = "inline";
+            carta.style.opacity = "1";
+            carta.style ="animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity = "0"
-            elemento.style.display = "none"
-
+            elemento.style.display = "none";
+            carta.style.opacity = "0";
+            carta.style ="animation: va 1.2s forwards 0s ease-in";
         }
     }
     // Listeners
@@ -1196,19 +1204,21 @@ var elementosScrollTop = function () {
         if (window.scrollY >= 2200) {
             /* console.log("se ve"); */
             /*  elemento.style.opacity="1" */
-            carta.style.opacity = "1"
-            elemento.style.display = "inline"
+            elemento.style.display = "inline";
+            carta.style.opacity = "1";
+            carta.style ="animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-            carta.style.opacity = "0"
-            elemento.style.display = "none"
-
+            elemento.style.display = "none";
+            carta.style.opacity = "0";
+            carta.style ="animation: va 1.2s forwards 0s ease-in";
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal5);
 
+    
 };
 elementosScrollTop();

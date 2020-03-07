@@ -10,7 +10,24 @@
     <meta name="theme-color" content="#000">
     <link rel="stylesheet" href="style.css">
     <script src="scripts/js.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
 </head>
+<style>
+    /* [data-scroll] {
+        transition: translate 1s;
+
+
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+    } */
+</style>
 
 <body class="fondo4">
     <div class="topnav" id="myTopnav">
@@ -24,38 +41,39 @@
     </div>
 
     <br id="position"><br><br>
-    <div class="card">
+    <div class="card" >
         <h1>Historia</h1>
-        <p>Tu y tú clan, deberán poner todo su empeño y compromiso para pasar todas las misiones y así obtener el rango
+        <p data-scroll>Tu y tú clan, deberán poner todo su empeño y compromiso para pasar todas las misiones y así obtener el rango
             más alto: Estrella dorada y con él, la
             calificación mas alta posible en la materia (10). </p>
-        <p>Cada mundo (periodo) estará constituido por 4 misiones, y cada una de ellas te entregara una insignia si
+        <p data-scroll>Cada mundo (periodo) estará constituido por 4 misiones, y cada una de ellas te entregara una insignia si
             consigues todos los puntos de la misión.</p>
         <!-- <p>Las insignias, ademas de puntos, otorgan monedas.</p> -->
-        <p>Debes tener al menos 10 asistencias para tener derecho a tu calificación</p>
-        <p>Los puntos determinan tu rango y calificación final para ese mundo en particular.</p>
-        <p>Tu calificación final la
+        <p data-scroll>Debes tener al menos 10 asistencias para tener derecho a tu calificación</p>
+        <p data-scroll>Los puntos determinan tu rango y calificación final para ese mundo en particular.</p>
+        <p data-scroll>Tu calificación final la
             obtienes sumando los puntos de todas las misiones y dividiendo estos entre 100.</p>
         <!-- <p>Las monedas se puedes usar para activar las habilidades que tu personaje tiene.</p> -->
-        <p>Al finalizar cada mundo todos los puntajes y monedas vuelven a 0.</p>
+        <p data-scroll>Al finalizar cada mundo todos los puntajes y monedas vuelven a 0.</p>
         <div class="sheen"></div>
     </div>
     <br>
-    <div class="card">
+    <br>
+    <div class="card" >
         <h1>Rangos</h1>
         <p>
             La calificación final se obtiene dividiendo los puntos totales entre 100
         </p>
-        <h3 style="color:white;">Noob: <img src="images/sinNivel.png" /></h3>
+        <h3 data-scroll style="color:white;">Noob: <img src="images/sinNivel.png" /></h3>
         <p>Todos comienzan cada mundo sin rango y 0 de calificación
         </p>
-        <h3 style="color:white;">Traine: <img src="images/nivel1.png" /></h3>
+        <h3 data-scroll style="color:white;">Traine: <img src="images/nivel1.png" /></h3>
         <p>Este rango se alcanza cuando tu calificación es al menos 6
         </p>
-        <h3 style="color:white;">Junior: <img src="images/nivel2.png" /></h3>
+        <h3 data-scroll style="color:white;">Junior: <img src="images/nivel2.png" /></h3>
         <p>Este rango se alcanza cuando tus calificación es al menos 8
         </p>
-        <h3 style="color:white;">Senior: <img src="images/nivel3.png" /></h3>
+        <h3 data-scroll style="color:white;">Senior: <img src="images/nivel3.png" /></h3>
         <p>Este rango se alcanza cuando tu calificación es 10
         </p>
 
@@ -102,26 +120,26 @@
         <div class="sheen"></div>
     </div> -->
     <br>
-    <div class="card">
+    <div class="card" >
         <h1>Misiones</h1>
         <p>Recibirás los puntos correspondientes a cada misión, pero la insignia se consigue con la
             puntuación máxima de cada misión</p>
-        <h3 class="ayuda">Actividades: <img src="images/insgAct.png" /></h3>
+        <h3 data-scroll class="ayuda">Actividades: <img src="images/insgAct.png" /></h3>
         <p>Completar esta misión otorga un máximo de 300 puntos.
         </p>
-        <h3 class="ayuda">Cuestionarios previos: <img src="images/insgCuest.png" /></h3>
+        <h3 data-scroll class="ayuda">Cuestionarios previos: <img src="images/insgCuest.png" /></h3>
         <p>Completar esta misión otorga un máximo de 200 puntos.
         </p>
-        <h3 class="ayuda">Bitácora: <img src="images/insgBit.png" /></h3>
+        <h3 data-scroll class="ayuda">Bitácora: <img src="images/insgBit.png" /></h3>
         <p>Completar esta misión otorga un máximo de 200 puntos.
         </p>
-        <h3 class="ayuda">Proyecto: <img src="images/insgPlat.png" /></h3>
+        <h3 data-scroll class="ayuda">Proyecto: <img src="images/insgPlat.png" /></h3>
         <p>Completar esta misión otorga un máximo de 300 puntos.
         </p>
-       <!--  <h3 class="ayuda">Plataforma: <img src="images/insgPro.png" /></h3>
+        <!--  <h3 class="ayuda">Plataforma: <img src="images/insgPro.png" /></h3>
         <p>Completar esta misión otorga un máximo de 100 puntos y 200 monedas al conseguir la insignia.
         </p> -->
-        <h3 class="ayuda">Puntos extra: <img src="images/insgPuntos.png" /></h3>
+        <h3 data-scroll class="ayuda">Puntos extra: <img src="images/insgPuntos.png" /></h3>
         <p>Completar esta misión otorga 100 puntos extra.
         </p>
 
@@ -133,6 +151,20 @@
     <br>
     <br>
     <script>
+        ScrollOut({
+            threshold:0.2,
+            onShown: function (el) {
+                // remove the class
+                el.classList.remove("bond");
+
+                // force reflow
+                void el.offsetWidth;
+
+                // re-add the animated cl
+                el.classList.add("bond");
+            }
+        });
+
         function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
@@ -159,7 +191,6 @@
             window.addEventListener('scroll', btnReveal);
         };
         basicScrollTop();
-        
     </script>
 
     <script>

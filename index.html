@@ -15,7 +15,7 @@
   <script src="scripts/js.js"></script>
   <script src="scripts/script.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 
 <body class="fondo1">
@@ -37,7 +37,7 @@
   <br>
   <br>
   <br>
-  <div class="card2">
+  <div data-scroll class="card2">
     <center>
       <form>
         <input id="texto" autofocus onKeypress="if (event.keyCode == 13) event.returnValue = false;" onkeyup="recibir()"
@@ -51,9 +51,9 @@
 
 
   <div id="resultado">
-    <div class="card">
+    <div class="card" data-scroll>
       <br>
-      <h1 >
+      <h1>
         Ingresa un ID valido
       </h1>
     </div>
@@ -67,7 +67,7 @@
       <a href="#"><img src="images/prompt_no.png" alt=""></a>
       <h5>Selecciona un Mundo</h5>
       <span>
-        <a href="#" onclick="cambiaMundo(1)">
+        <a  href="#" onclick="cambiaMundo(1)">
           Mundo <span class="MUno">1</span>
         </a>
       </span>
@@ -255,7 +255,19 @@
     };
     basicScrollTop();
 
-    
+    ScrollOut({
+      threshold: 0.2,
+      onShown: function (el) {
+        // remove the class
+        el.classList.remove("bond");
+
+        // force reflow
+        void el.offsetWidth;
+
+        // re-add the animated cl
+        el.classList.add("bond");
+      }
+    });
   </script>
 
   <script>

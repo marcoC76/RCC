@@ -41,7 +41,10 @@ html {
   transition: opacity 0.4s linear;  */
   display: none;
 }
-
+#carta0{
+  opacity:0;
+  animation: llega 1s forwards 0s ease-in;
+}
 #carta {
   opacity: 0;
   transition: opacity 0.4s linear;
@@ -128,14 +131,15 @@ body {
 
 .ayuda {
   color: white;
-  opacity:0;
+  opacity: 0;
   animation: anima 1s forwards 2.5s ease;
 }
 
-#estado{
-  opacity:0;
+#estado {
+  opacity: 0;
   animation: anima 1s forwards 3.5s ease;
 }
+
 .ayuda img {
   width: 15%;
 }
@@ -175,6 +179,8 @@ p {
   overflow: hidden;
   transition: all ease-out .5s;
 }
+
+
 
 .card:hover {
   transform: scale(1.04) translateY(-5px) translateX(-5px);
@@ -312,7 +318,7 @@ p {
 #asisMeter {
   width: 50px;
   height: 15px;
-  opacity:0;
+  opacity: 0;
   animation: anima 1s forwards 3.2s ease;
 }
 
@@ -332,10 +338,10 @@ p {
   position: relative;
   padding: 0;
   margin: 10px 0 10px 0;
- 
 }
-.tamaño{
-  opacity:0;
+
+.tamaño {
+  opacity: 0;
   animation: anima 1s forwards 2.7s ease;
 }
 
@@ -372,7 +378,23 @@ p {
 
 #pie img {
   opacity: 0;
-  animation: anima 1s forwards 2.5s ease;
+  animation: llega-izq 1s forwards 2.5s ease;
+}
+#eq {
+  opacity: 0;
+  animation: llega 1s forwards 2.2s ease;
+}
+#nic {
+  opacity: 0;
+  animation: llega 1s forwards 2.2s ease;
+}
+.name1 {
+  opacity: 0;
+  animation: llega 1s forwards 1.5s ease;
+}
+.nick {
+  opacity: 0;
+  animation: llega-izq 1s forwards 1.5s ease;
 }
 
 .desglo img {
@@ -423,12 +445,16 @@ p {
   padding: 10px 0;
   text-align: right;
 }
-#descripcion{
-  font-family: poke ;
+
+#descripcion {
+  opacity: 0;
+  font-family: poke;
   font-size: 0.7em;
   margin-bottom: 5%;
   color: white;
+  animation: llega-izq 1.7s forwards 0.2s ease-in;
 }
+
 .abilities {
   background: rgba(255, 255, 255, .3);
   padding: 3px 12px;
@@ -498,8 +524,6 @@ p {
   border: none;
 }
 
-
-
 /* Power and Defense stats at the bottom */
 
 .stat {
@@ -511,7 +535,6 @@ p {
   font-size: 1.5em;
   background: black;
 }
-
 
 .stat img {
   opacity: 0;
@@ -639,7 +662,7 @@ canvas {
   margin-bottom: 6%;
   font-size: 4em;
   color: white;
-  opacity:0;
+  opacity: 0;
   animation: anima 1s forwards 3s ease;
 }
 
@@ -700,7 +723,6 @@ input[type=password] {
   box-sizing: border-box;
   background-color: #272b28;
   border: solid 10px #000000;
-  border-radius: 10%;
   font-size: 2em;
   background-image: url('images/glass.png');
   background-position: 10px 5px;
@@ -914,7 +936,7 @@ input[type=password]:focus {
   animation-fill-mode: forwards;
 }
 
-@keyframes edit-in {
+/* @keyframes edit-in {
   from {
     opacity: 0;
     transform: rotateZ(-70deg);
@@ -956,7 +978,7 @@ input[type=password]:focus {
     opacity: 1;
     transform: rotateZ(0deg);
   }
-}
+} */
 
 .nds {
   width: 60%;
@@ -1002,6 +1024,50 @@ input[type=password]:focus {
   animation-delay: 0.1s;
   animation: bounce-out-nds 0.1s linear;
   animation-fill-mode: forwards;
+}
+
+.bond {
+  animation: llega 1.2s forwards 0s ease;
+}
+
+@keyframes llega {
+  0% {
+    transform: translateX(-250%) scale(0);
+    opacity: 0.2;
+  }
+  70% {
+    transform: translateX(15%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes llega-izq {
+  0% {
+    transform: translateX(250%) scale(0);
+    opacity: 0.2;
+  }
+  70% {
+    transform: translateX(-15%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes va {
+  0% {
+    
+    opacity: 1;
+  }
+  
+  100% {
+    
+    opacity: 0;
+  }
 }
 
 @keyframes bounce-nds {
