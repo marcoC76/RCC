@@ -627,17 +627,17 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act7.1", "Act8.0", "Act8.1", "Act9.1", "Act9.2", "ActR"],
+                labels: ["Act10", "Act11", "Act12", "Elect"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD7_1, newArray[0].ACTIVIDAD8_0, newArray[0].ACTIVIDAD8_1, newArray[0].ACTIVIDAD9_1, newArray[0].ACTIVIDAD9_2, newArray[0].ACTIVIDADR],
+                    data: [newArray[0].ACTIVIDAD10, newArray[0].ACTIVIDAD11, newArray[0].ACTIVIDAD12, newArray[0].ACTIVIDADELEC],
                     backgroundColor: [
                         'rgba(56, 2, 59, 0.6)',
                         'rgba(162, 136, 227, 0.6)',
                         'rgba(187, 213, 237, 0.6)',
-                        'rgba(206, 253, 255, 0.6)',
+                        'rgba(206, 253, 255, 0.6)'/* ,
                         'rgba(204, 255, 203, 0.6)',
-                        'rgba(186, 232, 185, 0.6)'
+                        'rgba(186, 232, 185, 0.6)' */
                     ]
                 }]
             },
@@ -655,13 +655,14 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest6", "Cuest7"],
+                labels: ["Cuest10", "Cuest11", "Cuest12"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7],
+                    data: [newArray[0].CUESTIONARIO10, newArray[0].CUESTIONARIO11, newArray[0].CUESTIONARIO12],
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)'
+                        'rgba(64, 146, 111, 0.6)',
+                        'rgba(42, 120, 87, 0.6)',
+                        'rgba(24, 95, 65, 0.6)'
                     ]
                 }]
             },
@@ -734,7 +735,7 @@ function recibir() {
         document.getElementById("habilidad3").style.textDecoration = "line-through";
     } */
 
-    //TODO: cambiar caracteres por mundo 
+     
     var caracter = "";
     if (localStorage.getItem("mundo") == 1) {
         animaHover=""

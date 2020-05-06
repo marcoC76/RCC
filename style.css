@@ -473,6 +473,18 @@ p {
   transform: scale(1.02) translateY(-0.25px) translateX(-0.25px);
   transition: 1s;
 }
+.card:hover .insignias {
+ 
+  filter:  hue-rotate(360deg);
+  
+  transition: 1s;
+}
+.card:hover .desglo {
+  
+  filter: hue-rotate(360deg);
+  
+  transition: 1s;
+}
 
 .card:hover .image {
   background-position-y: -70px;
