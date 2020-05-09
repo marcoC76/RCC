@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="128x128" href="images/icon-128x128.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <link rel="stylesheet" href="js-snackbar.min.css" />
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#000">
@@ -18,7 +19,10 @@
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 
-<body class="fondo1">
+<body class="fondo1" onload="m(0);">
+  <div id="canvas">
+    <canvas id="canv"></canvas>
+  </div>
 
   <div class="topnav" id="myTopnav">
     <a href="#" class="active">Perfil</a>
@@ -67,16 +71,16 @@
       <a href="#"><img src="images/prompt_no.png" alt=""></a>
       <h5>Selecciona un Mundo</h5>
       <span>
-        <a  href="#" onclick="cambiaMundo(1)">
+        <a href="#" onclick="cambiaMundo(1);m(0);">
           Mundo <span class="MUno">1</span>
         </a>
       </span>
       <span>
-        <a href="#" onclick="cambiaMundo(2)">
+        <a href="#" onclick="cambiaMundo(2); m(1);">
           Mundo <span class="MDos">2</span>
         </a>
       </span><span>
-        <a href="#" onclick="cambiaMundo(3)">
+        <a href="#" onclick="cambiaMundo(3); m(2);">
           Mundo <span class="MTres">3</span>
         </a>
       </span>

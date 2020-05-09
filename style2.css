@@ -1,0 +1,16 @@
+#canvas {
+  position: fixed;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  z-index: 1;
+}
+
+/* #contenido {
+  z-index: 0;
+  top: 10%;
+  position: relative;
+}
+ */
