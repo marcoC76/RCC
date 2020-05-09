@@ -608,7 +608,7 @@ p {
 
 /* The shine on the card when you hover over it */
 
-.canvas {
+canvas {
   animation: anima 1s forwards 1s ease;
 }
 
