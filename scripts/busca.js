@@ -110,6 +110,9 @@ function recibir() {
     salida = `
                 <br>
                 <div id="carta0" class="card">
+                    <div id="cinta1">
+                        
+                    </div>
                     <div id="elemento0">
                         <h2 onclick="clanInfo();" class="name1 ">
                             ${newArray[0].EQUIPO}   
@@ -157,7 +160,9 @@ function recibir() {
                 <br>
                 
                 <div id="carta"  class="card" >
-
+                        <div id="cinta2">
+                            
+                        </div>
                     <div id="elemento">
                         <h2 class="name" >
                             Datos Generales
@@ -308,6 +313,13 @@ function recibir() {
     document.getElementById("resultado").innerHTML = salida;
 
     
+
+    var def = ``;
+    if (newArray[0].Def == 1) {
+        def = `<span title="Calificaciones definitivas" onclick="cinta();" id="forkongithub"><a href="#!"></a></span>`;
+    } 
+    document.getElementById("cinta1").innerHTML = def;
+    document.getElementById("cinta2").innerHTML = def;
 
     var rango = "";
     if (newArray[0].FINAL < 6) {

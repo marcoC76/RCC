@@ -23,7 +23,7 @@
   <div id="canvas">
     <canvas id="canv"></canvas>
   </div>
-
+  
   <div class="topnav" id="myTopnav">
     <a href="#" class="active">Perfil</a>
     <!--  <a href="desglose.html" onclick="limpiar()">Desglose</a> -->
@@ -224,6 +224,12 @@
       SnackBar({
         message: "16 asistencias totales, minimo 9",
         status: "info"
+      })
+    }
+    var cinta = function () {
+      SnackBar({
+        message: "Estas calificaciones son definitivas",
+        status: "danger"
       })
     }
     /* if (navigator.onLine) {
