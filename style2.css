@@ -29,9 +29,16 @@ nav {
   position: relative;
   transition: 0.5s;
   z-index: 20;
-  
+  animation: pulse 1.5s infinite ease-in-out;
 }
-
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(134, 1, 1, 0.466);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0.062);
+  }
+} 
 #forkongithub a:hover {
   background: rgb(102, 0, 0);
   color: #fff;
