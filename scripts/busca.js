@@ -318,9 +318,9 @@ function recibir() {
     if (newArray[0].Def == 1) {
         def = `<span title="Calificaciones definitivas" onclick="cinta();" id="forkongithub"><a href="#!"></a></span>`;
         Push.create("Calificaciones Definitivas", { //Titulo de la notificación
-            body: "Las calificaciones de este mundo ya son definitivas", //Texto del cuerpo de la notificación
+            body: "Tus calificaciones de este mundo ya son definitivas", //Texto del cuerpo de la notificación
             icon: 'images/icon-512x512.png', //Icono de la notificación
-            timeout: 6000, //Tiempo de duración de la notificación
+            timeout: 9000, //Tiempo de duración de la notificación
            
         });
     }
