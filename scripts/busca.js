@@ -312,12 +312,18 @@ function recibir() {
                 `;
     document.getElementById("resultado").innerHTML = salida;
 
-    
+
 
     var def = ``;
     if (newArray[0].Def == 1) {
         def = `<span title="Calificaciones definitivas" onclick="cinta();" id="forkongithub"><a href="#!"></a></span>`;
-    } 
+        Push.create("Calificaciones Definitivas", { //Titulo de la notificación
+            body: "Las calificaciones de este mundo ya son definitivas", //Texto del cuerpo de la notificación
+            icon: 'images/icon-512x512.png', //Icono de la notificación
+            timeout: 6000, //Tiempo de duración de la notificación
+           
+        });
+    }
     document.getElementById("cinta1").innerHTML = def;
     document.getElementById("cinta2").innerHTML = def;
 
@@ -647,9 +653,10 @@ function recibir() {
                         'rgba(56, 2, 59, 0.6)',
                         'rgba(162, 136, 227, 0.6)',
                         'rgba(187, 213, 237, 0.6)',
-                        'rgba(206, 253, 255, 0.6)'/* ,
-                        'rgba(204, 255, 203, 0.6)',
-                        'rgba(186, 232, 185, 0.6)' */
+                        'rgba(206, 253, 255, 0.6)'
+                        /* ,
+                                                'rgba(204, 255, 203, 0.6)',
+                                                'rgba(186, 232, 185, 0.6)' */
                     ]
                 }]
             },
@@ -747,13 +754,13 @@ function recibir() {
         document.getElementById("habilidad3").style.textDecoration = "line-through";
     } */
 
-     
+
     var caracter = "";
     if (localStorage.getItem("mundo") == 1) {
-        animaHover=""
+        animaHover = ""
         switch (newArray[0].AVATAR) {
             case 1:
-               
+
                 caracter = "images/caracter.png";
                 break;
             case 2:
@@ -960,7 +967,7 @@ function recibir() {
                 break;
         }
     }
-    
+
     document.getElementById("caracter").src = caracter;
 
     var estado = "";
@@ -1021,12 +1028,12 @@ function recibir() {
             break;
         case 6:
             avatar = "images/personaje3_H.png";
-           /*  habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*  habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'De pocas palabras pero muchas mas acciones';
             break;
         case 7:
             avatar = "images/personaje4.png";
-           /*  habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*  habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Su sigilo y ágilidad le dan una amplia ventaja';
             break;
         case 8:
@@ -1071,32 +1078,32 @@ function recibir() {
             break;
         case 16:
             avatar = "images/personaje8_H.png";
-           /*  habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*  habilidad = 'Trampa en examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Posee una voz encantadora pero también un carácter fuerte ';
             break;
         case 17:
             avatar = "images/personaje9.png";
-           /*  habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*  habilidad = 'Entregar un dia después 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'De pocas palabras pero muchas mas acciones';
             break;
         case 18:
             avatar = "images/personaje9_H.png";
-           /*  habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*  habilidad = 'Pista en el examen 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Su sigilo y ágilidad le dan una amplia ventaja';
             break;
         case 19:
             avatar = "images/personaje10.png";
-          /*   habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*   habilidad = 'Mas tiempo 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Muy fuerte, usa correctamente su astucia';
             break;
         case 20:
             avatar = "images/personaje10_H.png";
-          /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Tiene una voluntad de hierro al mismo nivel de su rudeza';
             break;
         case 0:
             avatar = "images/personaje0.png";
-          /*   habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            /*   habilidad = 'Comer en clase 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Único';
             break;
         default:
@@ -1109,7 +1116,7 @@ function recibir() {
 
 }
 
-    
+
 
 function limpiar() {
     document.getElementById("texto").value = "";
@@ -1126,7 +1133,7 @@ function launch_toast() {
 //para los demas elementos
 var elementosScrollTop = function () {
     // Reveal the button
-    
+
 
     var reveal = function () {
         console.log(window.scrollY);
@@ -1137,7 +1144,7 @@ var elementosScrollTop = function () {
             /*  elemento.style.opacity="1" */
             elemento.style.display = "inline";
             carta.style.opacity = "1";
-            carta.style ="animation: llega 1.2s forwards 0s ease-in";
+            carta.style = "animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
@@ -1158,7 +1165,7 @@ var elementosScrollTop = function () {
             /*  elemento.style.opacity="1" */
             elemento.style.display = "inline";
             carta.style.opacity = "1";
-            carta.style ="animation: llega 1.2s forwards 0s ease-in";
+            carta.style = "animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
@@ -1179,7 +1186,7 @@ var elementosScrollTop = function () {
             /*  elemento.style.opacity="1" */
             elemento.style.display = "inline";
             carta.style.opacity = "1";
-            carta.style ="animation: llega 1.2s forwards 0s ease-in";
+            carta.style = "animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
@@ -1200,7 +1207,7 @@ var elementosScrollTop = function () {
             /*  elemento.style.opacity="1" */
             elemento.style.display = "inline";
             carta.style.opacity = "1";
-            carta.style ="animation: llega 1.2s forwards 0s ease-in";
+            carta.style = "animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
@@ -1221,19 +1228,19 @@ var elementosScrollTop = function () {
             /*  elemento.style.opacity="1" */
             elemento.style.display = "inline";
             carta.style.opacity = "1";
-            carta.style ="animation: llega 1.2s forwards 0s ease-in";
+            carta.style = "animation: llega 1.2s forwards 0s ease-in";
 
         } else {
             /* console.log("no se ve"); */
             /* elemento.style.opacity="0" */
-          /*   elemento.style.display = "none";
-            carta.style.opacity = "0";
-            carta.style ="animation: va 1.2s forwards 0s ease-in"; */
+            /*   elemento.style.display = "none";
+              carta.style.opacity = "0";
+              carta.style ="animation: va 1.2s forwards 0s ease-in"; */
         }
     }
     // Listeners
     window.addEventListener('scroll', reveal5);
 
-    
+
 };
 elementosScrollTop();
