@@ -4,7 +4,7 @@ var valor;
 
 var appi = "https://script.googleusercontent.com/macros/echo?user_content_key=F50kUuixg_1_YNRBwi-XJB9Irsas9MzbLt4HIRZSSQW6mLPfwDXhVX1mvQ0tFXI9qN3e22ahv33gsDNlgmxmCNfjzRWAR42Hm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnH7FvHuoCA3aY6oYh_uPeR7OGIv6mE7OArfLpHEi2SkZG7auUhcX8GvYge8pF1VBKFasVhBWVkFc&lib=MlfAK7sYzDUKhAPiLWJ3BQCiYTb7JmIRw";
 ft(appi);
-window.onload = inicio;
+/* window.onload = inicio; */
 
 function inicio() {
 
@@ -129,7 +129,7 @@ function recibir() {
                         </div>
                         <div class="abilities insignias" >
                             Resumen: <hr>
-                            <canvas class="canvas" id="resumen" width="100%" height="70hv"></canvas>
+                            <canvas id="resumen" width="100%" height="70hv"></canvas>
                         </div>
                         <div class="insignias">Insignias conseguidas: <hr>
                             <center>
@@ -228,7 +228,7 @@ function recibir() {
                         </div>
                         <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;"> ${newArray[0].PUNTOSCUES*100}</a> </h4>
                         <center class="insignias">
-                            <canvas class="canvas" id="cuestChart" width="100%"></canvas>
+                            <canvas  id="cuestChart" width="100%"></canvas>
                         </center>
                         <center class="abilities">
                             <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
@@ -250,7 +250,7 @@ function recibir() {
                         </div>
                         <h4 class="ayuda"> Puntos totales: <span style="font-size:1.5em;">${Math.round(newArray[0].PUNTOSACT*100)}</span></h4>
                         <center class="insignias">
-                            <canvas class="canvas" id="actChart" width="100%"></canvas>
+                            <canvas  id="actChart" width="100%"></canvas>
                         </center>
                         <center class="abilities">
                             <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
@@ -271,7 +271,7 @@ function recibir() {
                         </div>
                         <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSBIT*100}</a></h4>
                         <center class="insignias">
-                            <canvas class="canvas" id="bitChart" width="50"></canvas>
+                            <canvas  id="bitChart" width="50"></canvas>
                         </center>
                         <br>
                         <center class="abilities">
@@ -295,7 +295,7 @@ function recibir() {
                         </div>
                         <h4 class="ayuda">Puntos totales: <a style="font-size:1.5em;">${newArray[0].PUNTOSPRO*100}</a></h4>
                         <center class="insignias">
-                            <canvas class="canvas" id="proChart" width="100%"></canvas>
+                            <canvas  id="proChart" width="100%"></canvas>
                         </center>
                         <br>
                         <center class="abilities">
