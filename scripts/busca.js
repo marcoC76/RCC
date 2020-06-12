@@ -779,7 +779,7 @@ function recibir() {
         animaHover = ""
         switch (newArray[0].AVATAR) {
             case 1:
-
+                /* caracter = "images/avatarAnimado.gif"; */
                 caracter = "images/caracter.png";
                 break;
             case 2:
