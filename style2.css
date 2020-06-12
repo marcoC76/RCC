@@ -82,3 +82,8 @@ nav {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
   }
 }
+
+.txtRango{
+  font-size: 1em;
+  color:white;
+}

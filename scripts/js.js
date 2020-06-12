@@ -264,6 +264,6 @@ function setImage(img) {
 ready();
 draw();
 
-console.log('Code With ❤ Always, @tmrDevelops');
+
 }
 

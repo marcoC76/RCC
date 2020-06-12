@@ -191,7 +191,7 @@ p {
   animation: llega-izq 0.7s forwards 0.5s ease-in;
 }
 
-@keyframes hover1 {
+/* @keyframes hover1 {
   0% {
     transform: ;
   }
@@ -207,7 +207,7 @@ p {
   100% {
     transform: ;
   }
-}
+} */
 
 .card:hover {
   
@@ -247,9 +247,9 @@ p {
   background-color: black;
   font-weight: bolder;
   opacity: 0;
-  position: absolute;
-  bottom: 80px;
-  right: 37px;
+  position: relative;
+  bottom: 0px;
+  right: 13px;
   padding-left: 5px;
   padding-right: 5px;
   animation: anima 1s forwards 2.7s ease;

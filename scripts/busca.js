@@ -148,7 +148,9 @@ function recibir() {
                             ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span> 
                         </div>
                         <div class="defense stat" onclick="puntosInfo();">
-                            <img title="Puntos y rango" id="rango1" src="images/nivel2.png" />
+                            
+                            <img  title="Rango" id="rango1" src="images/nivel2.png" />
+                           
                         </div>
                         <div class="sheen"></div>   
                         <br id="desglose">
@@ -208,7 +210,8 @@ function recibir() {
                                 <br>
                                 <span class="ayuda" style="font-size: 2em" onclick="pFinalInfo();"> 
                                     ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span>
-                                </span> <img title="Puntos y rango" id="rango" src="images/nivel2.png" />
+                                </span> <img title="Rango" id="rango" src="images/nivel2.png" />
+                                <span id="txtRango" class="txtRango"></span>
                                 <h1 id="estado">
                                     REPROBADO
                                 </h1>
@@ -321,24 +324,39 @@ function recibir() {
             body: "Tus calificaciones de este mundo ya son definitivas", //Texto del cuerpo de la notificación
             icon: 'images/icon-512x512.png', //Icono de la notificación
             timeout: 9000, //Tiempo de duración de la notificación
-           
+
         });
     }
     document.getElementById("cinta1").innerHTML = def;
     document.getElementById("cinta2").innerHTML = def;
 
     var rango = "";
+    var txtRango="";
     if (newArray[0].FINAL < 6) {
         rango = "images/sinNivel.png";
+        txtRango="Noob";
+        document.getElementById("rango1").addEventListener("click",rangoNoob);
+        document.getElementById("rango").addEventListener("click",rangoNoob);
     } else if (newArray[0].FINAL < 8) {
         rango = "images/nivel1.png";
+        txtRango="Traine";
+        document.getElementById("rango1").addEventListener("click",rangoTraine);
+        document.getElementById("rango").addEventListener("click",rangoTraine);
     } else if (newArray[0].FINAL < 10) {
         rango = "images/nivel2.png";
+        txtRango="Junior";
+        document.getElementById("rango1").addEventListener("click",rangoJunior);
+        document.getElementById("rango").addEventListener("click",rangoJunior);
     } else if (newArray[0].FINAL == 10) {
         rango = "images/nivel3.png";
+        txtRango="Senior";
+        document.getElementById("rango1").addEventListener("click",rangoSenior);
+        document.getElementById("rango").addEventListener("click",rangoSenior);
     }
     document.getElementById("rango1").src = rango;
     document.getElementById("rango").src = rango;
+    document.getElementById("txtRango").innerHTML = txtRango;
+    
 
 
     var act = "";
@@ -398,6 +416,7 @@ function recibir() {
         por1 = "X2";
     } else {
         mas = "images/sinInsgPuntos.png";
+        document.getElementById("por").style.display="none";
     }
     document.getElementById("por").innerHTML = por;
     document.getElementById("por1").innerHTML = por1;
