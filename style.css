@@ -256,13 +256,18 @@ p {
 }
 
 #mas1 {
+  width: 15%;
   opacity: 0;
   animation: anima 1s forwards 1s ease;
+}
+#mas{
+  width: 15%;
 }
 
 #cuest1 {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
+  width: 100%;
 }
 
 #act1 {
@@ -276,11 +281,15 @@ p {
 }
 
 #pro1 {
+  width: 65%;
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-
+#pro{
+  width: 17.5%;
+}
 #por1 {
+
   font-weight: bolder;
   opacity: 0;
   font-size: 1.5em;
@@ -539,8 +548,16 @@ p {
 
 .insignias img {
   opacity: 0;
-  width: 14%;
+  width: 15%;
   animation: anima 1s forwards 2.5s ease;
+}
+ #centro{
+	/* padding: 0 0rem; */
+  margin: 0rem 0rem 0rem 1rem;
+ }
+
+#act{
+  width: 15%;
 }
 
 #rango {

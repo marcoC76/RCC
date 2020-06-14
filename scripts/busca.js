@@ -135,7 +135,7 @@ function recibir() {
                             <canvas id="resumen" width="100%" height="70hv"></canvas>
                         </div>
                         <div class="insignias">Insignias conseguidas: <hr>
-                            <center>
+                            <center id="centro">
                                 <img onclick="cuestInfo();" id="cuest" title="Misión cuestionarios" src="images/sinInsgCuest.png" />
                                 <img onclick="actInfo();" id="act" title="Misión actividades" src="images/sinInsgAct.png" />
                                 <img onclick="bitInfo();" id="bit" title="Misión bitácora" src="images/sinInsgBit.png" />
@@ -361,18 +361,18 @@ function recibir() {
 
     var act = "";
     if (newArray[0].PROMACT == 10) {
-        act = "images/insgAct.png";
+        act = "images/insignia6.png";
     } else {
-        act = "images/sinInsgAct.png";
+        act = "images/sinInsignia6.png";
     }
     document.getElementById("act").src = act;
     document.getElementById("act1").src = act;
 
     var cuest = "";
     if (newArray[0].PROMCUES == 10) {
-        cuest = "images/insgCuest.png";
+        cuest = "images/insignia13.png";
     } else {
-        cuest = "images/sinInsgCuest.png";
+        cuest = "images/sinInsignia13.png";
     }
     document.getElementById("cuest").src = cuest;
     document.getElementById("cuest1").src = cuest;
@@ -388,9 +388,9 @@ function recibir() {
 
     var pro = "";
     if (newArray[0].PROYECTO == 10) {
-        pro = "images/insgPlat.png";
+        pro = "images/insignia12.png";
     } else {
-        pro = "images/sinInsgPlat.png";
+        pro = "images/sinInsignia12.png";
     }
     document.getElementById("pro").src = pro;
     document.getElementById("pro1").src = pro;
@@ -407,11 +407,11 @@ function recibir() {
     var por1 = "";
     var mas = "";
     if (newArray[0].PUNTOEX == 1) {
-        mas = "images/insgPuntos.png";
+        mas = "images/insignia1.png";
         por = "1";
         por1 = "X1";
     } else if (newArray[0].PUNTOEX == 2) {
-        mas = "images/insgPuntos.png";
+        mas = "images/insignia1.png";
         por = "2";
         por1 = "X2";
     } else {
