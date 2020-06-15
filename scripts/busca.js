@@ -331,32 +331,32 @@ function recibir() {
     document.getElementById("cinta2").innerHTML = def;
 
     var rango = "";
-    var txtRango="";
+    var txtRango = "";
     if (newArray[0].FINAL < 6) {
         rango = "images/sinNivel.png";
-        txtRango="Noob";
-        document.getElementById("rango1").addEventListener("click",rangoNoob);
-        document.getElementById("rango").addEventListener("click",rangoNoob);
+        txtRango = "Noob";
+        document.getElementById("rango1").addEventListener("click", rangoNoob);
+        document.getElementById("rango").addEventListener("click", rangoNoob);
     } else if (newArray[0].FINAL < 8) {
         rango = "images/nivel1.png";
-        txtRango="Traine";
-        document.getElementById("rango1").addEventListener("click",rangoTraine);
-        document.getElementById("rango").addEventListener("click",rangoTraine);
+        txtRango = "Traine";
+        document.getElementById("rango1").addEventListener("click", rangoTraine);
+        document.getElementById("rango").addEventListener("click", rangoTraine);
     } else if (newArray[0].FINAL < 10) {
         rango = "images/nivel2.png";
-        txtRango="Junior";
-        document.getElementById("rango1").addEventListener("click",rangoJunior);
-        document.getElementById("rango").addEventListener("click",rangoJunior);
+        txtRango = "Junior";
+        document.getElementById("rango1").addEventListener("click", rangoJunior);
+        document.getElementById("rango").addEventListener("click", rangoJunior);
     } else if (newArray[0].FINAL == 10) {
         rango = "images/nivel3.png";
-        txtRango="Senior";
-        document.getElementById("rango1").addEventListener("click",rangoSenior);
-        document.getElementById("rango").addEventListener("click",rangoSenior);
+        txtRango = "Senior";
+        document.getElementById("rango1").addEventListener("click", rangoSenior);
+        document.getElementById("rango").addEventListener("click", rangoSenior);
     }
     document.getElementById("rango1").src = rango;
     document.getElementById("rango").src = rango;
     document.getElementById("txtRango").innerHTML = txtRango;
-    
+
 
 
     var act = "";
@@ -416,7 +416,7 @@ function recibir() {
         por1 = "X2";
     } else {
         mas = "images/sinInsgPuntos.png";
-        document.getElementById("por").style.display="none";
+        document.getElementById("por").style.display = "none";
     }
     document.getElementById("por").innerHTML = por;
     document.getElementById("por1").innerHTML = por1;
@@ -839,6 +839,24 @@ function recibir() {
             case 20:
                 caracter = "images/caracter10_H.png";
                 break;
+            case 21:
+                caracter = "images/caracter11.png";
+                break;
+            case 22:
+                caracter = "images/caracter11_H.png";
+                break;
+            case 23:
+                caracter = "images/caracter12.png";
+                break;
+            case 24:
+                caracter = "images/caracter12_H.png";
+                break;
+            case 25:
+                caracter = "images/caracter13.png";
+                break;
+            case 26:
+                caracter = "images/caracter13_H.png";
+                break;
             case 0:
                 caracter = "images/caracter0.png";
                 break;
@@ -909,6 +927,24 @@ function recibir() {
             case 20:
                 caracter = "images/caracter10_H_2.png";
                 break;
+            case 21:
+                caracter = "images/caracter11_2.png";
+                break;
+            case 22:
+                caracter = "images/caracter11_H_2.png";
+                break;
+            case 23:
+                caracter = "images/caracter12_2.png";
+                break;
+            case 24:
+                caracter = "images/caracter12_H_2.png";
+                break;
+            case 25:
+                caracter = "images/caracter13_2.png";
+                break;
+            case 26:
+                caracter = "images/caracter13_H_2.png";
+                break;
             case 0:
                 caracter = "images/caracter0_2.png";
                 break;
@@ -977,6 +1013,24 @@ function recibir() {
                 break;
             case 20:
                 caracter = "images/caracter10_H_3.png";
+                break;
+            case 21:
+                caracter = "images/caracter11_3.png";
+                break;
+            case 22:
+                caracter = "images/caracter11_H_3.png";
+                break;
+            case 23:
+                caracter = "images/caracter12_3.png";
+                break;
+            case 24:
+                caracter = "images/caracter12_H_3.png";
+                break;
+            case 25:
+                caracter = "images/caracter13_3.png";
+                break;
+            case 26:
+                caracter = "images/caracter13_H_3.png";
                 break;
             case 0:
                 caracter = "images/caracter0_3.png";
@@ -1119,6 +1173,36 @@ function recibir() {
             avatar = "images/personaje10_H.png";
             /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
             descripcion = 'Tiene una voluntad de hierro al mismo nivel de su rudeza';
+            break;
+        case 21:
+            avatar = "images/personaje11.png";
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            descripcion = 'Su sigilo y ágilidad le dan una amplia ventaja';
+            break;
+        case 22:
+            avatar = "images/personaje11_H.png";
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            descripcion = 'De pocas palabras pero muchas mas acciones';
+            break;
+        case 23:
+            avatar = "images/personaje12.png";
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            descripcion = 'De pocas palabras pero muchas mas acciones';
+            break;
+        case 24:
+            avatar = "images/personaje12_H.png";
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            descripcion = 'No olvida su cabeza porque la tiene pegada al cuello';
+            break;
+        case 25:
+            avatar = "images/personaje13.png";
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            descripcion = 'Tiene una voluntad de hierro al mismo nivel de su rudeza';
+            break;
+        case 26:
+            avatar = "images/personaje13_H.png";
+            /*   habilidad = 'Escuchar música 300<span style="font-family:Poke;font-size:0.6em;">$</span>'; */
+            descripcion = 'Tiene mucho carisma y una envidiable ágilidad';
             break;
         case 0:
             avatar = "images/personaje0.png";
