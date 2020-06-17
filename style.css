@@ -306,8 +306,6 @@ p {
   animation: anima 1s forwards 2s ease;
 }
 
-
-
 .lightbox img {
   /** Pad the lightbox image */
   max-width: 90%;
@@ -413,13 +411,13 @@ p {
 }
 
 #caracter {
-  /* width: 40%; */
-  height: 17vh;
+  height: 21vh;
 }
 
 .card:hover #caracter {
   filter: drop-shadow(1px 1px 5px rgba(31, 30, 30, 0.678)) hue-rotate(360deg);
   transition: 2s;
+ /*  animation: agita 1s forwards 0.2s */
 }
 
 #pie img {
@@ -1027,16 +1025,7 @@ input[type=password]:focus {
   }
 }
 
-@keyframes plus-in {
-  from {
-    opacity: 1;
-    transform: rotateZ(0deg);
-  }
-  to {
-    opacity: 0;
-    transform: rotateZ(180deg);
-  }
-}
+
 
 @keyframes plus-out {
   from {
@@ -1048,6 +1037,17 @@ input[type=password]:focus {
     transform: rotateZ(0deg);
   }
 } */
+
+@keyframes plus-in {
+  from {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotateZ(180deg);
+  }
+}
 
 .nds {
   width: 60%;
@@ -1111,6 +1111,17 @@ input[type=password]:focus {
   100% {
     transform: translateX(0%) scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes agita {
+  from {
+    opacity: 1;
+    transform: rotateZ(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(0deg);
   }
 }
 
