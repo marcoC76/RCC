@@ -187,7 +187,6 @@ p {
   overflow: hidden;
   transition: all ease-out .5s;
   opacity: 0;
-  
   animation: llega-izq 0.7s forwards 0.5s ease-in;
 }
 
@@ -210,11 +209,9 @@ p {
 } */
 
 .card:hover {
-  
   transform: scale(1.04) translateY(-5px) translateX(-5px);
   box-shadow: 12px 12px 10px rgba(0, 0, 0, .2);
   background-position: 100%;
- 
 }
 
 .card2 {
@@ -260,7 +257,8 @@ p {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#mas{
+
+#mas {
   width: 15%;
 }
 
@@ -285,11 +283,12 @@ p {
   opacity: 0;
   animation: anima 1s forwards 1s ease;
 }
-#pro{
+
+#pro {
   width: 17.5%;
 }
-#por1 {
 
+#por1 {
   font-weight: bolder;
   opacity: 0;
   font-size: 1.5em;
@@ -301,11 +300,13 @@ p {
   border-radius: 10px;
   padding-top: 10px;
   min-height: 10em;
-  background-image: url(images/Ruins.png);
+  /*  background-image: url(images/Ruins.png); */
   background-size: cover;
   opacity: 0;
   animation: anima 1s forwards 2s ease;
 }
+
+
 
 .lightbox img {
   /** Pad the lightbox image */
@@ -422,7 +423,6 @@ p {
 }
 
 #pie img {
-
   opacity: 0;
   animation: llega-izq 1s forwards 2.5s ease;
 }
@@ -482,16 +482,14 @@ p {
   transform: scale(1.02) translateY(-0.25px) translateX(-0.25px);
   transition: 1s;
 }
+
 .card:hover .insignias {
- 
-  filter:  hue-rotate(360deg);
-  
+  filter: hue-rotate(360deg);
   transition: 1s;
 }
+
 .card:hover .desglo {
-  
   filter: hue-rotate(360deg);
-  
   transition: 1s;
 }
 
@@ -551,12 +549,13 @@ p {
   width: 15%;
   animation: anima 1s forwards 2.5s ease;
 }
- #centro{
-	/* padding: 0 0rem; */
-  margin: 0rem 0rem 0rem 1rem;
- }
 
-#act{
+#centro {
+  /* padding: 0 0rem; */
+  margin: 0rem 0rem 0rem 1rem;
+}
+
+#act {
   width: 15%;
 }
 

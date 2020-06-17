@@ -315,6 +315,13 @@ function recibir() {
                 `;
     document.getElementById("resultado").innerHTML = salida;
 
+    if (localStorage.getItem("mundo") == 1) {
+        document.getElementById('pie').style.backgroundImage = "url('images/Ruins.png')";
+    } else if (localStorage.getItem("mundo") == 2) {
+        document.getElementById('pie').style.backgroundImage = "url('images/Mine.png')";
+    } else if (localStorage.getItem("mundo") == 3) {
+        document.getElementById('pie').style.backgroundImage = "url('images/DemonCastle.png')";
+    }
 
 
     var def = ``;
@@ -1347,3 +1354,4 @@ var elementosScrollTop = function () {
 
 };
 elementosScrollTop();
+
