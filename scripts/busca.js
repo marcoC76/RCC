@@ -200,7 +200,7 @@ function recibir() {
                         <center>
                             <div class="abilities cali" onclick="finalInfo();">
                                 <h2 class="name" >
-                                    Calificación Final: 
+                                    Nivel (calificación) Final: 
                                 </h2>
                                 <hr>
                                 <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
@@ -239,7 +239,7 @@ function recibir() {
                             <canvas  id="cuestChart" width="100%"></canvas>
                         </center>
                         <center class="abilities">
-                            <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
+                            <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
                         </center>
                         <div class="sheen"></div>
                     </div>
@@ -261,7 +261,7 @@ function recibir() {
                             <canvas  id="actChart" width="100%"></canvas>
                         </center>
                         <center class="abilities">
-                            <h4 class="ayuda">Promedio: <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
+                            <h4 class="ayuda">Nivel (promedio): <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
                         </center>
                         <div class="sheen"></div>
                     </div>
@@ -283,7 +283,7 @@ function recibir() {
                         </center>
                         <br>
                         <center class="abilities">
-                            <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
+                            <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
                         </center>
                         <div class="sheen"></div>
                     </div>
@@ -307,7 +307,7 @@ function recibir() {
                         </center>
                         <br>
                         <center class="abilities">
-                            <h4 class="ayuda">Promedio: <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
+                            <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
                         </center>
                         <div class="sheen"></div>
                     </div> 
