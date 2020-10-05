@@ -202,8 +202,10 @@ function recibir() {
                                 <h2 class="name" >
                                     Nivel (calificación) Final: 
                                 </h2>
-                                <hr>
+                                <progress  id="" value="${parseInt(newArray[0].FINAL)}" max="10"></progress>
+                                <br>
                                 <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
+                               
                                 <img id="reaccion" src="images/reaccion_neutral.png" >
                             </div>
                             <div class="abilities cali">
@@ -239,6 +241,7 @@ function recibir() {
                             <canvas  id="cuestChart" width="100%"></canvas>
                         </center>
                         <center class="abilities">
+                        <progress  id="" value="${parseInt(newArray[0].PROMCUES)}" max="10"></progress> <br>
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
                         </center>
                         <div class="sheen"></div>
@@ -261,6 +264,7 @@ function recibir() {
                             <canvas  id="actChart" width="100%"></canvas>
                         </center>
                         <center class="abilities">
+                         <progress  id="" value="${parseInt(newArray[0].PROMACT)}" max="10"></progress> <br>
                             <h4 class="ayuda">Nivel (promedio): <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
                         </center>
                         <div class="sheen"></div>
@@ -283,6 +287,7 @@ function recibir() {
                         </center>
                         <br>
                         <center class="abilities">
+                        <progress  id="" value="${parseInt(newArray[0].BITACORA)}" max="10"></progress> <br>
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
                         </center>
                         <div class="sheen"></div>
@@ -307,6 +312,7 @@ function recibir() {
                         </center>
                         <br>
                         <center class="abilities">
+                        <progress id="" value="${parseInt(newArray[0].PROYECTO)}" max="10"></progress> <br>
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
                         </center>
                         <div class="sheen"></div>
@@ -429,7 +435,22 @@ function recibir() {
     document.getElementById("por1").innerHTML = por1;
     document.getElementById("mas").src = mas;
     document.getElementById("mas1").src = mas;
-
+    var backgroundColor = '#062e6b80';
+    var borderColor = '#0042A6';
+    var pointBackgroundColor = '#0a58ce';
+    if (localStorage.getItem("mundo") == 2) {
+        backgroundColor = '#08590B80';
+        borderColor = '#107A14';
+        pointBackgroundColor = '#099410';
+    } else if (localStorage.getItem("mundo") == 3) {
+        backgroundColor = '#870C0C80';
+        borderColor = '#870C0C';
+        pointBackgroundColor = '#990909';
+    } else{
+        backgroundColor = '#062e6b80';
+        borderColor = '#0042A6';
+        pointBackgroundColor = '#0a58ce';
+    }
     var ctx = document.getElementById("resumen");
     Chart.defaults.global.defaultFontColor = 'black';
     var resumenChart = new Chart(ctx, {
@@ -439,9 +460,9 @@ function recibir() {
             datasets: [{
                 label: 'Promedio',
                 fontColor: '#fff',
-                backgroundColor: '#259e2166',
-                borderColor: '#076605',
-                pointBackgroundColor: '#044702',
+                backgroundColor: backgroundColor,
+                borderColor: borderColor,
+                pointBackgroundColor: pointBackgroundColor,
                 data: [
                     newArray[0].PROMACT, newArray[0].BITACORA, newArray[0].PROMCUES, newArray[0].PROYECTO
                 ]
@@ -465,7 +486,7 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act0", "Act1", "Act2", "Act3", "Act4", "Act5", "ActR"],
+                labels: ["Act1", "Act2", "ActR"],
                 datasets: [{
                     label: 'Calificación',
                     data: [newArray[0].ACTIVIDAD0, newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2, newArray[0].ACTIVIDAD3, newArray[0].ACTIVIDAD4, newArray[0].ACTIVIDAD5, newArray[0].ACTIVIDADR],
@@ -494,7 +515,7 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest1", "Cuest2", "Cuest3", "Cuest4", "Cuest5"],
+                labels: ["Cuest1", "Cuest2"],
                 datasets: [{
                     label: 'Calificación',
                     data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2, newArray[0].CUESTIONARIO3, newArray[0].CUESTIONARIO4, newArray[0].CUESTIONARIO5],
@@ -1354,4 +1375,3 @@ var elementosScrollTop = function () {
 
 };
 elementosScrollTop();
-
