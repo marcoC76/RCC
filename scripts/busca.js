@@ -109,7 +109,7 @@ function recibir() {
     document.getElementById("texto").focus();
     salida = `
                 <br>
-                <div id="carta0" class="card">
+                <div id="carta0" class="card no-seleccionable">
                     <div id="cinta1">
                         
                     </div>
@@ -161,7 +161,7 @@ function recibir() {
                 <br>
                 <br>
                 
-                <div id="carta"  class="card" >
+                <div id="carta"  class="card no-seleccionable" >
                         <div id="cinta2">
                             
                         </div>
@@ -199,12 +199,12 @@ function recibir() {
                         <br>
                         
                             <div class="abilities cali" onclick="finalInfo();">
-                               <center>
- <h2 class="name" >
+                            <center>
+                                <h2 class="name" >
                                     Nivel (calificación) Final: 
                                 </h2>
-</center>
-<div class="meter">
+                            </center>
+                        <div class="meter">
 			                <span style="width: ${(parseInt(newArray[0].FINAL)*100)/10}%"></span>
 		                </div>
                            <center>
@@ -212,10 +212,11 @@ function recibir() {
                                 <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
                                
                                 <img id="reaccion" src="images/reaccion_neutral.png" >
-<center>
+                            <center>
                             </div>
                             <div class="abilities cali">
                                 <br>
+                                <center>
                                 <span class="ayuda" style="font-size: 2em" onclick="pFinalInfo();"> 
                                     ${parseInt((parseFloat(newArray[0].CALI)+parseFloat(newArray[0].PUNTOEX)) * 100)}<span style="font-size:0.5em;">p</span>
                                 </span> <img title="Rango" id="rango" src="images/nivel2.png" />
@@ -223,6 +224,7 @@ function recibir() {
                                 <h1 id="estado">
                                     REPROBADO
                                 </h1>
+                                </center>
                             </div>
                             
                         </center>
@@ -233,7 +235,7 @@ function recibir() {
                 <br>
                 <br>
 
-                <div  class="card" id="carta2">
+                <div  class="card no-seleccionable" id="carta2">
 
                     <div id="elemento2">
                         <h2 class="name">
@@ -247,13 +249,13 @@ function recibir() {
                             <canvas  id="cuestChart" width="100%"></canvas>
                         </center>
                         <div class="abilities">
-<div class="meter orange">
+                        <div class="meter azul">
 			                <span style="width: ${(parseInt(newArray[0].PROMCUES)*100)/10}%"></span>
 		                </div>
                         <br>
-<center<
+                        <center>
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
-</center>
+                        </center>
                         </div>
                         <div class="sheen"></div>
                     </div>
@@ -261,7 +263,7 @@ function recibir() {
 
                 <br>
                 <br>
-                <div  class="card" id="carta3">
+                <div  class="card no-seleccionable" id="carta3">
 
                     <div id="elemento3">
                         <h2 class="name">
@@ -275,20 +277,20 @@ function recibir() {
                             <canvas  id="actChart" width="100%"></canvas>
                         </center>
                         <div class="abilities">
-<div class="meter red">
+                        <div class="meter red">
 			                <span style="width: ${(parseInt(newArray[0].PROMACT)*100)/10}%"></span>
 		                </div>
                          <br>
-<center>
+                        <center>
                             <h4 class="ayuda">Nivel (promedio): <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
-</center>
+                        </center>
                         </div>
                         <div class="sheen"></div>
                     </div>
                 </div>
                 <br>
                 <br>
-                <div  class="card" id="carta4">
+                <div  class="card no-seleccionable" id="carta4">
 
                     <div id="elemento4">
                         <h2 class="name">
@@ -318,7 +320,7 @@ function recibir() {
                 <br>
 
                 
-                <div  class="card" id="carta5">
+                <div  class="card no-seleccionable" id="carta5">
 
                     <div id="elemento5">
                         <h2 class="name">
@@ -547,8 +549,8 @@ function recibir() {
                     label: 'Calificación',
                     data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2],
                     backgroundColor: [
-                        'rgba(147, 155, 186, 0.6)',
-                        'rgba(93, 106, 152, 0.6)'
+                        'rgba(27, 15, 255, 0.6)',
+                        'rgba(3, 106, 255, 0.6)'
                         /* ,
                                                 'rgba(50, 65, 119, 0.6)',
                                                 'rgba(22, 36, 89, 0.6)',

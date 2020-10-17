@@ -52,12 +52,12 @@
     .meter>span {
       display: block;
       height: 100%;
-      -webkit-border-top-right-radius: 8px;
-      -webkit-border-bottom-right-radius: 8px;
-      -moz-border-radius-topright: 8px;
-      -moz-border-radius-bottomright: 8px;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
+      -webkit-border-top-right-radius: 20px;
+      -webkit-border-bottom-right-radius: 20px;
+      -moz-border-radius-topright: 20px;
+      -moz-border-radius-bottomright: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
       -webkit-border-top-left-radius: 20px;
       -webkit-border-bottom-left-radius: 20px;
       -moz-border-radius-topleft: 20px;
@@ -114,12 +114,12 @@
       -webkit-background-size: 50px 50px;
       -moz-background-size: 50px 50px;
       -webkit-animation: move 2s linear infinite;
-      -webkit-border-top-right-radius: 8px;
-      -webkit-border-bottom-right-radius: 8px;
-      -moz-border-radius-topright: 8px;
-      -moz-border-radius-bottomright: 8px;
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
+      -webkit-border-top-right-radius: 20px;
+      -webkit-border-bottom-right-radius: 20px;
+      -moz-border-radius-topright: 20px;
+      -moz-border-radius-bottomright: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
       -webkit-border-top-left-radius: 20px;
       -webkit-border-bottom-left-radius: 20px;
       -moz-border-radius-topleft: 20px;
@@ -156,11 +156,17 @@
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f0a3a3), color-stop(1, #f42323));
       background-image: -webkit-linear-gradient(#f0a3a3, #f42323);
     }
+    .azul>span {
+      background-color: #a3c2f0;
+      background-image: -moz-linear-gradient(top, #a3daf0, #235bf4);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a3daf0), color-stop(1, #236cf4));
+      background-image: -webkit-linear-gradient(#a3def0, #2365f4);
+    }
     .morado>span {
-      background-color: #e1a3f0;
-      background-image: -moz-linear-gradient(top, #e1a3f0, #d123f4);
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e1a3f0), color-stop(1, #dc23f4));
-      background-image: -webkit-linear-gradient(#dea3f0, #ca23f4);
+      background-color: #cda3f0;
+      background-image: -moz-linear-gradient(top, #d1a3f0, #9623f4);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e1a3f0), color-stop(1, #8f23f4));
+      background-image: -webkit-linear-gradient(#cda3f0, #8f23f4);
     }
     .caqui>span {
       background-color: #f0d5a3;
@@ -179,7 +185,7 @@
   </style>
 </head>
 
-<body class="fondo1" onload="m(0); inicio()">
+<body class="fondo1 no-seleccionable" onload="m(0); inicio()">
   <div id="canvas">
     <canvas id="canv"></canvas>
   </div>
