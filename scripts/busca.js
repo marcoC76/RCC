@@ -286,10 +286,15 @@ function recibir() {
                             <canvas  id="bitChart" width="50"></canvas>
                         </center>
                         <br>
-                        <center class="abilities">
-                        <progress  id="" value="${parseInt(newArray[0].BITACORA)}" max="10"></progress> <br>
+                        <div class="abilities">
+                        <div class="meter morado">
+			                <span style="width: ${(parseInt(newArray[0].BITACORA)*100)/10}%"></span>
+		                </div>
+                         <br>
+                         <center>
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].BITACORA}</a></h4>
-                        </center>
+                        <center>
+                        </div>
                         <div class="sheen"></div>
                     </div>
                 </div>
@@ -311,10 +316,15 @@ function recibir() {
                             <canvas  id="proChart" width="100%"></canvas>
                         </center>
                         <br>
-                        <center class="abilities">
-                        <progress id="" value="${parseInt(newArray[0].PROYECTO)}" max="10"></progress> <br>
+                        <div class="abilities">
+                        <div class="meter caqui">
+			                <span style="width: ${(parseInt(newArray[0].PROYECTO)*100)/10}%"></span>
+		                </div>
+                       <br>
+                       <center>
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROYECTO}</a></h4>
                         </center>
+                        </div>
                         <div class="sheen"></div>
                     </div> 
                 </div>
@@ -446,7 +456,7 @@ function recibir() {
         backgroundColor = '#870C0C80';
         borderColor = '#870C0C';
         pointBackgroundColor = '#990909';
-    } else{
+    } else {
         backgroundColor = '#062e6b80';
         borderColor = '#0042A6';
         pointBackgroundColor = '#0a58ce';
@@ -489,15 +499,16 @@ function recibir() {
                 labels: ["Act1", "Act2"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [ newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2],
+                    data: [newArray[0].ACTIVIDAD1, newArray[0].ACTIVIDAD2],
                     backgroundColor: [
                         'rgba(243, 145, 159, 0.6)',
-                        'rgba(208, 97, 112, 0.6)'/* ,
-                        'rgba(167, 58, 73, 0.6)',
-                        'rgba(126, 28, 42, 0.6)',
-                        'rgba(120, 19, 14, 0.6)',
-                        'rgba(85, 8, 19, 0.6)',
-                        'rgba(60, 3, 0, 0.6)' */
+                        'rgba(208, 97, 112, 0.6)'
+                        /* ,
+                                                'rgba(167, 58, 73, 0.6)',
+                                                'rgba(126, 28, 42, 0.6)',
+                                                'rgba(120, 19, 14, 0.6)',
+                                                'rgba(85, 8, 19, 0.6)',
+                                                'rgba(60, 3, 0, 0.6)' */
                     ]
                 }]
             },
@@ -521,10 +532,11 @@ function recibir() {
                     data: [newArray[0].CUESTIONARIO1, newArray[0].CUESTIONARIO2],
                     backgroundColor: [
                         'rgba(147, 155, 186, 0.6)',
-                        'rgba(93, 106, 152, 0.6)'/* ,
-                        'rgba(50, 65, 119, 0.6)',
-                        'rgba(22, 36, 89, 0.6)',
-                        'rgba(5, 17, 57, 0.6)' */
+                        'rgba(93, 106, 152, 0.6)'
+                        /* ,
+                                                'rgba(50, 65, 119, 0.6)',
+                                                'rgba(22, 36, 89, 0.6)',
+                                                'rgba(5, 17, 57, 0.6)' */
                     ]
                 }]
             },
