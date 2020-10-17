@@ -197,9 +197,10 @@ function recibir() {
                             Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
                         </h2>
                         <br>
-                        <center>
+                        
                             <div class="abilities cali" onclick="finalInfo();">
-                                <h2 class="name" >
+                               <center>
+ <h2 class="name" >
                                     Nivel (calificación) Final: 
                                 </h2>
 </center>
@@ -211,6 +212,7 @@ function recibir() {
                                 <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
                                
                                 <img id="reaccion" src="images/reaccion_neutral.png" >
+<center>
                             </div>
                             <div class="abilities cali">
                                 <br>
