@@ -202,7 +202,11 @@ function recibir() {
                                 <h2 class="name" >
                                     Nivel (calificación) Final: 
                                 </h2>
-                                <progress  id="" value="${parseInt(newArray[0].FINAL)}" max="10"></progress>
+</center>
+<div class="meter">
+			                <span style="width: ${(parseInt(newArray[0].FINAL)*100)/10}%"></span>
+		                </div>
+                           <center>
                                 <br>
                                 <span id="calificacionFinal">${parseInt(newArray[0].FINAL)}</span>
                                
@@ -240,10 +244,15 @@ function recibir() {
                         <center class="insignias">
                             <canvas  id="cuestChart" width="100%"></canvas>
                         </center>
-                        <center class="abilities">
-                        <progress  id="" value="${parseInt(newArray[0].PROMCUES)}" max="10"></progress> <br>
+                        <div class="abilities">
+<div class="meter orange">
+			                <span style="width: ${(parseInt(newArray[0].PROMCUES)*100)/10}%"></span>
+		                </div>
+                        <br>
+<center<
                             <h4 class="ayuda">Nivel (promedio): <a  style="font-size:1.5em;">${newArray[0].PROMCUES}</a></h4>
-                        </center>
+</center>
+                        </div>
                         <div class="sheen"></div>
                     </div>
                 </div>
@@ -263,10 +272,15 @@ function recibir() {
                         <center class="insignias">
                             <canvas  id="actChart" width="100%"></canvas>
                         </center>
-                        <center class="abilities">
-                         <progress  id="" value="${parseInt(newArray[0].PROMACT)}" max="10"></progress> <br>
+                        <div class="abilities">
+<div class="meter red">
+			                <span style="width: ${(parseInt(newArray[0].PROMACT)*100)/10}%"></span>
+		                </div>
+                         <br>
+<center>
                             <h4 class="ayuda">Nivel (promedio): <span style="font-size:1.5em">${newArray[0].PROMACT}</span></h4>
-                        </center>
+</center>
+                        </div>
                         <div class="sheen"></div>
                     </div>
                 </div>
