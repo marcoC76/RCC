@@ -191,12 +191,12 @@ function recibir() {
                         </h2>
                         <h2 class="name" onclick="asisInfo();" >
                             Asistencias: <span class="tamaño ">${newArray[0].TOTALASIS}</span>
-<div class="meter azul">
-			                <span class="animate" style="width: ${(parseInt(newArray[0].TOTALASIS)*100)/12}%"></span>
-		                </div>
 
                         </h2>
-                        
+                        <div class="meter azul">
+			                <span class="animate" style="width: ${(parseInt(newArray[0].TOTALASIS)*100)/12}%"></span>
+		                </div>
+<br>
                         <h2 class="name">
                             Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
                         </h2>
