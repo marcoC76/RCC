@@ -192,7 +192,7 @@ function recibir() {
                         <h2 class="name" onclick="asisInfo();" >
                             Asistencias: <span class="tamaño ">${newArray[0].TOTALASIS}</span>
 <div class="meter azul">
-			                <span style="width: ${(parseInt(newArray[0].PROMCUES)*100)/10}%"></span>
+			                <span style="width: ${(parseInt(newArray[0].TOTALASIS)*100)/16}%"></span>
 		                </div>
 <progress id="asisMeter" value="${newArray[0].TOTALASIS}" max="16"></progress>
                         </h2>
