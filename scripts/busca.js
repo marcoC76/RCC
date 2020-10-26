@@ -124,7 +124,7 @@ function recibir() {
                             <img id="avatar" src="" width="100%">
                         </div>
                         <div class="nick" style="color:white; text-align:center;font-size: 1.5em;">
-                            ${newArray[0].NICK}
+                            ${newArray[0].NICK.substring(0,10)}
                         </div>
                         <br>
                         <div  >
