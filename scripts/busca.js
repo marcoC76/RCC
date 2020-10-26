@@ -182,7 +182,7 @@ function recibir() {
                             </div>
                             <div class="abilities" >
                             <h2 id="nic" style="color:white;">
-                                ${newArray[0].NICK.substring(0,9)}
+                                ${newArray[0].NICK.substring(0,10)}
                             </h2>
                             </div>
                         </center>
