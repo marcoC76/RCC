@@ -624,17 +624,17 @@ function recibir() {
         var actChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Act6", "Act7", "Act8", "Act9", "Ondas", "ActR"],
+                labels: ["Act3", "Act4"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].ACTIVIDAD6, newArray[0].ACTIVIDAD7, newArray[0].ACTIVIDAD8, newArray[0].ACTIVIDAD9, newArray[0].ONDAS, newArray[0].ACTIVIDADR],
+                    data: [newArray[0].ACTIVIDAD3, newArray[0].ACTIVIDAD4],
                     backgroundColor: [
                         'rgba(197, 204, 215, 0.6)',
-                        'rgba(106, 127, 159, 0.6)',
+                        'rgba(106, 127, 159, 0.6)'/* ,
                         'rgba(47, 74, 116, 0.6)',
                         'rgba(12, 37, 76, 0.6)',
                         'rgba(1, 13, 32, 0.6)',
-                        'rgba(0, 8, 21, 0.6)'
+                        'rgba(0, 8, 21, 0.6)' */
                     ]
                 }]
             },
@@ -652,15 +652,15 @@ function recibir() {
         var cuestChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Cuest6", "Cuest7", "Cuest8", "Cuest9"],
+                labels: ["Cuest3", "Cuest4"],
                 datasets: [{
                     label: 'Calificación',
-                    data: [newArray[0].CUESTIONARIO6, newArray[0].CUESTIONARIO7, newArray[0].CUESTIONARIO8, newArray[0].CUESTIONARIO9],
+                    data: [newArray[0].CUESTIONARIO3, newArray[0].CUESTIONARIO4],
                     backgroundColor: [
                         'rgba(92, 171, 137, 0.6)',
-                        'rgba(64, 146, 111, 0.6)',
+                        'rgba(64, 146, 111, 0.6)'/* ,
                         'rgba(42, 120, 87, 0.6)',
-                        'rgba(24, 95, 65, 0.6)'
+                        'rgba(24, 95, 65, 0.6)' */
                     ]
                 }]
             },
