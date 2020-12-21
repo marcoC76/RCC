@@ -11,6 +11,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 html {
   scroll-behavior: smooth;
 }
@@ -54,6 +55,7 @@ html {
   transition: 2s;
   /* display: none; */
 }
+
 
 #elemento2 {
   /* opacity: 0;
@@ -306,6 +308,8 @@ p {
   animation: anima 1s forwards 2s ease;
 }
 
+
+
 .lightbox img {
   /** Pad the lightbox image */
   max-width: 90%;
@@ -417,7 +421,7 @@ p {
 .card:hover #caracter {
   filter: drop-shadow(1px 1px 5px rgba(31, 30, 30, 0.678)) hue-rotate(360deg);
   transition: 2s;
- /*  animation: agita 1s forwards 0.2s */
+  /*  animation: agita 1s forwards 0.2s */
 }
 
 #pie img {
@@ -472,6 +476,8 @@ p {
   border-radius: 10px 10px 0px 0px;
   transition: 1s;
   height: 139px;
+
+
 }
 
 .card:hover #avatar {
@@ -573,6 +579,12 @@ p {
   background: rgba(255, 255, 255, .3);
   margin-top: 0.5%;
   border-radius: 0 0 10px 10px;
+  /* background-image: url("https://avatars.dicebear.com/api/jdenticon/:jaja.svg"
+  ); */
+  background-repeat: no-repeat;
+  background-size: 10%;
+  background-position: right center;
+
 }
 
 .abilities li {
@@ -643,27 +655,32 @@ canvas {
   animation: sheen .45s linear 1;
 }
 
+
 @keyframes sheen {
   0% {
     top: -10%;
     height: 0%;
     opacity: 0;
   }
+
   25% {
     top: -10%;
     height: 20%;
     opacity: .3;
   }
+
   50% {
     top: 20%;
     height: 50%;
     opacity: .5;
   }
+
   75% {
     top: 110%;
     height: 20%;
     opacity: .3;
   }
+
   100% {
     top: 110%;
     height: 0%;
@@ -744,6 +761,7 @@ canvas {
   .topnav a:not(:first-child) {
     display: none;
   }
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -754,12 +772,14 @@ canvas {
   .topnav.responsive {
     position: fixed;
   }
+
   .topnav.responsive .icon {
     position: fixed;
     color: white;
     right: 0;
     top: 0;
   }
+
   .topnav.responsive a {
     background-color: rgba(12, 11, 11, 0.87);
     float: none;
@@ -773,10 +793,12 @@ canvas {
     transform: rotate(xx) scale(0);
     opacity: 0;
   }
+
   50% {
     transform: scale(1.2);
     opacity: 0.5;
   }
+
   100% {
     transform: rotate(xx) scale(1);
     opacity: 1;
@@ -871,7 +893,9 @@ input[type=password]:focus {
   transition: all .1s ease-out;
 }
 
-.buttons:active, .buttons:focus, .buttons:hover {
+.buttons:active,
+.buttons:focus,
+.buttons:hover {
   box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
@@ -922,7 +946,8 @@ input[type=password]:focus {
   white-space: nowrap;
 }
 
-[tooltip]:hover:before, [tooltip]:hover:after {
+[tooltip]:hover:before,
+[tooltip]:hover:after {
   visibility: visible;
   opacity: 1;
 }
@@ -1043,6 +1068,7 @@ input[type=password]:focus {
     opacity: 1;
     transform: rotateZ(0deg);
   }
+
   to {
     opacity: 0;
     transform: rotateZ(180deg);
@@ -1104,10 +1130,12 @@ input[type=password]:focus {
     transform: translateX(-250%) scale(0);
     opacity: 0.2;
   }
+
   70% {
     transform: translateX(15%);
     opacity: 1;
   }
+
   100% {
     transform: translateX(0%) scale(1);
     opacity: 1;
@@ -1119,6 +1147,7 @@ input[type=password]:focus {
     opacity: 1;
     transform: rotateZ(180deg);
   }
+
   to {
     opacity: 1;
     transform: rotateZ(0deg);
@@ -1130,10 +1159,12 @@ input[type=password]:focus {
     transform: translateX(200%) scale(0);
     opacity: 0.2;
   }
+
   70% {
     transform: translateX(-15%);
     opacity: 1;
   }
+
   100% {
     transform: translateX(0%) scale(1);
     opacity: 1;
@@ -1144,6 +1175,7 @@ input[type=password]:focus {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -1153,6 +1185,7 @@ input[type=password]:focus {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -1164,6 +1197,7 @@ input[type=password]:focus {
     opacity: 1;
     transform: scale(1);
   }
+
   to {
     opacity: 0;
     transform: scale(0);
@@ -1228,8 +1262,8 @@ input[type=password]:focus {
 }
 
 .no-seleccionable {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

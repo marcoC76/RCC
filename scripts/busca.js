@@ -99,6 +99,7 @@ function ft(appi) {
 setInterval('ft(appi)', 60000);
 
 
+
 function recibir() {
     valor = document.getElementById("texto").value;
     localStorage.setItem("id", valor);
@@ -107,6 +108,8 @@ function recibir() {
     });
     console.log(newArray);
     document.getElementById("texto").focus();
+    var stil = "https://avatars.dicebear.com/api/jdenticon/:" + newArray[0].ESTILO + ".svg";
+
     salida = `
                 <br>
                 <div id="carta0" class="card no-seleccionable">
@@ -123,7 +126,7 @@ function recibir() {
                         <div class="image">
                             <img id="avatar" src="" width="100%">
                         </div>
-                        <div class="nick" style="color:white; text-align:center;font-size: 1.5em;">
+                        <div class="nick" style="color:white; text-align:center;font-size: 1.5em; background-image:url(${stil});">
                             ${newArray[0].NICK.substring(0,10)}
                         </div>
                         <br>
@@ -186,6 +189,9 @@ function recibir() {
                             </h2>
                             </div>
                         </center>
+                        <h2 class="name">
+                            Iniciales: <span class="tamaño ">${newArray[0].COMPLETO.split(" ").map((n)=>n[0]).join(" ")}</span>
+                        </h2>
                         <h2 class="name">
                             Grupo: <span class="tamaño ">${newArray[0].GRUPO}</span>
                         </h2>
@@ -763,8 +769,9 @@ function recibir() {
                     data: [newArray[0].CUESTIONARIO5, newArray[0].CUESTIONARIO6],
                     backgroundColor: [
                         'rgba(64, 146, 111, 0.6)',
-                        'rgba(42, 120, 87, 0.6)'/* ,
-                        'rgba(24, 95, 65, 0.6)' */
+                        'rgba(42, 120, 87, 0.6)'
+                        /* ,
+                                                'rgba(24, 95, 65, 0.6)' */
                     ]
                 }]
             },
