@@ -192,6 +192,9 @@ p {
   animation: llega-izq 0.7s forwards 0.5s ease-in;
 }
 
+
+
+
 /* @keyframes hover1 {
   0% {
     transform: ;
@@ -1267,3 +1270,4 @@ input[type=password]:focus {
   -ms-user-select: none;
   user-select: none;
 }
+
