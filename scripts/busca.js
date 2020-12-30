@@ -112,7 +112,7 @@ function recibir() {
 
     salida = `
                 <br>
-                <div id="carta0" class="card no-seleccionable">
+                <div id="carta0" class="card no-seleccionable" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     <div id="cinta1">
                         
                     </div>
@@ -164,7 +164,7 @@ function recibir() {
                 <br>
                 <br>
                 
-                <div id="carta"  class="card no-seleccionable" >
+                <div id="carta"  class="card no-seleccionable" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                         <div id="cinta2">
                             
                         </div>
@@ -202,7 +202,7 @@ function recibir() {
                         <div class="meter azul">
 			                <span class="animate" style="width: ${(parseInt(newArray[0].TOTALASIS)*100)/12}%"></span>
 		                </div>
-<br>
+                        <br>
                         <h2 class="name">
                             Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
                         </h2>
@@ -245,7 +245,7 @@ function recibir() {
                 <br>
                 <br>
 
-                <div  class="card no-seleccionable" id="carta2">
+                <div  class="card no-seleccionable" id="carta2" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
 
                     <div id="elemento2">
                         <h2 class="name">
@@ -273,7 +273,7 @@ function recibir() {
 
                 <br>
                 <br>
-                <div  class="card no-seleccionable" id="carta3">
+                <div  class="card no-seleccionable" id="carta3" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
 
                     <div id="elemento3">
                         <h2 class="name">
@@ -300,7 +300,7 @@ function recibir() {
                 </div>
                 <br>
                 <br>
-                <div  class="card no-seleccionable" id="carta4">
+                <div  class="card no-seleccionable" id="carta4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
 
                     <div id="elemento4">
                         <h2 class="name">
@@ -330,7 +330,7 @@ function recibir() {
                 <br>
 
                 
-                <div  class="card no-seleccionable" id="carta5">
+                <div  class="card no-seleccionable" id="carta5" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
 
                     <div id="elemento5">
                         <h2 class="name">
