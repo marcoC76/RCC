@@ -117,9 +117,10 @@ function recibir() {
                         
                     </div>
                     <div id="elemento0">
-                        <h2 onclick="clanInfo();" class="name1 ">
+                        <!--<h2 onclick="clanInfo();" class="name1 ">
                             ${newArray[0].EQUIPO}   
-                        </h2>
+                        </h2>-->
+                        <img class="animal" id="" src="images/animales/${newArray[0].EQUIPO}.png" width="10%" onclick="clanInfo();"/>
                         <div onclick="mundoInfo();" id="mundoActual" class="cost">
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
@@ -176,9 +177,11 @@ function recibir() {
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
                         <center>
-                            <h2 id="eq" style="color:white;" onclick="clanInfo();" >
-                                ${newArray[0].EQUIPO}
-                            </h2>
+                            <img class="animal" id="" src="images/animales/${newArray[0].EQUIPO}.png" width="20%" onclick="clanInfo();" />
+                            <!--<h2 id="eq" style="color:white;" onclick="clanInfo();" >
+                            
+                            ${newArray[0].EQUIPO}
+                            </h2>-->
                             
                             <div id="pie">
                                 <img id="caracter" src="images/caracter.png" />

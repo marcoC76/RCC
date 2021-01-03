@@ -1271,3 +1271,9 @@ input[type=password]:focus {
   user-select: none;
 }
 
+
+
+
+.animal{
+  border-radius: 50px;
+}
