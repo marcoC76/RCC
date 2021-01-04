@@ -120,7 +120,7 @@ function recibir() {
                         <!--<h2 onclick="clanInfo();" class="name1 ">
                             ${newArray[0].EQUIPO}   
                         </h2>-->
-                        <img class="animal" id="" src="images/animales/${newArray[0].EQUIPO}.png" width="10%" onclick="clanInfo();"/>
+                        <img class="animal" id="" src="images/animales/${newArray[0].EQUIPO}.png" width="15%" onclick="clanInfo();"/>
                         <div onclick="mundoInfo();" id="mundoActual" class="cost">
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
@@ -176,8 +176,9 @@ function recibir() {
                         <div id="mundoActualDesg" onclick="mundoInfo();" class="cost">
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
+                        
                         <center>
-                            <img class="animal" id="" src="images/animales/${newArray[0].EQUIPO}.png" width="20%" onclick="clanInfo();" />
+                            
                             <!--<h2 id="eq" style="color:white;" onclick="clanInfo();" >
                             
                             ${newArray[0].EQUIPO}
@@ -186,8 +187,11 @@ function recibir() {
                             <div id="pie">
                                 <img id="caracter" src="images/caracter.png" />
                             </div>
-                            <div class="abilities" >
-                            <h2 id="nic" style="color:white;">
+
+                            <div class="abilities" style="background-image:url(${stil});">
+                            
+                            <h2 id="nic" style="color:white;" >
+                            
                                 ${newArray[0].NICK.substring(0,10)}
                             </h2>
                             </div>
@@ -198,17 +202,31 @@ function recibir() {
                         <h2 class="name">
                             Grupo: <span class="tamaño ">${newArray[0].GRUPO}</span>
                         </h2>
-                        <h2 class="name" onclick="asisInfo();" >
-                            Asistencias: <span class="tamaño ">${newArray[0].TOTALASIS}</span>
-
+                        <h2 class="name">
+                            Clan: <span class="tamaño ">${newArray[0].EQUIPO} </span><img class="animal" id="clan" src="images/animales/${newArray[0].EQUIPO}.png" width="500%" onclick="clanInfo();" /> 
                         </h2>
-                        <div class="meter azul">
-			                <span class="animate" style="width: ${(parseInt(newArray[0].TOTALASIS)*100)/12}%"></span>
-		                </div>
-                        <br>
+
                         <h2 class="name">
                             Punto Extra: <img class="" id="mas1" src="images/insgPuntos.png" /><span class="" id="por1"></span>
                         </h2>
+
+                        <br>
+                        <div class="abilities " >
+                            <center>
+                                <h2 class="name" onclick="asisInfo();" >
+                                    Asistencias:
+                                    </h2>
+                                   
+                            </center>
+                                <div class="meter negro" id="">
+                                    <span class="animate" style="width: ${(parseInt(newArray[0].TOTALASIS)*100)/12}%"></span>
+                                </div>
+                                <br>
+                                <center>
+                                <h1>${newArray[0].TOTALASIS}</h1>
+                                </center>
+                               
+                        </div>
                         <br>
                         
                             <div class="abilities cali" onclick="finalInfo();">
