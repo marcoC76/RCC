@@ -108,7 +108,7 @@ function recibir() {
     });
     console.log(newArray);
     document.getElementById("texto").focus();
-    var stil = "images/stilos/" + newArray[0].ESTILO + "1.png";
+    var stil = "images/stilos/" + newArray[0].ESTILO + "2.png";
 
     salida = `
                 <br>
