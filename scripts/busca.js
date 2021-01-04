@@ -108,7 +108,7 @@ function recibir() {
     });
     console.log(newArray);
     document.getElementById("texto").focus();
-    var stil = "https://avatars.dicebear.com/api/jdenticon/:" + newArray[0].ESTILO + ".svg";
+    var stil = "images/stilos/" + newArray[0].ESTILO + "1.png";
 
     salida = `
                 <br>
@@ -227,7 +227,7 @@ function recibir() {
                                 </center>
                                
                         </div>
-                        <br>
+                        
                         
                             <div class="abilities cali" onclick="finalInfo();">
                             <center>
@@ -517,7 +517,7 @@ function recibir() {
         data: {
             labels: ['Actividades', 'Bitácora', ['Cuestionarios', 'previos'], 'Proyecto'],
             datasets: [{
-                label: 'Promedio',
+                label: 'Nivel',
                 fontColor: '#fff',
                 backgroundColor: backgroundColor,
                 borderColor: borderColor,
