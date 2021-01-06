@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil de reporte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" sizes="128x128" href="../images/icon-128x128.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/js.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    
+</head>
+<style>
+    /* [data-scroll] {
+        transition: translate 1s;
+
+
+    }
+
+    [data-scroll="in"] {
+        opacity: 1;
+    }
+
+    [data-scroll="out"] {
+        opacity: 0;
+    } */
+</style>
+
+<body class="fondo4 no-seleccionable">
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active">Ayuda</a>
+        <a href="index.html">Perfil</a>
+        <a href="desglose.html">Desglose</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <br id="position"><br><br>
+    <div class="card" >
+        <h1>Historia</h1>
+        <p data-scroll>Tu y tú clan, deberán poner todo su empeño y compromiso para pasar todas las misiones y así obtener el rango
+            más alto: Estrella dorada y con él, la
+            calificación mas alta posible en la materia (10). </p>
+        <p data-scroll>Cada mundo (periodo) estará constituido por 4 misiones, y cada una de ellas te entregara una insignia si
+            consigues todos los puntos de la misión.</p>
+        <!-- <p>Las insignias, ademas de puntos, otorgan monedas.</p> -->
+        <p data-scroll>Debes tener al menos 10 asistencias para tener derecho a tu calificación</p>
+        <p data-scroll>Los puntos determinan tu rango y calificación final para ese mundo en particular.</p>
+        <p data-scroll>Tu calificación final la
+            obtienes sumando los puntos de todas las misiones y dividiendo estos entre 100.</p>
+        <!-- <p>Las monedas se puedes usar para activar las habilidades que tu personaje tiene.</p> -->
+        <p data-scroll>Al finalizar cada mundo todos los puntajes y monedas vuelven a 0.</p>
+        <div class="sheen"></div>
+    </div>
+    <br>
+    <br>
+    <div class="card" >
+        <h1>Rangos</h1>
+        <p>
+            La calificación final se obtiene dividiendo los puntos totales entre 100
+        </p>
+        <h3 data-scroll style="color:white;">Noob: <img src="../images/sinNivel.png" /></h3>
+        <p>Todos comienzan cada mundo sin rango y 0 de calificación
+        </p>
+        <h3 data-scroll style="color:white;">Traine: <img src="../images/nivel1.png" /></h3>
+        <p>Este rango se alcanza cuando tu calificación es al menos 6
+        </p>
+        <h3 data-scroll style="color:white;">Junior: <img src="../images/nivel2.png" /></h3>
+        <p>Este rango se alcanza cuando tus calificación es al menos 8
+        </p>
+        <h3 data-scroll style="color:white;">Senior: <img src="../images/nivel3.png" /></h3>
+        <p>Este rango se alcanza cuando tu calificación es 10
+        </p>
+
+        <div class="sheen"></div>
+    </div>
+    <br>
+    <!-- <div class="card">
+        <h1>Habilidades</h1>
+        <p>
+            Cada habilidad tiene un costo y solo puede ser usada una vez por cada mundo.
+        </p>
+        <h3 style="color:white;">Puntos Extra: </h3>
+        <p>Activar esta habilidad cuesta 200 monedas, te da acceso una misión especial para obtener la insignia de
+            Puntos Extra.
+        </p>
+        <h3 style="color:white;">Pasar Puntos: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas te permite seleccionar a un compañero de cualquier Clan para
+            pasarle 100 de tus puntos.
+        </p>
+        <h3 style="color:white;">Otro Intento: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y te permite repetir una actividad para obtener mejor puntaje
+        </p>
+        <h3 style="color:white;">Trampa en examen: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y le permite a tu clan sacar sus apuntes durante el examen
+        </p>
+        <h3 style="color:white;">Entregar un dia después: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y le permite a tu clan entregar un trabajo un dia después
+        </p>
+        <h3 style="color:white;">Pista en el examen: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y le otorga a tu clan una pista para una pregunta antes del
+            examen
+        </p>
+        <h3 style="color:white;">Mas tiempo: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y le otorga a tu clan 10 minutos mas para contestar el examen
+        </p>
+        <h3 style="color:white;">Escuchar Música: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y le permite a tu clan escuchar música en clase (actividades) con
+            audífonos
+        </p>
+        <h3 style="color:white;">Comer en clase: </h3>
+        <p>Activar esta habilidad cuesta 300 monedas y le permite a tu clan comer en clase (botanas o snacks)
+        </p>
+
+        <div class="sheen"></div>
+    </div> -->
+    <br>
+    <div class="card" >
+        <h1>Misiones</h1>
+        <p>Recibirás los puntos correspondientes a cada misión, pero la insignia se consigue con la
+            puntuación máxima de cada misión</p>
+        <h3 data-scroll class="ayuda">Actividades: <img src="../images/insgAct.png" /></h3>
+        <p>Completar esta misión otorga un máximo de 200 puntos.
+        </p>
+        <h3 data-scroll class="ayuda">Cuestionarios previos: <img src="../images/insgCuest.png" /></h3>
+        <p>Completar esta misión otorga un máximo de 200 puntos.
+        </p>
+        <h3 data-scroll class="ayuda">Bitácora: <img src="../images/insgBit.png" /></h3>
+        <p>Completar esta misión otorga un máximo de 200 puntos.
+        </p>
+        <h3 data-scroll class="ayuda">Proyecto: <img src="../images/insgPlat.png" /></h3>
+        <p>Completar esta misión otorga un máximo de 400 puntos.
+        </p>
+        <!--  <h3 class="ayuda">Plataforma: <img src="images/insgPro.png" /></h3>
+        <p>Completar esta misión otorga un máximo de 100 puntos y 200 monedas al conseguir la insignia.
+        </p> -->
+        <h3 data-scroll class="ayuda">Puntos extra: <img src="../images/insgPuntos.png" /></h3>
+        <p>Completar esta misión otorga 100 puntos extra.
+        </p>
+
+
+        <div class="sheen"></div>
+    </div>
+    <a id="goTop" href="#position">^</a>
+    <br>
+    <br>
+    <br>
+    <script>
+        ScrollOut({
+            threshold:0.2,
+            onShown: function (el) {
+                // remove the class
+                el.classList.remove("bond");
+
+                // force reflow
+                void el.offsetWidth;
+
+                // re-add the animated cl
+                el.classList.add("bond");
+            }
+        });
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        var basicScrollTop = function () {
+            // The button
+            var btnTop = document.querySelector('#goTop');
+            // Reveal the button
+            var btnReveal = function () {
+                var position = document.querySelector('#position');
+                position.innerHTML = window.scrollY + 'px';
+                if (window.scrollY >= 300) {
+                    btnTop.classList.add('is-visible');
+                } else {
+                    btnTop.classList.remove('is-visible');
+                }
+            }
+            // Listeners
+            window.addEventListener('scroll', btnReveal);
+        };
+        basicScrollTop();
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log("El Navegador admite service workers");
+            window.addEventListener('load', function () {
+                //navigator.serviceWorker.register('sw_offlinepage.js')
+                //navigator.serviceWorker.register('sw_offlinesite.js')
+                navigator.serviceWorker.register('sw.js')
+
+                    .then(function (registration) {
+                        console.log('Service worker registrado de modo correcto');
+                        console.log('Scope: ' + registration.scope)
+                    }, function (error) {
+                        console.log('El registro del Service worker ha fallado');
+                        console.log(error)
+                    });
+            });
+        }
+    </script>
+
+</body>
+
+</html>
