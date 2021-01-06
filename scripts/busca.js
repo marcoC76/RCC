@@ -120,14 +120,16 @@ function recibir() {
                         <!--<h2 onclick="clanInfo();" class="name1 ">
                             ${newArray[0].EQUIPO}   
                         </h2>-->
-                        <img class="animal" id="" src="images/animales/${newArray[0].EQUIPO}.png" width="15%" onclick="clanInfo();"/>
+                        
+                        <img class="animal " id="clan1" src="images/animales/${newArray[0].EQUIPO}.png" width="15%" onclick="clanInfo();"/>
+                        
                         <div onclick="mundoInfo();" id="mundoActual" class="cost">
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
                         <div class="image">
                             <img id="avatar" src="" width="100%">
                         </div>
-                        <div class="nick" style="color:white; text-align:center;font-size: 1.5em; background-image:url(${stil});">
+                        <div id="stilo" class="nick" style="color:white; text-align:center;font-size: 1.5em; background-image:url(${stil});">
                             ${newArray[0].NICK.substring(0,10)}
                         </div>
                         <br>
@@ -173,6 +175,7 @@ function recibir() {
                         <h2 class="name" >
                             Datos Generales
                         </h2>
+                        
                         <div id="mundoActualDesg" onclick="mundoInfo();" class="cost">
                             Mundo ${localStorage.getItem("mundo")}
                         </div>
@@ -188,7 +191,7 @@ function recibir() {
                                 <img id="caracter" src="images/caracter.png" />
                             </div>
 
-                            <div class="abilities" style="background-image:url(${stil});">
+                            <div id="stilo1" class="abilities" style="background-image:url(${stil});">
                             
                             <h2 id="nic" style="color:white;" >
                             
