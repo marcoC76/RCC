@@ -15,8 +15,8 @@
       "url": "/RCC/ayuda?utm_source=homescreen",
       "icons": [
         {
-          "src": "images/icon_ayuda.PNG",
-          "sizes": "256x256"
+          "src": "images/icon-128x128.png",
+          "sizes": "128x128"
         }
       ]
     }
