@@ -7,6 +7,20 @@
   "orientation": "portrait",
   "Scope": "/",
   "start_url": "/RCC/?utm_source=homescreen",
+  "shortcuts": [
+    {
+      "name": "Ayuda",
+      "short_name": "Ayuda",
+      "description": "Ver la ayuda del reporte",
+      "url": "/RCC/ayuda?utm_source=homescreen",
+      "icons": [
+        {
+          "src": "images/icon_ayuda.PNG",
+          "sizes": "256x256"
+        }
+      ]
+    }
+  ],
   "icons": [
     {
       "src": "images/icon-72x72.png",
