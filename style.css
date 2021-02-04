@@ -506,9 +506,9 @@ p {
   transition: 1s;
 }
 
-.card:hover .insignias {
+.card:hover  {
   filter: hue-rotate(360deg);
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .card:hover .desglo {
